@@ -10,6 +10,7 @@ export default function Quiz({ results, addResult }: { results: QuizResult[]; ad
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [showExplanation, setShowExplanation] = useState(false);
+  const [showResult, setShowResult] = useState(false);
   const [score, setScore] = useState({ correct: 0, total: 0 });
   const [quizActive, setQuizActive] = useState(false);
 
@@ -30,6 +31,7 @@ export default function Quiz({ results, addResult }: { results: QuizResult[]; ad
     setCurrentIndex(0);
     setSelectedAnswer(null);
     setShowExplanation(false);
+    setShowResult(false);
     setScore({ correct: 0, total: 0 });
     setQuizActive(true);
   }, []);
@@ -53,6 +55,8 @@ export default function Quiz({ results, addResult }: { results: QuizResult[]; ad
       setCurrentIndex(prev => prev + 1);
       setSelectedAnswer(null);
       setShowExplanation(false);
+    } else {
+      setShowResult(true);
     }
   }, [currentIndex, questions.length]);
 
@@ -142,7 +146,7 @@ export default function Quiz({ results, addResult }: { results: QuizResult[]; ad
   }
 
   // Quiz in progress
-  const isFinished = currentIndex >= questions.length - 1 && showExplanation;
+  const isLastQuestion = currentIndex >= questions.length - 1;
 
   return (
     <div className="space-y-4">
@@ -154,7 +158,7 @@ export default function Quiz({ results, addResult }: { results: QuizResult[]; ad
         </div>
         <div className="flex items-center gap-3">
           <span className="text-sm text-dark-muted">Score: {score.correct}/{score.total}</span>
-          {!isFinished && (
+          {!showResult && (
             <button onClick={finishQuiz} className="text-xs text-dark-muted hover:text-dark-text">
               End Quiz
             </button>
@@ -170,7 +174,7 @@ export default function Quiz({ results, addResult }: { results: QuizResult[]; ad
         />
       </div>
 
-      {!isFinished ? (
+      {!showResult ? (
         <div className="bg-dark-surface rounded-xl p-6 border border-dark-border space-y-6">
           {/* Question */}
           {currentQuestion.passage && (
@@ -214,13 +218,13 @@ export default function Quiz({ results, addResult }: { results: QuizResult[]; ad
             </div>
           )}
 
-          {/* Next button */}
-          {showExplanation && currentIndex < questions.length - 1 && (
+          {/* Next / Finish button */}
+          {showExplanation && (
             <button
               onClick={nextQuestion}
               className="w-full py-3 bg-gold hover:bg-gold-dark text-dark-bg font-semibold rounded-xl transition-colors"
             >
-              Next Question
+              {isLastQuestion ? 'View Results' : 'Next Question'}
             </button>
           )}
         </div>
