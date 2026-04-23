@@ -10,6 +10,7 @@ export default function Quiz({ results, addResult }: { results: QuizResult[]; ad
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [showExplanation, setShowExplanation] = useState(false);
+  const [showHint, setShowHint] = useState(false);
   const [showResult, setShowResult] = useState(false);
   const [score, setScore] = useState({ correct: 0, total: 0 });
   const [quizActive, setQuizActive] = useState(false);
@@ -35,6 +36,7 @@ export default function Quiz({ results, addResult }: { results: QuizResult[]; ad
     setCurrentIndex(0);
     setSelectedAnswer(null);
     setShowExplanation(false);
+    setShowHint(false);
     setShowResult(false);
     setScore({ correct: 0, total: 0 });
     setQuizActive(true);
@@ -59,6 +61,7 @@ export default function Quiz({ results, addResult }: { results: QuizResult[]; ad
       setCurrentIndex(prev => prev + 1);
       setSelectedAnswer(null);
       setShowExplanation(false);
+      setShowHint(false);
     } else {
       setShowResult(true);
     }
@@ -191,6 +194,28 @@ export default function Quiz({ results, addResult }: { results: QuizResult[]; ad
             </div>
           )}
           <p className="text-lg leading-relaxed">{currentQuestion.question}</p>
+
+          {/* Hint button */}
+          {currentQuestion.hint && !showExplanation && (
+            <div className="flex justify-end">
+              <button
+                onClick={() => setShowHint(prev => !prev)}
+                className="px-3 py-1.5 rounded-lg text-sm bg-blue-900/30 hover:bg-blue-900/50 text-blue-400 border border-blue-800/50 transition-colors"
+              >
+                {showHint ? 'Hide Hint' : 'Hint'}
+              </button>
+            </div>
+          )}
+
+          {/* Hint display */}
+          {showHint && currentQuestion.hint && (
+            <div className="bg-blue-900/20 rounded-lg p-4 border border-blue-800/40">
+              <p className="text-sm">
+                <span className="font-semibold text-blue-400">Hint: </span>
+                <span className="text-dark-text">{currentQuestion.hint}</span>
+              </p>
+            </div>
+          )}
 
           {/* Options */}
           <div className="space-y-3">

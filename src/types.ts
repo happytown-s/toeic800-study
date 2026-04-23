@@ -10,6 +10,7 @@ export interface Question {
   passage?: string;
   options: QuestionOption[];
   explanation: string;
+  hint?: string;
 }
 
 export interface VocabWord {
