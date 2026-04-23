@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import type { Question, QuizResult, QuizMode } from '../types';
 import examData from '../data/toeic800-exam.json';
 
@@ -13,28 +13,32 @@ export default function Quiz({ results, addResult }: { results: QuizResult[]; ad
   const [showResult, setShowResult] = useState(false);
   const [score, setScore] = useState({ correct: 0, total: 0 });
   const [quizActive, setQuizActive] = useState(false);
+  const [questions, setQuestions] = useState<Question[]>([]);
 
-  const questions = useMemo(() => {
-    const filtered = selectedCategory === 'All' ? examData : examData.filter((q: Question) => q.category === selectedCategory);
-    const shuffled = [...filtered].sort(() => Math.random() - 0.5);
-    if (mode === 'drill') return shuffled.slice(0, 20);
-    if (mode === 'exam') return shuffled.slice(0, 50);
-    // review: wrong answers
-    const wrongIds = new Set(results.filter(r => !r.correct).map(r => r.questionId));
-    const reviewQs = shuffled.filter((q: Question) => wrongIds.has(q.id));
-    return reviewQs.length > 0 ? reviewQs.slice(0, 20) : shuffled.slice(0, 20);
-  }, [selectedCategory, mode, results]);
-
-  const currentQuestion: Question = questions[currentIndex];
+  const currentQuestion: Question = questions[currentIndex] || { id: '', category: '', question: '', options: [], explanation: '' };
 
   const startQuiz = useCallback(() => {
+    const filtered = selectedCategory === 'All' ? examData : examData.filter((q: Question) => q.category === selectedCategory);
+    const shuffled = [...filtered].sort(() => Math.random() - 0.5);
+    let selected: Question[];
+    if (mode === 'drill') {
+      selected = shuffled.slice(0, 20);
+    } else if (mode === 'exam') {
+      selected = shuffled.slice(0, 50);
+    } else {
+      // review: wrong answers
+      const wrongIds = new Set(results.filter(r => !r.correct).map(r => r.questionId));
+      const reviewQs = shuffled.filter((q: Question) => wrongIds.has(q.id));
+      selected = reviewQs.length > 0 ? reviewQs.slice(0, 20) : shuffled.slice(0, 20);
+    }
+    setQuestions(selected);
     setCurrentIndex(0);
     setSelectedAnswer(null);
     setShowExplanation(false);
     setShowResult(false);
     setScore({ correct: 0, total: 0 });
     setQuizActive(true);
-  }, []);
+  }, [selectedCategory, mode, results]);
 
   const handleAnswer = useCallback((optionIndex: number) => {
     if (selectedAnswer !== null) return;
@@ -116,7 +120,11 @@ export default function Quiz({ results, addResult }: { results: QuizResult[]; ad
             onClick={startQuiz}
             className="mt-6 w-full py-3 bg-gold hover:bg-gold-dark text-dark-bg font-semibold rounded-xl transition-colors"
           >
-            Start Quiz ({questions.length} questions)
+            Start Quiz ({(() => {
+              const filtered = selectedCategory === 'All' ? examData : examData.filter((q: Question) => q.category === selectedCategory);
+              const count = mode === 'exam' ? Math.min(50, filtered.length) : Math.min(20, filtered.length);
+              return count;
+            })()} questions)
           </button>
         </div>
 
