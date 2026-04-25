@@ -21,6 +21,7 @@ export const questions: Question[] = [
       { word: 'folder', meaning: '書類入れ、フォルダー' },
       { word: 'colleague', meaning: '同僚' },
     ],
+    imagePrompt: 'A realistic photograph of a modern office scene. A professional woman in business attire is handing a manila folder to a male colleague who is seated at a desk with a computer monitor. The office is bright and clean with large windows, potted plants, and organized shelves. Natural lighting, corporate setting, no text, no watermarks.',
   },
   {
     id: 102,
@@ -41,6 +42,7 @@ export const questions: Question[] = [
       { word: 'ingredients', meaning: '材料、食材' },
       { word: 'dinner service', meaning: '夕食の提供（時間）' },
     ],
+    imagePrompt: 'A realistic photograph of a professional commercial kitchen. Several kitchen staff members in white chef coats and aprons are preparing ingredients on stainless steel counters. Fresh vegetables are being washed and chopped on cutting boards. The kitchen has overhead industrial lights, hanging pots, and stainless steel shelves. Busy but organized atmosphere, no text, no watermarks.',
   },
   {
     id: 103,
@@ -59,6 +61,7 @@ export const questions: Question[] = [
       { word: 'platform', meaning: 'プラットフォーム、ホーム' },
       { word: 'schedule', meaning: '時刻表、スケジュール' },
     ],
+    imagePrompt: 'A realistic photograph of a train station platform scene. A businessman in a suit is stepping through the open doors of a modern commuter train. The platform has a yellow safety line, digital display boards, and other passengers waiting in the background. Bright daytime lighting, urban transit setting, no text, no watermarks.',
   },
   {
     id: 104,
@@ -79,6 +82,7 @@ export const questions: Question[] = [
       { word: 'rectangular', meaning: '長方形の' },
       { word: 'presentation', meaning: 'プレゼンテーション' },
     ],
+    imagePrompt: 'A realistic photograph of a corporate conference room viewed from a slightly elevated angle. Several business professionals are seated around a large rectangular wooden table with laptops, notepads, and coffee cups in front of them. The room has a whiteboard on the wall, large windows with blinds, and ceiling fluorescent lights. Professional meeting in progress, no text, no watermarks.',
   },
   {
     id: 105,
@@ -99,6 +103,7 @@ export const questions: Question[] = [
       { word: 'warehouse', meaning: '倉庫' },
       { word: 'paved', meaning: '舗装された' },
     ],
+    imagePrompt: 'A realistic photograph of an industrial area. A large white delivery truck with a company logo area is parked directly in front of a large gray warehouse building with a loading dock. The paved parking area has clear markings. Overcast daylight, industrial commercial setting, no text, no watermarks.',
   },
 
   // ===== Part 2: Question-Response (5 questions) =====

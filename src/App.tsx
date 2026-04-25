@@ -7,6 +7,7 @@ import QuizSetupPage from './pages/QuizSetupPage';
 import QuizPlayPage from './pages/QuizPlayPage';
 import TermsPage from './pages/TermsPage';
 import ExamHistoryPage from './pages/ExamHistoryPage';
+import ImageGenSettings from './components/ImageGenSettings';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<PageName>('home');
@@ -58,7 +59,7 @@ export default function App() {
           <button onClick={() => navigate('home')} className="text-xl font-bold text-gold">
             TOEIC 800+
           </button>
-          <nav className="flex gap-1">
+          <nav className="flex gap-1 items-center">
             {tabs.map(t => (
               <button
                 key={t.key}
@@ -72,6 +73,17 @@ export default function App() {
                 {t.label}
               </button>
             ))}
+            <button
+              onClick={() => navigate('settings')}
+              className={`ml-1 px-2 py-1.5 rounded-lg text-lg transition-colors ${
+                currentPage === 'settings'
+                  ? 'text-gold'
+                  : 'text-dark-muted hover:text-dark-text'
+              }`}
+              title="Settings"
+            >
+              ⚙️
+            </button>
           </nav>
         </div>
       </header>
@@ -116,6 +128,10 @@ export default function App() {
             onNavigate={navigate}
             onClear={clearHistory}
           />
+        )}
+
+        {currentPage === 'settings' && (
+          <ImageGenSettings onNavigate={navigate} />
         )}
       </main>
     </div>
