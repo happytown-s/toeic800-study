@@ -1,9 +1,6 @@
 import { useState, useCallback, useMemo, useRef } from 'react';
 import type { PageName, Question } from '../core/types';
 import { questions } from '../data/questions';
-import { generateImage } from '../utils/imageGen';
-
-const API_KEY_STORAGE = 'toeic800-openai-key';
 
 interface Props {
   onNavigate: (page: PageName) => void;
@@ -29,9 +26,6 @@ export default function QuizPlayPage({ onNavigate, selectedPart, questionCount, 
   const [score, setScore] = useState({ correct: 0, total: 0 });
   const [showResult, setShowResult] = useState(false);
   const lastCorrectRef = useRef(false);
-  const [genLoading, setGenLoading] = useState(false);
-  const [genError, setGenError] = useState<string | null>(null);
-  const [generatedImg, setGeneratedImg] = useState<string | null>(null);
 
   const quizQuestions = useMemo(() => {
     const pool = selectedPart !== null ? questions.filter(q => q.part === selectedPart) : questions;
@@ -39,42 +33,6 @@ export default function QuizPlayPage({ onNavigate, selectedPart, questionCount, 
   }, [selectedPart, questionCount]);
 
   const currentQuestion: Question | undefined = quizQuestions[currentIndex];
-
-  // Check for cached image on question change
-  const isPart1WithImage = currentQuestion?.part === 1 && !!currentQuestion.imagePrompt;
-  const apiKey = useMemo(() => localStorage.getItem(API_KEY_STORAGE) ?? '', [currentQuestion?.id]);
-
-  // Reset image state when question changes
-  useMemo(() => {
-    if (currentQuestion) {
-      const cached = sessionStorage.getItem(`img_${currentQuestion.id}`);
-      setGeneratedImg(cached);
-      setGenError(null);
-      setGenLoading(false);
-    }
-  }, [currentQuestion?.id]);
-
-  const handleGenerateImage = useCallback(async () => {
-    if (!currentQuestion?.imagePrompt || !apiKey) return;
-    const qId = currentQuestion.id;
-    const cached = sessionStorage.getItem(`img_${qId}`);
-    if (cached) {
-      setGeneratedImg(cached);
-      return;
-    }
-    setGenLoading(true);
-    setGenError(null);
-    try {
-      const url = await generateImage(currentQuestion.imagePrompt, apiKey);
-      sessionStorage.setItem(`img_${qId}`, url);
-      setGeneratedImg(url);
-    } catch (e: unknown) {
-      const message = e instanceof Error ? e.message : 'Failed to generate image';
-      setGenError(message);
-    } finally {
-      setGenLoading(false);
-    }
-  }, [currentQuestion, apiKey]);
 
   const handleAnswer = useCallback((optionIndex: number) => {
     if (selectedAnswer !== null || !currentQuestion) return;
@@ -166,40 +124,6 @@ export default function QuizPlayPage({ onNavigate, selectedPart, questionCount, 
       </div>
 
       <div className="bg-dark-surface rounded-xl p-6 border border-dark-border space-y-5">
-        {/* Part 1: Image Generation */}
-        {isPart1WithImage && (
-          <div className="space-y-3">
-            {generatedImg ? (
-              <div className="rounded-xl overflow-hidden border border-dark-border">
-                <img src={generatedImg} alt="TOEIC Part 1 photo" className="w-full" loading="lazy" />
-              </div>
-            ) : genLoading ? (
-              <div className="flex items-center justify-center py-8 bg-dark-card rounded-xl border border-dark-border">
-                <span className="text-sm text-dark-muted animate-pulse">⏳ Generating photo...</span>
-              </div>
-            ) : genError ? (
-              <div className="bg-red-900/20 rounded-xl border border-red-800/50 p-4 space-y-2">
-                <p className="text-sm text-red-400">❌ {genError}</p>
-                <button onClick={handleGenerateImage} className="text-xs text-gold hover:underline">Retry</button>
-              </div>
-            ) : apiKey ? (
-              <button
-                onClick={handleGenerateImage}
-                className="w-full py-3 bg-dark-card hover:bg-dark-border border border-dark-border rounded-xl text-sm text-dark-text transition-colors flex items-center justify-center gap-2"
-              >
-                🖼️ Generate Photo
-              </button>
-            ) : (
-              <button
-                onClick={() => onNavigate('settings')}
-                className="w-full py-3 bg-dark-card hover:bg-dark-border border border-dark-border rounded-xl text-sm text-dark-muted transition-colors"
-              >
-                🔗 Connect API key to generate photos
-              </button>
-            )}
-          </div>
-        )}
-
         {/* Passage (Parts 6-7) */}
         {currentQuestion.passage && (
           <div className="bg-dark-card rounded-lg p-4 text-sm text-dark-muted leading-relaxed whitespace-pre-wrap border border-dark-border">

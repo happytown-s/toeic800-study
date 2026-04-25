@@ -19,7 +19,6 @@ export interface Question {
   audioScript?: string;
   passage?: string;
   keyVocabulary?: KeyVocab[];
-  imagePrompt?: string;
 }
 
 export interface QuizResult {
@@ -75,5 +74,4 @@ export type PageName =
   | 'quiz-result'
   | 'vocab'
   | 'idioms'
-  | 'progress'
-  | 'settings';
+  | 'progress';
