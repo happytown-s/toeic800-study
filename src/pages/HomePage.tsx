@@ -107,7 +107,7 @@ export default function HomePage({ onNavigate, examScores, streak, accuracy, wro
       </div>
 
       {/* Quick Actions */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-4 gap-3">
         <button
           onClick={() => onNavigate('quiz-setup')}
           className="bg-gold hover:bg-gold-dark text-dark-bg font-semibold rounded-xl p-4 transition-colors text-center"
@@ -119,6 +119,12 @@ export default function HomePage({ onNavigate, examScores, streak, accuracy, wro
           className="bg-dark-surface hover:bg-dark-card border border-dark-border rounded-xl p-4 transition-colors text-center"
         >
           📖 Vocabulary
+        </button>
+        <button
+          onClick={() => onNavigate('idioms')}
+          className="bg-dark-surface hover:bg-dark-card border border-dark-border rounded-xl p-4 transition-colors text-center"
+        >
+          💬 Idioms
         </button>
         <button
           onClick={() => onNavigate('progress')}

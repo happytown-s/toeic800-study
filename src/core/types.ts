@@ -54,6 +54,17 @@ export interface Term {
   meaning: string;
   part?: number;
   example?: string;
+  category?: 'business' | 'finance' | 'it' | 'hr' | 'marketing' | 'legal' | 'general';
+  difficulty?: 'essential' | 'intermediate' | 'advanced';
+}
+
+export interface Idiom {
+  id: number;
+  idiom: string;
+  meaning: string;
+  example: string;
+  category: string;
+  difficulty: 'essential' | 'intermediate' | 'advanced';
 }
 
 export type PageName =

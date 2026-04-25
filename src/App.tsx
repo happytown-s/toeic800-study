@@ -71,7 +71,7 @@ export default function App() {
                 key={t.key}
                 onClick={() => navigate(t.key)}
                 className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
-                  currentPage === t.key
+                  currentPage === t.key || (t.key === 'vocab' && currentPage === 'idioms')
                     ? 'bg-gold text-dark-bg'
                     : 'text-dark-muted hover:text-dark-text hover:bg-dark-card'
                 }`}
@@ -110,6 +110,10 @@ export default function App() {
 
         {currentPage === 'vocab' && (
           <TermsPage onNavigate={navigate} />
+        )}
+
+        {currentPage === 'idioms' && (
+          <TermsPage onNavigate={navigate} initialTab="idioms" />
         )}
 
         {currentPage === 'progress' && (
