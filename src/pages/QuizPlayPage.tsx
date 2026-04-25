@@ -1,4 +1,4 @@
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo, useRef } from 'react';
 import type { PageName, Question } from '../core/types';
 import { questions } from '../data/questions';
 
@@ -25,6 +25,7 @@ export default function QuizPlayPage({ onNavigate, selectedPart, questionCount, 
   const [showExplanation, setShowExplanation] = useState(false);
   const [score, setScore] = useState({ correct: 0, total: 0 });
   const [showResult, setShowResult] = useState(false);
+  const lastCorrectRef = useRef(false);
 
   const quizQuestions = useMemo(() => {
     const pool = selectedPart !== null ? questions.filter(q => q.part === selectedPart) : questions;
@@ -40,6 +41,7 @@ export default function QuizPlayPage({ onNavigate, selectedPart, questionCount, 
     const isCorrect = currentQuestion.options[optionIndex].isCorrect;
     setScore(prev => ({ correct: prev.correct + (isCorrect ? 1 : 0), total: prev.total + 1 }));
     recordAnswer(currentQuestion.id, isCorrect, currentQuestion.part, currentQuestion.category);
+    lastCorrectRef.current = isCorrect;
   }, [selectedAnswer, currentQuestion, recordAnswer]);
 
   const nextQuestion = useCallback(() => {
@@ -49,8 +51,9 @@ export default function QuizPlayPage({ onNavigate, selectedPart, questionCount, 
       setShowExplanation(false);
     } else {
       setShowResult(true);
+      onFinish({ correct: score.correct + (lastCorrectRef.current ? 1 : 0), total: score.total + 1 });
     }
-  }, [currentIndex, quizQuestions.length]);
+  }, [currentIndex, quizQuestions.length, score, onFinish]);
 
   if (!currentQuestion && !showResult) {
     return (

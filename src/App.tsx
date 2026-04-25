@@ -1,8 +1,6 @@
 import { useState, useCallback, useMemo } from 'react';
 import type { PageName, ExamScore } from './core/types';
 import { useStorage } from './core/useStorage';
-import { parts } from './data/config';
-import { questions } from './data/questions';
 
 import HomePage from './pages/HomePage';
 import QuizSetupPage from './pages/QuizSetupPage';
@@ -12,8 +10,8 @@ import ExamHistoryPage from './pages/ExamHistoryPage';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<PageName>('home');
-  const [selectedPart, setSelectedPart] = useState<number | null>(null);
-  const [questionCount, setQuestionCount] = useState(10);
+  const [selectedPart, _setSelectedPart] = useState<number | null>(null);
+  const [questionCount, _setQuestionCount] = useState(10);
 
   const {
     results,
@@ -33,11 +31,6 @@ export default function App() {
     window.scrollTo(0, 0);
   }, []);
 
-  const handleStartQuiz = useCallback((part: number | null, count: number) => {
-    setSelectedPart(part);
-    setQuestionCount(count);
-    navigate('quiz-play');
-  }, [navigate]);
 
   const handleQuizFinish = useCallback((score: { correct: number; total: number }) => {
     const examScore: ExamScore = {

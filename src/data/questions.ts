@@ -233,7 +233,7 @@ export const questions: Question[] = [
     keyVocabulary: [
       { word: 'revised contract', meaning: '修正された契約書' },
       { word: 'delivery schedule', meaning: '納入スケジュール' },
-      { text: 'first thing tomorrow morning', meaning: '明日の朝一番に' },
+      { word: 'first thing tomorrow morning', meaning: '明日の朝一番に' },
     ],
   },
   {
@@ -567,8 +567,8 @@ export const questions: Question[] = [
     explanation: '空所(A)は前文（1995年からの愛されるレストラン）と後文（来月から大規模な改装）の間にあります。「しかし、大きな変化がやってくる」が、前向きな内容から突然の変更を告げる適切な繋ぎです。',
     keyVocabulary: [
       { word: 'undergo a renovation', meaning: '改装を受ける' },
-      { text: 'overlooking the harbor', meaning: '港を見下ろす' },
-      { text: 'temporary location', meaning: '一時的な場所' },
+      { word: 'overlooking the harbor', meaning: '港を見下ろす' },
+      { word: 'temporary location', meaning: '一時的な場所' },
     ],
   },
   {
@@ -649,7 +649,7 @@ export const questions: Question[] = [
     keyVocabulary: [
       { word: 'timeline', meaning: 'タイムライン、スケジュール' },
       { word: 'unexpected delays', meaning: '予期せぬ遅延' },
-      { text: 'alternative arrangements', meaning: '代替の取り決め' },
+      { word: 'alternative arrangements', meaning: '代替の取り決め' },
     ],
   },
   {

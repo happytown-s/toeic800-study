@@ -1,5 +1,5 @@
 import { useState, useMemo, useCallback } from 'react';
-import type { PageName, Term, Idiom } from '../core/types';
+import type { PageName } from '../core/types';
 import { terms } from '../data/terms';
 import { idioms } from '../data/idioms';
 
@@ -38,7 +38,7 @@ const difficultyLabels: Record<string, string> = {
   advanced: 'Advanced (800-900)',
 };
 
-export default function TermsPage({ onNavigate }: Props) {
+export default function TermsPage({ onNavigate, initialTab }: Props) {
   const [tab, setTab] = useState<Tab>(initialTab || 'vocab');
   const [search, setSearch] = useState('');
   const [partFilter, setPartFilter] = useState<number | null>(null);
