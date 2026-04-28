@@ -2,6 +2,64 @@ import { useState, useCallback, useMemo, useRef, useEffect } from 'react';
 import type { PageName, Question } from '../core/types';
 import { questions } from '../data/questions';
 
+// ===== JP Translations for Part 2 =====
+const jpTranslations: Record<number, { question: string; options: Record<string, string> }> = {
+  201: {
+    question: '一番近い郵便局はどこですか？',
+    options: {
+      '(A)': '5時に閉まります',
+      '(B)': 'ここから2ブロックくらい、オークストリートにあります',
+      '(C)': '小包を送らなきゃいけません',
+    },
+  },
+  202: {
+    question: '金曜日までに四半期報告書を送ってくれますか？',
+    options: {
+      '(A)': '木曜日までに用意します',
+      '(B)': '四半期ミーティングは来週の月曜です',
+      '(C)': 'あの地区に行ったことがありません',
+    },
+  },
+  203: {
+    question: '予算会議は明日の午後に予定されていませんでしたか？',
+    options: {
+      '(A)': 'はい、水曜日の朝に変更されました',
+      '(B)': '予算は先週承認されました',
+      '(C)': '私も朝の会議の方が好きです',
+    },
+  },
+  204: {
+    question: '体調が悪くて、今日のワークショップに参加できそうにありません',
+    options: {
+      '(A)': 'ワークショップの資料はデスクにあります',
+      '(B)': '早く良くなるといいですね。代わりにメモを取りましょうか？',
+      '(C)': 'コンベンションセンターで開催されました',
+    },
+  },
+  205: {
+    question: '田中さんは会社に何年いるんですか？',
+    options: {
+      '(A)': 'マーケティング部門で働いています',
+      '(B)': '大学卒業以来、約8年です',
+      '(C)': '毎日電車に乗っています',
+    },
+  },
+};
+
+function getJpTranslation(q: Question): string {
+  const t = jpTranslations[q.id];
+  return t ? t.question : '(翻訳なし)';
+}
+
+function getJpOptionTranslation(questionId: number, optionText: string): string {
+  const t = jpTranslations[questionId];
+  if (!t) return '(翻訳なし)';
+  // Extract (A), (B), (C) from option text
+  const key = optionText.match(/^\([A-D]\)/)?.[0];
+  if (!key) return '(翻訳なし)';
+  return t.options[key] || '(翻訳なし)';
+}
+
 // ===== TTS Audio Hook =====
 function useAudioPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -76,8 +134,10 @@ export default function QuizPlayPage({ onNavigate, selectedPart, questionCount, 
   const [score, setScore] = useState({ correct: 0, total: 0 });
   const [showResult, setShowResult] = useState(false);
   const [audioRevealed, setAudioRevealed] = useState(false);
+  const [hintLevel, setHintLevel] = useState(0); // 0=none, 1=script, 2=script+translation
   const lastCorrectRef = useRef(false);
   const audio = useAudioPlayer();
+  const isFirstPlayRef = useRef(true);
 
   const quizQuestions = useMemo(() => {
     const pool = selectedPart !== null ? questions.filter(q => q.part === selectedPart) : questions;
@@ -111,10 +171,12 @@ export default function QuizPlayPage({ onNavigate, selectedPart, questionCount, 
   }, [currentIndex, quizQuestions.length, score, onFinish, audio]);
 
   // Auto-play audio for listening parts when question loads
+  // First question: audio first, then reveal. After that: show options immediately.
   useEffect(() => {
-    if (currentQuestion?.audioScript && isListeningPart) {
+    setHintLevel(0);
+    if (currentQuestion?.audioScript && isListeningPart && isFirstPlayRef.current) {
+      isFirstPlayRef.current = false;
       setAudioRevealed(false);
-      // Small delay so the question renders first
       const timer = setTimeout(() => {
         audio.play(currentQuestion.audioScript!, () => {
           setAudioRevealed(true);
@@ -223,13 +285,21 @@ export default function QuizPlayPage({ onNavigate, selectedPart, questionCount, 
                   <span className="inline-block w-2 h-2 bg-gold rounded-full animate-pulse" />
                 )}
               </div>
-              <button
-                onClick={() => audio.play(currentQuestion.audioScript!)}
-                disabled={audio.isPlaying}
-                className="text-xs px-3 py-1.5 bg-dark-surface hover:bg-dark-border disabled:opacity-50 rounded-lg transition-colors"
-              >
-                {audio.isPlaying ? '▶ Playing...' : '🔄 Replay'}
-              </button>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => setHintLevel(h => h === 0 ? 1 : h === 1 ? 2 : 0)}
+                  className={"text-xs px-3 py-1.5 rounded-lg transition-colors " + (hintLevel > 0 ? 'bg-gold/20 text-gold' : 'bg-dark-surface hover:bg-dark-border text-dark-muted')}
+                >
+                  {hintLevel === 0 ? '💡 Hint' : hintLevel === 1 ? '💡 Hint 🔤' : '💡 Hint 🔤🇯🇵'}
+                </button>
+                <button
+                  onClick={() => audio.play(currentQuestion.audioScript!)}
+                  disabled={audio.isPlaying}
+                  className="text-xs px-3 py-1.5 bg-dark-surface hover:bg-dark-border disabled:opacity-50 rounded-lg transition-colors"
+                >
+                  {audio.isPlaying ? '▶ Playing...' : '🔄 Replay'}
+                </button>
+              </div>
             </div>
             {!audioRevealed && (
               <p className="text-xs text-dark-muted text-center animate-pulse">
@@ -239,7 +309,27 @@ export default function QuizPlayPage({ onNavigate, selectedPart, questionCount, 
           </div>
         )}
 
-        {/* Audio Script (show after answering for listening parts) */}
+        {/* Hint: Audio Script (tap once) */}
+        {currentQuestion.audioScript && isListeningPart && hintLevel >= 1 && !showExplanation && (
+          <div className="bg-dark-card rounded-lg p-4 text-sm text-dark-muted leading-relaxed whitespace-pre-wrap border border-dark-border">
+            <p className="text-xs text-gold mb-2">📝 Audio Script:</p>
+            {currentQuestion.audioScript}
+          </div>
+        )}
+
+        {/* Hint: Translation (tap twice) */}
+        {currentQuestion.audioScript && isListeningPart && hintLevel >= 2 && !showExplanation && (
+          <div className="bg-dark-card rounded-lg p-4 text-sm text-dark-muted leading-relaxed whitespace-pre-wrap border border-dark-border">
+            <p className="text-xs text-gold mb-2">🇯🇵 日本語訳:</p>
+            <p className="mb-2 text-dark-text">{getJpTranslation(currentQuestion)}</p>
+            <p className="text-xs text-gold mb-2 mt-3">🇯🇵 選択肢:</p>
+            {currentQuestion.options.map((opt, i) => (
+              <p key={i} className="text-dark-text">{opt.text} → {getJpOptionTranslation(currentQuestion.id, opt.text)}</p>
+            ))}
+          </div>
+        )}
+
+        {/* Audio Script after answering (no hint needed) */}
         {currentQuestion.audioScript && showExplanation && (
           <div className="bg-dark-card rounded-lg p-4 text-sm text-dark-muted leading-relaxed whitespace-pre-wrap border border-dark-border">
             <p className="text-xs text-gold mb-2">📝 Audio Script:</p>
