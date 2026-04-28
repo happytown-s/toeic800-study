@@ -251,7 +251,7 @@ export default function QuizPlayPage({ onNavigate, selectedPart, questionCount, 
         <p className="text-lg leading-relaxed">{currentQuestion.question}</p>
 
         {/* Options — hide until audio finishes for listening parts */}
-        <div className={"space-y-3" + (isListeningPart && !audioRevealed ? ' opacity-30 pointer-events-none' : '')}>
+        <div className={"space-y-3" + (isListeningPart && !audioRevealed ? ' hidden' : '')}>
           {currentQuestion.options.map((opt, i) => {
             const isCorrect = opt.isCorrect;
             const isSelected = selectedAnswer === i;
