@@ -443,6 +443,13 @@ export default function QuizPlayPage({ onNavigate, selectedPart, questionCount, 
               if (isCorrect) bg = 'bg-green-900/40 border-green-500';
               else if (isSelected && !isCorrect) bg = 'bg-red-900/40 border-red-500';
             }
+            // Part 1 options only have "(A)" etc — get full text from audioScript
+            let displayText = opt.text;
+            if (currentQuestion.part === 1 && currentQuestion.audioScript) {
+              const lines = currentQuestion.audioScript.split('\n');
+              const match = lines.find(l => l.startsWith(opt.text));
+              if (match) displayText = match;
+            }
             return (
               <button
                 key={i}
@@ -450,7 +457,7 @@ export default function QuizPlayPage({ onNavigate, selectedPart, questionCount, 
                 disabled={showExplanation}
                 className={`w-full text-left px-4 py-3 rounded-xl border ${bg} transition-colors`}
               >
-                {opt.text}
+                {displayText}
               </button>
             );
           })}
