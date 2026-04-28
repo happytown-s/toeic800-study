@@ -79,14 +79,13 @@ export default function QuizPlayPage({ onNavigate, selectedPart, questionCount, 
   const lastCorrectRef = useRef(false);
   const audio = useAudioPlayer();
 
-  const isListeningPart = currentQuestion?.part && currentQuestion.part >= 2 && currentQuestion.part <= 4;
-
   const quizQuestions = useMemo(() => {
     const pool = selectedPart !== null ? questions.filter(q => q.part === selectedPart) : questions;
     return shuffle(pool).slice(0, Math.min(questionCount, pool.length));
   }, [selectedPart, questionCount]);
 
   const currentQuestion: Question | undefined = quizQuestions[currentIndex];
+  const isListeningPart = currentQuestion?.part != null && currentQuestion.part >= 2 && currentQuestion.part <= 4;
 
   const handleAnswer = useCallback((optionIndex: number) => {
     if (selectedAnswer !== null || !currentQuestion) return;
