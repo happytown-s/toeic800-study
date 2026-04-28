@@ -8,6 +8,8 @@ export const questions: Question[] = [
     category: 'part1',
     categoryLabel: '写真描写問題',
     question: 'Look at the picture marked number 1 in your test book.',
+    imageSrc: '/part1/q101-office-folder.png',
+    imageAlt: 'A woman handing a folder to a colleague in an office.',
     audioScript: '(A) The man is adjusting his tie in front of a mirror.\n(B) The woman is handing a folder to her colleague.\n(C) A group of colleagues is reviewing documents on a table.\n(D) The office building has several empty parking spaces.',
     options: [
       { text: '(A)', isCorrect: false },
@@ -28,6 +30,8 @@ export const questions: Question[] = [
     category: 'part1',
     categoryLabel: '写真描写問題',
     question: 'Look at the picture marked number 2 in your test book.',
+    imageSrc: '/part1/q102-kitchen-prep.png',
+    imageAlt: 'Kitchen staff preparing ingredients at a counter.',
     audioScript: '(A) The chef is slicing vegetables on a cutting board.\n(B) The waiter is setting the table with clean dishes.\n(C) The kitchen staff is preparing ingredients for dinner service.\n(D) A customer is reading the menu at the counter.',
     options: [
       { text: '(A)', isCorrect: false },
@@ -48,6 +52,8 @@ export const questions: Question[] = [
     category: 'part1',
     categoryLabel: '写真描写問題',
     question: 'Look at the picture marked number 3 in your test book.',
+    imageSrc: '/part1/q103-train-platform.png',
+    imageAlt: 'A man boarding a train from a station platform.',
     audioScript: '(A) A man is boarding a train at the platform.\n(B) Passengers are waiting for the bus at the station.\n(C) The woman is checking the schedule on the information board.\n(D) Two people are having a conversation in the ticket line.',
     options: [
       { text: '(A)', isCorrect: true },
@@ -66,6 +72,8 @@ export const questions: Question[] = [
     category: 'part1',
     categoryLabel: '写真描写問題',
     question: 'Look at the picture marked number 4 in your test book.',
+    imageSrc: '/part1/q104-conference-table.png',
+    imageAlt: 'Several participants seated around a rectangular conference table.',
     audioScript: '(A) The conference room is being cleaned by the janitorial staff.\n(B) A presentation is being given to a large audience.\n(C) Several participants are seated around a rectangular table.\n(D) Someone is adjusting the projector screen near the window.',
     options: [
       { text: '(A)', isCorrect: false },
@@ -86,6 +94,8 @@ export const questions: Question[] = [
     category: 'part1',
     categoryLabel: '写真描写問題',
     question: 'Look at the picture marked number 5 in your test book.',
+    imageSrc: '/part1/q105-delivery-truck.png',
+    imageAlt: 'A delivery truck parked in front of a warehouse.',
     audioScript: '(A) The construction worker is operating heavy machinery.\n(B) Trees are being planted along the newly paved sidewalk.\n(C) A delivery truck is parked in front of the warehouse.\n(D) The road is closed due to ongoing roadwork.',
     options: [
       { text: '(A)', isCorrect: false },

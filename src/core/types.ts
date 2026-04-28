@@ -14,6 +14,8 @@ export interface Question {
   category: string;
   categoryLabel: string;
   question: string;
+  imageSrc?: string;
+  imageAlt?: string;
   options: QuestionOption[];
   explanation: string;
   audioScript?: string;

@@ -10,8 +10,8 @@ import ExamHistoryPage from './pages/ExamHistoryPage';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<PageName>('home');
-  const [selectedPart, _setSelectedPart] = useState<number | null>(null);
-  const [questionCount, _setQuestionCount] = useState(10);
+  const [selectedPart, setSelectedPart] = useState<number | null>(null);
+  const [questionCount, setQuestionCount] = useState(10);
 
   const {
     results,
@@ -80,6 +80,7 @@ export default function App() {
         {currentPage === 'home' && (
           <HomePage
             onNavigate={navigate}
+            onSelectPart={setSelectedPart}
             examScores={examScores}
             streak={streak}
             accuracy={accuracy}
@@ -88,7 +89,13 @@ export default function App() {
         )}
 
         {currentPage === 'quiz-setup' && (
-          <QuizSetupPage onNavigate={navigate} />
+          <QuizSetupPage
+            onNavigate={navigate}
+            selectedPart={selectedPart}
+            questionCount={questionCount}
+            onSelectedPartChange={setSelectedPart}
+            onQuestionCountChange={setQuestionCount}
+          />
         )}
 
         {currentPage === 'quiz-play' && (

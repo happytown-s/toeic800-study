@@ -3,13 +3,14 @@ import { parts } from '../data/config';
 
 interface Props {
   onNavigate: (page: PageName) => void;
+  onSelectPart: (part: number | null) => void;
   examScores: { date: string; correctCount: number; totalQuestions: number }[];
   streak: number;
   accuracy: number;
   wrongCount: number;
 }
 
-export default function HomePage({ onNavigate, examScores, streak, accuracy, wrongCount }: Props) {
+export default function HomePage({ onNavigate, onSelectPart, examScores, streak, accuracy, wrongCount }: Props) {
   const listeningParts = parts.filter(p => p.section === 'listening');
   const readingParts = parts.filter(p => p.section === 'reading');
   const latestExam = examScores.length > 0 ? examScores[examScores.length - 1] : null;
@@ -69,7 +70,10 @@ export default function HomePage({ onNavigate, examScores, streak, accuracy, wro
           {listeningParts.map(part => (
             <button
               key={part.part}
-              onClick={() => onNavigate('quiz-setup')}
+              onClick={() => {
+                onSelectPart(part.part);
+                onNavigate('quiz-setup');
+              }}
               className="bg-dark-surface rounded-xl p-4 border border-dark-border text-left hover:border-gold/50 transition-colors"
             >
               <div className="flex items-center gap-2 mb-1">
@@ -92,7 +96,10 @@ export default function HomePage({ onNavigate, examScores, streak, accuracy, wro
           {readingParts.map(part => (
             <button
               key={part.part}
-              onClick={() => onNavigate('quiz-setup')}
+              onClick={() => {
+                onSelectPart(part.part);
+                onNavigate('quiz-setup');
+              }}
               className="bg-dark-surface rounded-xl p-4 border border-dark-border text-left hover:border-gold/50 transition-colors"
             >
               <div className="flex items-center gap-2 mb-1">
@@ -109,7 +116,10 @@ export default function HomePage({ onNavigate, examScores, streak, accuracy, wro
       {/* Quick Actions */}
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-3">
         <button
-          onClick={() => onNavigate('quiz-setup')}
+          onClick={() => {
+            onSelectPart(null);
+            onNavigate('quiz-setup');
+          }}
           className="bg-gold hover:bg-gold-dark text-dark-bg font-semibold rounded-xl p-4 transition-colors text-center"
         >
           📋 Quick Quiz

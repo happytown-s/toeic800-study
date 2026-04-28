@@ -1,15 +1,23 @@
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useEffect, useMemo } from 'react';
 import type { PageName } from '../core/types';
 import { parts } from '../data/config';
 import { questions } from '../data/questions';
 
 interface Props {
   onNavigate: (page: PageName) => void;
+  selectedPart: number | null;
+  questionCount: number;
+  onSelectedPartChange: (part: number | null) => void;
+  onQuestionCountChange: (count: number) => void;
 }
 
-export default function QuizSetupPage({ onNavigate }: Props) {
-  const [selectedPart, setSelectedPart] = useState<number | null>(null);
-  const [questionCount, setQuestionCount] = useState<number>(10);
+export default function QuizSetupPage({
+  onNavigate,
+  selectedPart,
+  questionCount,
+  onSelectedPartChange,
+  onQuestionCountChange,
+}: Props) {
   const [isFullExam, setIsFullExam] = useState(false);
 
   const partQuestions = useMemo(() => {
@@ -18,6 +26,13 @@ export default function QuizSetupPage({ onNavigate }: Props) {
   }, [selectedPart]);
 
   const maxQuestions = partQuestions.length;
+
+  useEffect(() => {
+    if (questionCount > maxQuestions) {
+      onQuestionCountChange(maxQuestions);
+      setIsFullExam(false);
+    }
+  }, [maxQuestions, onQuestionCountChange, questionCount]);
 
   const startQuiz = useCallback(() => {
     onNavigate('quiz-play');
@@ -40,7 +55,7 @@ export default function QuizSetupPage({ onNavigate }: Props) {
         <h3 className="text-sm font-semibold text-dark-muted">Select Part</h3>
         <div className="flex flex-wrap gap-2">
           <button
-            onClick={() => setSelectedPart(null)}
+            onClick={() => onSelectedPartChange(null)}
             className={`px-3 py-2 rounded-lg text-sm transition-colors ${
               selectedPart === null
                 ? 'bg-gold text-dark-bg font-semibold'
@@ -54,7 +69,13 @@ export default function QuizSetupPage({ onNavigate }: Props) {
             return (
               <button
                 key={p.part}
-                onClick={() => setSelectedPart(p.part)}
+                onClick={() => {
+                  onSelectedPartChange(p.part);
+                  if (questionCount > count) {
+                    onQuestionCountChange(count);
+                    setIsFullExam(false);
+                  }
+                }}
                 className={`px-3 py-2 rounded-lg text-sm transition-colors ${
                   selectedPart === p.part
                     ? 'bg-gold text-dark-bg font-semibold'
@@ -75,7 +96,7 @@ export default function QuizSetupPage({ onNavigate }: Props) {
           {[5, 10, 20, 35].map(n => (
             <button
               key={n}
-              onClick={() => { setQuestionCount(n); setIsFullExam(false); }}
+              onClick={() => { onQuestionCountChange(n); setIsFullExam(false); }}
               disabled={n > maxQuestions}
               className={`px-3 py-2 rounded-lg text-sm transition-colors ${
                 questionCount === n && !isFullExam
@@ -87,7 +108,7 @@ export default function QuizSetupPage({ onNavigate }: Props) {
             </button>
           ))}
           <button
-            onClick={() => { setIsFullExam(true); setQuestionCount(maxQuestions); }}
+            onClick={() => { setIsFullExam(true); onQuestionCountChange(maxQuestions); }}
             className={`px-3 py-2 rounded-lg text-sm transition-colors ${
               isFullExam
                 ? 'bg-gold text-dark-bg font-semibold'

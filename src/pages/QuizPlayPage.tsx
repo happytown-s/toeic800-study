@@ -1,6 +1,56 @@
-import { useState, useCallback, useMemo, useRef } from 'react';
+import { useState, useCallback, useMemo, useRef, useEffect } from 'react';
 import type { PageName, Question } from '../core/types';
 import { questions } from '../data/questions';
+
+// ===== TTS Audio Hook =====
+function useAudioPlayer() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isReady, setIsReady] = useState(false);
+  const [hasPlayed, setHasPlayed] = useState(false);
+  const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
+
+  const play = useCallback((text: string, onEnd?: () => void) => {
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'en-US';
+    u.rate = 0.9;
+    u.pitch = 1.0;
+    // Prefer a natural-sounding voice
+    const voices = window.speechSynthesis.getVoices();
+    const preferred = voices.find(
+      v => v.lang.startsWith('en') && (v.name.includes('Google') || v.name.includes('Samantha') || v.name.includes('Natural'))
+    ) || voices.find(v => v.lang.startsWith('en-US'))
+      || voices.find(v => v.lang.startsWith('en'));
+    if (preferred) u.voice = preferred;
+    u.onstart = () => setIsPlaying(true);
+    u.onend = () => { setIsPlaying(false); onEnd?.(); };
+    u.onerror = () => { setIsPlaying(false); onEnd?.(); };
+    utteranceRef.current = u;
+    window.speechSynthesis.speak(u);
+    setHasPlayed(true);
+  }, []);
+
+  const stop = useCallback(() => {
+    window.speechSynthesis.cancel();
+    setIsPlaying(false);
+  }, []);
+
+  // Load voices on mount
+  useEffect(() => {
+    const loadVoices = () => {
+      const voices = window.speechSynthesis.getVoices();
+      if (voices.length > 0) setIsReady(true);
+    };
+    loadVoices();
+    window.speechSynthesis.addEventListener('voiceschanged', loadVoices);
+    return () => {
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.removeEventListener('voiceschanged', loadVoices);
+    };
+  }, []);
+
+  return { play, stop, isPlaying, isReady, hasPlayed };
+}
 
 interface Props {
   onNavigate: (page: PageName) => void;
@@ -25,7 +75,11 @@ export default function QuizPlayPage({ onNavigate, selectedPart, questionCount, 
   const [showExplanation, setShowExplanation] = useState(false);
   const [score, setScore] = useState({ correct: 0, total: 0 });
   const [showResult, setShowResult] = useState(false);
+  const [audioRevealed, setAudioRevealed] = useState(false);
   const lastCorrectRef = useRef(false);
+  const audio = useAudioPlayer();
+
+  const isListeningPart = currentQuestion?.part && currentQuestion.part >= 2 && currentQuestion.part <= 4;
 
   const quizQuestions = useMemo(() => {
     const pool = selectedPart !== null ? questions.filter(q => q.part === selectedPart) : questions;
@@ -49,11 +103,29 @@ export default function QuizPlayPage({ onNavigate, selectedPart, questionCount, 
       setCurrentIndex(prev => prev + 1);
       setSelectedAnswer(null);
       setShowExplanation(false);
+      setAudioRevealed(false);
+      audio.stop();
     } else {
       setShowResult(true);
       onFinish({ correct: score.correct + (lastCorrectRef.current ? 1 : 0), total: score.total + 1 });
     }
-  }, [currentIndex, quizQuestions.length, score, onFinish]);
+  }, [currentIndex, quizQuestions.length, score, onFinish, audio]);
+
+  // Auto-play audio for listening parts when question loads
+  useEffect(() => {
+    if (currentQuestion?.audioScript && isListeningPart) {
+      setAudioRevealed(false);
+      // Small delay so the question renders first
+      const timer = setTimeout(() => {
+        audio.play(currentQuestion.audioScript!, () => {
+          setAudioRevealed(true);
+        });
+      }, 300);
+      return () => { clearTimeout(timer); audio.stop(); };
+    } else {
+      setAudioRevealed(true);
+    }
+  }, [currentIndex]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!currentQuestion && !showResult) {
     return (
@@ -124,6 +196,17 @@ export default function QuizPlayPage({ onNavigate, selectedPart, questionCount, 
       </div>
 
       <div className="bg-dark-surface rounded-xl p-6 border border-dark-border space-y-5">
+        {/* Picture (Part 1) */}
+        {currentQuestion.imageSrc && (
+          <figure className="overflow-hidden rounded-lg border border-dark-border bg-slate-100">
+            <img
+              src={currentQuestion.imageSrc}
+              alt={currentQuestion.imageAlt ?? 'Question illustration'}
+              className="aspect-video w-full object-cover"
+            />
+          </figure>
+        )}
+
         {/* Passage (Parts 6-7) */}
         {currentQuestion.passage && (
           <div className="bg-dark-card rounded-lg p-4 text-sm text-dark-muted leading-relaxed whitespace-pre-wrap border border-dark-border">
@@ -131,8 +214,34 @@ export default function QuizPlayPage({ onNavigate, selectedPart, questionCount, 
           </div>
         )}
 
-        {/* Audio Script (Parts 1-4) */}
-        {currentQuestion.audioScript && (
+        {/* Audio Player (Listening Parts 2-4) */}
+        {currentQuestion.audioScript && isListeningPart && (
+          <div className="bg-dark-card rounded-lg p-4 border border-dark-border space-y-3">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <span className="text-xs text-gold font-semibold">🔊 Audio</span>
+                {audio.isPlaying && (
+                  <span className="inline-block w-2 h-2 bg-gold rounded-full animate-pulse" />
+                )}
+              </div>
+              <button
+                onClick={() => audio.play(currentQuestion.audioScript!)}
+                disabled={audio.isPlaying}
+                className="text-xs px-3 py-1.5 bg-dark-surface hover:bg-dark-border disabled:opacity-50 rounded-lg transition-colors"
+              >
+                {audio.isPlaying ? '▶ Playing...' : '🔄 Replay'}
+              </button>
+            </div>
+            {!audioRevealed && (
+              <p className="text-xs text-dark-muted text-center animate-pulse">
+                🔊 音声を再生しています...再生が終わると選択肢が表示されます
+              </p>
+            )}
+          </div>
+        )}
+
+        {/* Audio Script (show after answering for listening parts) */}
+        {currentQuestion.audioScript && showExplanation && (
           <div className="bg-dark-card rounded-lg p-4 text-sm text-dark-muted leading-relaxed whitespace-pre-wrap border border-dark-border">
             <p className="text-xs text-gold mb-2">📝 Audio Script:</p>
             {currentQuestion.audioScript}
@@ -142,8 +251,8 @@ export default function QuizPlayPage({ onNavigate, selectedPart, questionCount, 
         {/* Question */}
         <p className="text-lg leading-relaxed">{currentQuestion.question}</p>
 
-        {/* Options */}
-        <div className="space-y-3">
+        {/* Options — hide until audio finishes for listening parts */}
+        <div className={"space-y-3" + (isListeningPart && !audioRevealed ? ' opacity-30 pointer-events-none' : '')}>
           {currentQuestion.options.map((opt, i) => {
             const isCorrect = opt.isCorrect;
             const isSelected = selectedAnswer === i;
