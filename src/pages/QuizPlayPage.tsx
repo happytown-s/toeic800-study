@@ -153,20 +153,21 @@ function getJpOptionTranslation(questionId: number, optionText: string): string 
   return t.options[key] || '(翻訳なし)';
 }
 
-// ===== TTS Audio Hook =====
+// ===== TTS Audio Hook (mp3 priority + Web Speech API fallback) =====
 function useAudioPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isReady, setIsReady] = useState(false);
   const [hasPlayed, setHasPlayed] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const useTTSFallback = useRef(false);
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
 
-  const play = useCallback((text: string, onEnd?: () => void) => {
+  const playWithTTS = useCallback((text: string, onEnd?: () => void) => {
     window.speechSynthesis.cancel();
     const u = new SpeechSynthesisUtterance(text);
     u.lang = 'en-US';
     u.rate = 0.9;
     u.pitch = 1.0;
-    // Prefer a natural-sounding voice
     const voices = window.speechSynthesis.getVoices();
     const preferred = voices.find(
       v => v.lang.startsWith('en') && (v.name.includes('Google') || v.name.includes('Samantha') || v.name.includes('Natural'))
@@ -181,9 +182,47 @@ function useAudioPlayer() {
     setHasPlayed(true);
   }, []);
 
+  const play = useCallback((text: string, onEnd?: () => void, audioSrc?: string) => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current = null;
+    }
+    window.speechSynthesis.cancel();
+
+    if (audioSrc && !useTTSFallback.current) {
+      const audio = new Audio(audioSrc);
+      audio.onended = () => { setIsPlaying(false); onEnd?.(); };
+      audio.onerror = () => {
+        useTTSFallback.current = true;
+        audioRef.current = null;
+        playWithTTS(text, onEnd);
+      };
+      audio.oncanplay = () => {
+        audioRef.current = audio;
+        audio.play().catch(() => {
+          useTTSFallback.current = true;
+          playWithTTS(text, onEnd);
+        });
+      };
+      audio.load();
+      setIsPlaying(true);
+      setHasPlayed(true);
+    } else {
+      playWithTTS(text, onEnd);
+    }
+  }, [playWithTTS]);
+
   const stop = useCallback(() => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current = null;
+    }
     window.speechSynthesis.cancel();
     setIsPlaying(false);
+  }, []);
+
+  const resetFallback = useCallback(() => {
+    useTTSFallback.current = false;
   }, []);
 
   // Load voices on mount
@@ -200,7 +239,7 @@ function useAudioPlayer() {
     };
   }, []);
 
-  return { play, stop, isPlaying, isReady, hasPlayed };
+  return { play, stop, isPlaying, isReady, hasPlayed, resetFallback };
 }
 
 interface Props {
@@ -271,13 +310,15 @@ export default function QuizPlayPage({ onNavigate, selectedPart, questionCount, 
       isFirstPlayRef.current = false;
       setAudioRevealed(false);
       const timer = setTimeout(() => {
+        const audioSrc = `/audio/part${currentQuestion.part}_${currentQuestion.id}.mp3`;
         audio.play(currentQuestion.audioScript!, () => {
           setAudioRevealed(true);
-        });
+        }, audioSrc);
       }, 300);
-      return () => { clearTimeout(timer); audio.stop(); };
+      return () => { clearTimeout(timer); audio.stop(); audio.resetFallback(); };
     } else {
       setAudioRevealed(true);
+      audio.resetFallback();
     }
   }, [currentIndex]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -386,7 +427,7 @@ export default function QuizPlayPage({ onNavigate, selectedPart, questionCount, 
                   {hintLevel === 0 ? '💡 Hint' : hintLevel === 1 ? '💡 Hint 🔤' : '💡 Hint 🔤🇯🇵'}
                 </button>
                 <button
-                  onClick={() => audio.play(currentQuestion.audioScript!)}
+                  onClick={() => audio.play(currentQuestion.audioScript!, undefined, `/audio/part${currentQuestion.part}_${currentQuestion.id}.mp3`)}
                   disabled={audio.isPlaying}
                   className="text-xs px-3 py-1.5 bg-dark-surface hover:bg-dark-border disabled:opacity-50 rounded-lg transition-colors"
                 >
