@@ -348,20 +348,23 @@ function PuzzleGame({ selectedPart, onNavigate, onBack }: {
 
   // Handle word tap
   const handleWordTap = useCallback((word: string) => {
-    if (selectedBlankId === null) return;
-    const blank = blanks.find(b => b.id === selectedBlankId);
+    // If no blank selected, auto-select first unanswered blank
+    const targetBlankId = selectedBlankId ?? blanks.find(b => !b.answered)?.id;
+    if (targetBlankId === undefined) return;
+    setSelectedBlankId(targetBlankId);
+    const blank = blanks.find(b => b.id === targetBlankId);
     if (!blank || blank.answered) return;
 
     const isCorrect = word.toLowerCase() === blank.correctWord;
 
     if (isCorrect) {
       setBlanks(prev => prev.map(b =>
-        b.id === selectedBlankId ? { ...b, answered: word } : b
+        b.id === targetBlankId ? { ...b, answered: word } : b
       ));
       setSelectedBlankId(null);
     } else {
       // Shake animation
-      setShakingBlank(selectedBlankId);
+      setShakingBlank(targetBlankId);
       setTimeout(() => setShakingBlank(null), 500);
     }
   }, [selectedBlankId, blanks]);
@@ -397,9 +400,15 @@ function PuzzleGame({ selectedPart, onNavigate, onBack }: {
   // Speed controls
   const speeds = [0.8, 1.0, 1.2];
 
-  // Build choices for current blank
+  // Build choices for current blank (or all blanks when none selected)
   const choices = useMemo(() => {
-    if (!puzzle || selectedBlankId === null) return [];
+    if (!puzzle) return [];
+    if (selectedBlankId === null) {
+      // Show all correct words + dummies
+      const correctWords = blanks.map(b => b.displayWord);
+      const dummies = shuffle(puzzle.dummyWords).slice(0, correctWords.length);
+      return shuffle([...correctWords, ...dummies.map(d => d.charAt(0).toUpperCase() + d.slice(1))]);
+    }
     const blank = blanks.find(b => b.id === selectedBlankId);
     if (!blank) return [];
 
@@ -581,7 +590,7 @@ function PuzzleGame({ selectedPart, onNavigate, onBack }: {
       </div>
 
       {/* Choices */}
-      {selectedBlankId !== null && !allFilled && (
+      {!allFilled && choices.length > 0 && (
         <div className="bg-dark-surface rounded-xl p-4 border border-dark-border space-y-3">
           <p className="text-xs text-dark-muted">
             Tap the correct word for the highlighted blank:
