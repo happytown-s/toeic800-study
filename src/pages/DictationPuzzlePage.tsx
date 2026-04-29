@@ -155,9 +155,11 @@ function generatePuzzle(script: string, allScripts: string[]): PuzzleState {
 function useDictationAudio() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [playbackRate, setPlaybackRate] = useState(1.0);
-  const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const useTTSFallback = useRef(false); // per-instance fallback flag
 
-  const play = useCallback((text: string, rate: number) => {
+  // Web Speech API fallback
+  const playWithTTS = useCallback((text: string, rate: number) => {
     window.speechSynthesis.cancel();
     const u = new SpeechSynthesisUtterance(text);
     u.lang = 'en-US';
@@ -172,20 +174,69 @@ function useDictationAudio() {
     u.onstart = () => setIsPlaying(true);
     u.onend = () => setIsPlaying(false);
     u.onerror = () => setIsPlaying(false);
-    utteranceRef.current = u;
     window.speechSynthesis.speak(u);
   }, []);
 
+  const play = useCallback((text: string, rate: number, audioSrc?: string) => {
+    // Stop any current playback
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current = null;
+    }
+    window.speechSynthesis.cancel();
+
+    // If we have an audio source and haven't already fallen back for this src
+    if (audioSrc && !useTTSFallback.current) {
+      const audio = new Audio(audioSrc);
+      audio.playbackRate = rate;
+      audio.onended = () => setIsPlaying(false);
+      audio.onerror = () => {
+        // mp3 not available → fallback to TTS for this question
+        useTTSFallback.current = true;
+        audioRef.current = null;
+        playWithTTS(text, rate);
+      };
+      audio.oncanplay = () => {
+        audioRef.current = audio;
+        audio.play().catch(() => {
+          // play() can reject on mobile if no user gesture; fallback silently
+          useTTSFallback.current = true;
+          playWithTTS(text, rate);
+        });
+      };
+      // Trigger load
+      audio.load();
+      setIsPlaying(true);
+    } else {
+      // No audio source or already fallen back → use Web Speech API
+      playWithTTS(text, rate);
+    }
+  }, [playWithTTS]);
+
   const stop = useCallback(() => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current = null;
+    }
     window.speechSynthesis.cancel();
     setIsPlaying(false);
   }, []);
 
-  useEffect(() => {
-    return () => { window.speechSynthesis.cancel(); };
+  const resetFallback = useCallback(() => {
+    useTTSFallback.current = false;
   }, []);
 
-  return { play, stop, isPlaying, playbackRate, setPlaybackRate };
+  // Cleanup on unmount
+  useEffect(() => {
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+      }
+      window.speechSynthesis.cancel();
+    };
+  }, []);
+
+  return { play, stop, isPlaying, playbackRate, setPlaybackRate, resetFallback };
 }
 
 // ===== Props =====
@@ -314,13 +365,15 @@ function PuzzleGame({ selectedPart, onNavigate, onBack }: {
       setSelectedBlankId(puzzle.blanks[0]?.id ?? null);
       setHintUsed(false);
     }
+    audio.resetFallback();
   }, [currentIndex]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Auto-play audio on mount
   useEffect(() => {
     if (currentQuestion?.audioScript) {
       const timer = setTimeout(() => {
-        audio.play(currentQuestion.audioScript!, audio.playbackRate);
+        const audioSrc = `/audio/part${currentQuestion.part}_${currentQuestion.id}.mp3`;
+        audio.play(currentQuestion.audioScript!, audio.playbackRate, audioSrc);
       }, 300);
       return () => clearTimeout(timer);
     }
@@ -502,7 +555,10 @@ function PuzzleGame({ selectedPart, onNavigate, onBack }: {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <button
-              onClick={() => audio.play(currentQuestion.audioScript!, audio.playbackRate)}
+              onClick={() => {
+                const audioSrc = `/audio/part${currentQuestion.part}_${currentQuestion.id}.mp3`;
+                audio.play(currentQuestion.audioScript!, audio.playbackRate, audioSrc);
+              }}
               disabled={audio.isPlaying}
               className="w-10 h-10 flex items-center justify-center rounded-full bg-gold/20 hover:bg-gold/30 disabled:opacity-50 transition-colors"
             >
