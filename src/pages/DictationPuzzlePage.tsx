@@ -332,11 +332,11 @@ function PuzzleGame({ selectedPart, onNavigate, onBack }: {
 }) {
   const audio = useDictationAudio();
 
-  // Filter questions with audioScript
+  // Filter questions: only Part 3 and Part 4 for dictation (conversations & narrations)
   const poolQuestions = useMemo(() => {
     const pool = selectedPart !== null
-      ? questions.filter(q => q.part === selectedPart && q.audioScript)
-      : questions.filter(q => q.audioScript);
+      ? questions.filter(q => q.part === selectedPart && q.audioScript && (q.part === 3 || q.part === 4))
+      : questions.filter(q => q.audioScript && (q.part === 3 || q.part === 4));
     return shuffle(pool);
   }, [selectedPart]);
 
@@ -414,8 +414,8 @@ function PuzzleGame({ selectedPart, onNavigate, onBack }: {
       setBlanks(prev => prev.map(b =>
         b.id === targetBlankId ? { ...b, answered: word } : b
       ));
-      // Auto-advance to next unanswered blank
-      const nextBlank = blanks.find(b => !b.answered && b.id !== targetBlankId);
+      // Auto-advance to next unanswered blank (in text order)
+      const nextBlank = blanks.find(b => !b.answered);
       setSelectedBlankId(nextBlank?.id ?? null);
     } else {
       // Shake animation
