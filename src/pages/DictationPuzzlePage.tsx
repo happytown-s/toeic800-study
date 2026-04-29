@@ -1,5 +1,5 @@
 import { useState, useCallback, useMemo, useRef, useEffect } from 'react';
-import type { PageName, Question } from '../core/types';
+import type { PageName } from '../core/types';
 import { questions } from '../data/questions';
 
 // ===== Utility =====
@@ -97,7 +97,7 @@ function generatePuzzle(script: string, allScripts: string[]): PuzzleState {
   const parsedLines: ParsedLine[] = tokenizedLines.map((line, li) => {
     const segments: ParsedLine['segments'] = [];
     let currentText = '';
-    let blankIdx = 0;
+    let _blankIdx = 0;
 
     line.tokens.forEach((token, ti) => {
       const key = `${li}:${ti}`;
@@ -543,8 +543,8 @@ function PuzzleGame({ selectedPart, onNavigate, onBack }: {
                 const isSelected = selectedBlankId === blank.id;
                 const isShaking = shakingBlank === blank.id;
                 const isAnswered = blank.answered !== null;
-                const isCorrect = isAnswered && blank.answered.toLowerCase() === blank.correctWord;
-                const isWrong = isAnswered && blank.answered.toLowerCase() !== blank.correctWord;
+                const isCorrect = isAnswered && blank.answered!.toLowerCase() === blank.correctWord;
+                const _isWrong = isAnswered && blank.answered!.toLowerCase() !== blank.correctWord;
 
                 let blankClass = 'inline-flex items-center justify-center min-w-[80px] px-2 py-0.5 mx-0.5 rounded-lg border-b-2 transition-all duration-200 cursor-pointer align-middle ';
                 if (isAnswered) {
