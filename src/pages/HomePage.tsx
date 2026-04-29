@@ -114,7 +114,7 @@ export default function HomePage({ onNavigate, onSelectPart, examScores, streak,
       </div>
 
       {/* Quick Actions */}
-      <div className="grid grid-cols-1 sm:grid-cols-4 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-5 gap-3">
         <button
           onClick={() => {
             onSelectPart(null);
@@ -123,6 +123,12 @@ export default function HomePage({ onNavigate, onSelectPart, examScores, streak,
           className="bg-gold hover:bg-gold-dark text-dark-bg font-semibold rounded-xl p-4 transition-colors text-center"
         >
           📋 Quick Quiz
+        </button>
+        <button
+          onClick={() => onNavigate('dictation')}
+          className="bg-gold/20 hover:bg-gold/30 border border-gold/40 text-gold font-semibold rounded-xl p-4 transition-colors text-center"
+        >
+          🧩 Dictation
         </button>
         <button
           onClick={() => onNavigate('vocab')}

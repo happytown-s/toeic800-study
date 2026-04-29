@@ -76,4 +76,5 @@ export type PageName =
   | 'quiz-result'
   | 'vocab'
   | 'idioms'
-  | 'progress';
+  | 'progress'
+  | 'dictation';

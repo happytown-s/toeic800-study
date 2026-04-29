@@ -7,6 +7,7 @@ import QuizSetupPage from './pages/QuizSetupPage';
 import QuizPlayPage from './pages/QuizPlayPage';
 import TermsPage from './pages/TermsPage';
 import ExamHistoryPage from './pages/ExamHistoryPage';
+import DictationPuzzlePage from './pages/DictationPuzzlePage';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<PageName>('home');
@@ -123,6 +124,10 @@ export default function App() {
             onNavigate={navigate}
             onClear={clearHistory}
           />
+        )}
+
+        {currentPage === 'dictation' && (
+          <DictationPuzzlePage onNavigate={navigate} />
         )}
       </main>
     </div>
