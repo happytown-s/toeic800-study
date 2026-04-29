@@ -56,7 +56,7 @@ export interface Term {
   meaning: string;
   part?: number;
   example?: string;
-  category?: 'business' | 'finance' | 'it' | 'hr' | 'marketing' | 'legal' | 'general';
+  category?: 'business' | 'finance' | 'it' | 'hr' | 'marketing' | 'legal' | 'general' | 'travel' | 'tech' | 'manufacturing' | 'health' | 'communication';
   difficulty?: 'essential' | 'intermediate' | 'advanced';
 }
 

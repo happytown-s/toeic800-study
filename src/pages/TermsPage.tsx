@@ -11,7 +11,7 @@ interface Props {
 type Tab = 'vocab' | 'idioms';
 type SortMode = 'default' | 'difficulty' | 'alpha-asc' | 'alpha-desc' | 'category' | 'part' | 'random';
 
-const termCategories = ['business', 'finance', 'it', 'hr', 'marketing', 'legal', 'general'] as const;
+const termCategories = ['business', 'finance', 'it', 'hr', 'marketing', 'legal', 'general', 'travel', 'tech', 'manufacturing', 'health', 'communication'] as const;
 const termCategoryLabels: Record<string, string> = {
   business: 'Business',
   finance: 'Finance',
@@ -20,6 +20,11 @@ const termCategoryLabels: Record<string, string> = {
   marketing: 'Marketing',
   legal: 'Legal',
   general: 'General',
+  travel: 'Travel',
+  tech: 'Tech',
+  manufacturing: 'Manufacturing',
+  health: 'Health',
+  communication: 'Communication',
 };
 
 const idiomCategories = ['business', 'general', 'time', 'legal', 'negotiation', 'hr', 'it'] as const;
