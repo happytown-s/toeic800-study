@@ -269,7 +269,6 @@ export default function QuizPlayPage({ onNavigate, selectedPart, questionCount, 
   const [hintLevel, setHintLevel] = useState(0); // 0=none, 1=script, 2=script+translation
   const lastCorrectRef = useRef(false);
   const audio = useAudioPlayer();
-  const isFirstPlayRef = useRef(true);
 
   const quizQuestions = useMemo(() => {
     const pool = selectedPart !== null ? questions.filter(q => q.part === selectedPart) : questions;
@@ -302,12 +301,10 @@ export default function QuizPlayPage({ onNavigate, selectedPart, questionCount, 
     }
   }, [currentIndex, quizQuestions.length, score, onFinish, audio]);
 
-  // Auto-play audio for listening parts when question loads
-  // First question: audio first, then reveal. After that: show options immediately.
+  // Auto-play audio for listening parts — always hide options until audio finishes
   useEffect(() => {
     setHintLevel(0);
-    if (currentQuestion?.audioScript && isListeningPart && isFirstPlayRef.current) {
-      isFirstPlayRef.current = false;
+    if (currentQuestion?.audioScript && isListeningPart) {
       setAudioRevealed(false);
       const timer = setTimeout(() => {
         const audioSrc = `/audio/part${currentQuestion.part}_${currentQuestion.id}.mp3`;
