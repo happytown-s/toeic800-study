@@ -368,9 +368,9 @@ export const questions: Question[] = [
       { text: '(C)', isCorrect: true },
       { text: '(D)', isCorrect: false },
     ],
-    explanation: '写真は工事現場で青写真を確認する作業員です。「ヘルメットを被った男性が青写真を確認している」が正解。クレーン操縦(A)、コンクリート打設(B)は写っていません。',
+    explanation: '写真は工事現場で設計図を確認する作業員です。「ヘルメットを被った男性が設計図を確認している」が正解。クレーン操縦(A)、コンクリート打設(B)は写っていません。',
     keyVocabulary: [
-      { word: 'blueprints', meaning: '青写真、設計図' },
+      { word: 'blueprints', meaning: '設計図' },
       { word: 'hard hat', meaning: 'ヘルメット' },
       { word: 'framework', meaning: '骨組み、枠組み' },
     ],
