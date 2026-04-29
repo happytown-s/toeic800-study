@@ -307,11 +307,11 @@ function PuzzleGame({ selectedPart, onNavigate, onBack }: {
   const [blanks, setBlanks] = useState<Blank[]>([]);
   const [hintUsed, setHintUsed] = useState(false);
 
-  // Reset state on question change
+  // Reset state on question change — auto-focus first blank
   useEffect(() => {
     if (puzzle) {
       setBlanks(puzzle.blanks.map(b => ({ ...b })));
-      setSelectedBlankId(null);
+      setSelectedBlankId(puzzle.blanks[0]?.id ?? null);
       setHintUsed(false);
     }
   }, [currentIndex]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -361,7 +361,9 @@ function PuzzleGame({ selectedPart, onNavigate, onBack }: {
       setBlanks(prev => prev.map(b =>
         b.id === targetBlankId ? { ...b, answered: word } : b
       ));
-      setSelectedBlankId(null);
+      // Auto-advance to next unanswered blank
+      const nextBlank = blanks.find(b => !b.answered && b.id !== targetBlankId);
+      setSelectedBlankId(nextBlank?.id ?? null);
     } else {
       // Shake animation
       setShakingBlank(targetBlankId);
