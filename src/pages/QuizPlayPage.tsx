@@ -1,6 +1,7 @@
 import { useState, useCallback, useMemo, useRef, useEffect } from 'react';
 import type { PageName, Question } from '../core/types';
 import { questions } from '../data/questions';
+import { isBookmarked, toggleBookmark } from '../utils/storage';
 
 // ===== JP Translations for Part 2 =====
 const jpTranslations: Record<number, { question: string; options: Record<string, string> }> = {
@@ -267,6 +268,7 @@ export default function QuizPlayPage({ onNavigate, selectedPart, questionCount, 
   const [showResult, setShowResult] = useState(false);
   const [audioRevealed, setAudioRevealed] = useState(false);
   const [hintLevel, setHintLevel] = useState(0); // 0=none, 1=script, 2=script+translation
+  const [bookmarked, setBookmarked] = useState(false);
   const lastCorrectRef = useRef(false);
   const audio = useAudioPlayer();
 
@@ -277,6 +279,19 @@ export default function QuizPlayPage({ onNavigate, selectedPart, questionCount, 
 
   const currentQuestion: Question | undefined = quizQuestions[currentIndex];
   const isListeningPart = currentQuestion?.part != null && currentQuestion.part >= 2 && currentQuestion.part <= 4;
+
+  // Update bookmark state when question changes
+  useEffect(() => {
+    if (currentQuestion) {
+      setBookmarked(isBookmarked(currentQuestion.id));
+    }
+  }, [currentIndex, currentQuestion]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const handleToggleBookmark = useCallback(() => {
+    if (!currentQuestion) return;
+    const added = toggleBookmark(currentQuestion.id);
+    setBookmarked(added);
+  }, [currentQuestion]);
 
   const handleAnswer = useCallback((optionIndex: number) => {
     if (selectedAnswer !== null || !currentQuestion) return;
@@ -376,6 +391,13 @@ export default function QuizPlayPage({ onNavigate, selectedPart, questionCount, 
         </div>
         <div className="flex items-center gap-3">
           <span className="text-sm text-dark-muted">Score: {score.correct}/{score.total}</span>
+          <button
+            onClick={handleToggleBookmark}
+            className="text-xl leading-none transition-transform hover:scale-110"
+            title={bookmarked ? 'ブックマーク解除' : 'ブックマーク'}
+          >
+            {bookmarked ? '⭐️' : '☆'}
+          </button>
         </div>
       </div>
 

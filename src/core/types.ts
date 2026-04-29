@@ -77,4 +77,5 @@ export type PageName =
   | 'vocab'
   | 'idioms'
   | 'progress'
-  | 'dictation';
+  | 'dictation'
+  | 'bookmarks';

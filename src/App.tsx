@@ -8,6 +8,7 @@ import QuizPlayPage from './pages/QuizPlayPage';
 import TermsPage from './pages/TermsPage';
 import ExamHistoryPage from './pages/ExamHistoryPage';
 import DictationPuzzlePage from './pages/DictationPuzzlePage';
+import BookmarksPage from './pages/BookmarksPage';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<PageName>('home');
@@ -128,6 +129,10 @@ export default function App() {
 
         {currentPage === 'dictation' && (
           <DictationPuzzlePage onNavigate={navigate} />
+        )}
+
+        {currentPage === 'bookmarks' && (
+          <BookmarksPage onNavigate={navigate} />
         )}
       </main>
     </div>

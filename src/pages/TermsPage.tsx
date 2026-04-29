@@ -2,6 +2,7 @@ import { useState, useMemo, useCallback } from 'react';
 import type { PageName, Term, Idiom } from '../core/types';
 import { terms } from '../data/terms';
 import { idioms } from '../data/idioms';
+import { questions } from '../data/questions';
 
 interface Props {
   onNavigate: (page: PageName) => void;
@@ -155,6 +156,14 @@ export default function TermsPage({ onNavigate, initialTab }: Props) {
     }
     return sortItems(i, sortMode, (item) => item.idiom);
   }, [search, selectedCategories, selectedDifficulties, sortMode, sortItems]);
+
+  // Find related questions for a given word/idiom
+  const findRelatedQuestions = useCallback((word: string) => {
+    const lower = word.toLowerCase();
+    return questions.filter(q =>
+      q.keyVocabulary?.some(v => v.word.toLowerCase() === lower)
+    ).slice(0, 5);
+  }, []);
 
   const handleTTS = useCallback((word: string) => {
     if ('speechSynthesis' in window) {
@@ -418,6 +427,26 @@ export default function TermsPage({ onNavigate, initialTab }: Props) {
                     {term.example && (
                       <p className="text-sm italic text-dark-muted">"{term.example}"</p>
                     )}
+                    {(() => {
+                      const related = findRelatedQuestions(term.word);
+                      if (related.length === 0) return null;
+                      return (
+                        <div className="mt-2 pt-2 border-t border-dark-border">
+                          <p className="text-xs font-semibold text-gold mb-1">🔗 関連問題</p>
+                          <div className="space-y-1">
+                            {related.map(rq => (
+                              <button
+                                key={rq.id}
+                                onClick={() => onNavigate('quiz-play')}
+                                className="block text-xs text-dark-muted hover:text-gold transition-colors text-left"
+                              >
+                                - Part {rq.part} Q{rq.id}: {rq.question.length > 50 ? rq.question.slice(0, 50) + '...' : rq.question}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                      );
+                    })()}
                   </div>
                 )}
               </div>
@@ -460,6 +489,26 @@ export default function TermsPage({ onNavigate, initialTab }: Props) {
                   <div className="px-4 pb-4 space-y-2">
                     <p className="text-sm text-dark-text">{idiom.meaning}</p>
                     <p className="text-sm italic text-dark-muted">"{idiom.example}"</p>
+                    {(() => {
+                      const related = findRelatedQuestions(idiom.idiom);
+                      if (related.length === 0) return null;
+                      return (
+                        <div className="mt-2 pt-2 border-t border-dark-border">
+                          <p className="text-xs font-semibold text-gold mb-1">🔗 関連問題</p>
+                          <div className="space-y-1">
+                            {related.map(rq => (
+                              <button
+                                key={rq.id}
+                                onClick={() => onNavigate('quiz-play')}
+                                className="block text-xs text-dark-muted hover:text-gold transition-colors text-left"
+                              >
+                                - Part {rq.part} Q{rq.id}: {rq.question.length > 50 ? rq.question.slice(0, 50) + '...' : rq.question}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                      );
+                    })()}
                   </div>
                 )}
               </div>
