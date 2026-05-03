@@ -1,4 +1,3 @@
-import type { PageName } from '../core/types';
 import textbookData from '../data/textbook.json';
 
 interface TextbookTopic {
