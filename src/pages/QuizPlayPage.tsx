@@ -145,12 +145,16 @@ function getJpTranslation(q: Question): string {
   return t ? t.question : '(翻訳なし)';
 }
 
-function getJpOptionTranslation(questionId: number, optionText: string): string {
+function getJpOptionTranslation(questionId: number, optionText: string, labelMapping?: Record<string, string>): string {
   const t = jpTranslations[questionId];
   if (!t) return '(翻訳なし)';
   // Extract (A), (B), (C) from option text
-  const key = optionText.match(/^\([A-D]\)/)?.[0];
+  let key = optionText.match(/^\([A-D]\)/)?.[0];
   if (!key) return '(翻訳なし)';
+  // If label mapping exists, map the new label back to original
+  if (labelMapping && labelMapping[key]) {
+    key = labelMapping[key];
+  }
   return t.options[key] || '(翻訳なし)';
 }
 
@@ -260,6 +264,63 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
+/** Shuffle indices [0..n-1] and return the permutation */
+function shuffleIndices(n: number): number[] {
+  const indices = Array.from({ length: n }, (_, i) => i);
+  return shuffle(indices);
+}
+
+/**
+ * Reorder audioScript option lines (A)(B)(C)(D) to match a new option order.
+ * Only used for Part 1 and Part 2 where audioScript contains (A)...(D) lines.
+ */
+function reorderAudioScriptOptions(audioScript: string, newOrder: number[]): string {
+  const lines = audioScript.split('\n');
+  // Find lines that start with (A), (B), (C), (D) — these are the option lines
+  const optionLineIndices: number[] = [];
+  for (let i = 0; i < lines.length; i++) {
+    if (/^\([A-D]\)/.test(lines[i])) {
+      optionLineIndices.push(i);
+    }
+  }
+  // Reorder option lines according to newOrder
+  const reorderedLines = [...lines];
+  for (let newIdx = 0; newIdx < newOrder.length; newIdx++) {
+    const originalIdx = newOrder[newIdx];
+    reorderedLines[optionLineIndices[newIdx]] = lines[optionLineIndices[originalIdx]];
+  }
+  // Relabel: the line now at position newIdx gets label (A), next gets (B), etc.
+  const labels = ['(A)', '(B)', '(C)', '(D)'];
+  for (let i = 0; i < optionLineIndices.length; i++) {
+    reorderedLines[optionLineIndices[i]] = reorderedLines[optionLineIndices[i]].replace(/^\([A-D]\)/, labels[i]);
+  }
+  return reorderedLines.join('\n');
+}
+
+/**
+ * Shuffle options for a question using a pre-computed order.
+ * For Part 1 & 2: also reorders audioScript (A)(B)(C)(D) lines.
+ * For Part 1: option text stays as short label "(A)", full text is in reordered audioScript.
+ */
+function shuffleQuestionOptionsWithOrder(q: Question, order: number[]): Question {
+  const labels = ['(A)', '(B)', '(C)', '(D)'];
+  const newOptions = order.map(i => ({ ...q.options[i] }));
+
+  let newAudioScript = q.audioScript;
+  if (q.audioScript && (q.part === 1 || q.part === 2)) {
+    newAudioScript = reorderAudioScriptOptions(q.audioScript, order);
+  }
+
+  // For Part 1, keep option text as short label
+  if (q.part === 1) {
+    for (let i = 0; i < newOptions.length && i < labels.length; i++) {
+      newOptions[i] = { ...newOptions[i], text: labels[i] };
+    }
+  }
+
+  return { ...q, options: newOptions, audioScript: newAudioScript };
+}
+
 export default function QuizPlayPage({ onNavigate, selectedPart, questionCount, recordAnswer, onFinish }: Props) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
@@ -271,10 +332,26 @@ export default function QuizPlayPage({ onNavigate, selectedPart, questionCount, 
   const [bookmarked, setBookmarked] = useState(false);
   const lastCorrectRef = useRef(false);
   const audio = useAudioPlayer();
+  // Maps question ID -> { newLabel: originalLabel } for JP translation lookup
+  const labelMappingRef = useRef<Record<number, Record<string, string>>>({});
 
   const quizQuestions = useMemo(() => {
     const pool = selectedPart !== null ? questions.filter(q => q.part === selectedPart) : questions;
-    return shuffle(pool).slice(0, Math.min(questionCount, pool.length));
+    const selected = shuffle(pool).slice(0, Math.min(questionCount, pool.length));
+    const labels = ['(A)', '(B)', '(C)', '(D)'];
+    const mapping: Record<number, Record<string, string>> = {};
+    const result = selected.map(q => {
+      const order = shuffleIndices(q.options.length);
+      // Build label mapping: new label -> original label
+      const lm: Record<string, string> = {};
+      for (let i = 0; i < order.length && i < labels.length; i++) {
+        lm[labels[i]] = labels[order[i]];
+      }
+      mapping[q.id] = lm;
+      return shuffleQuestionOptionsWithOrder(q, order);
+    });
+    labelMappingRef.current = mapping;
+    return result;
   }, [selectedPart, questionCount]);
 
   const currentQuestion: Question | undefined = quizQuestions[currentIndex];
@@ -477,7 +554,7 @@ export default function QuizPlayPage({ onNavigate, selectedPart, questionCount, 
             <p className="mb-2 text-dark-text">{getJpTranslation(currentQuestion)}</p>
             <p className="text-xs text-gold mb-2 mt-3">🇯🇵 選択肢:</p>
             {currentQuestion.options.map((opt, i) => (
-              <p key={i} className="text-dark-text">{opt.text} → {getJpOptionTranslation(currentQuestion.id, opt.text)}</p>
+              <p key={i} className="text-dark-text">{opt.text} → {getJpOptionTranslation(currentQuestion.id, opt.text, labelMappingRef.current[currentQuestion.id])}</p>
             ))}
           </div>
         )}

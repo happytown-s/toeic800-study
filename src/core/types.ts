@@ -78,4 +78,6 @@ export type PageName =
   | 'idioms'
   | 'progress'
   | 'dictation'
-  | 'bookmarks';
+  | 'bookmarks'
+  | 'textbook'
+  | 'textbook-view';

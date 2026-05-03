@@ -114,7 +114,7 @@ export default function HomePage({ onNavigate, onSelectPart, examScores, streak,
       </div>
 
       {/* Quick Actions */}
-      <div className="grid grid-cols-1 sm:grid-cols-6 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         <button
           onClick={() => {
             onSelectPart(null);
@@ -153,6 +153,12 @@ export default function HomePage({ onNavigate, onSelectPart, examScores, streak,
           className="bg-dark-surface hover:bg-dark-card border border-dark-border rounded-xl p-4 transition-colors text-center"
         >
           ⭐️ ブックマーク
+        </button>
+        <button
+          onClick={() => onNavigate('textbook')}
+          className="bg-dark-surface hover:bg-dark-card border border-dark-border rounded-xl p-4 transition-colors text-center"
+        >
+          📖 Textbook
         </button>
       </div>
     </div>

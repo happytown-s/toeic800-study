@@ -9,11 +9,14 @@ import TermsPage from './pages/TermsPage';
 import ExamHistoryPage from './pages/ExamHistoryPage';
 import DictationPuzzlePage from './pages/DictationPuzzlePage';
 import BookmarksPage from './pages/BookmarksPage';
+import TextbookSelect from './components/TextbookSelect';
+import TextbookView from './components/TextbookView';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<PageName>('home');
   const [selectedPart, setSelectedPart] = useState<number | null>(null);
   const [questionCount, setQuestionCount] = useState(10);
+  const [selectedTextbookTopic, setSelectedTextbookTopic] = useState('');
 
   const {
     results,
@@ -50,6 +53,7 @@ export default function App() {
   const tabs: { key: PageName; label: string }[] = [
     { key: 'home', label: 'Home' },
     { key: 'vocab', label: 'Vocab' },
+    { key: 'textbook', label: '📖 Textbook' },
     { key: 'progress', label: 'History' },
   ];
 
@@ -133,6 +137,23 @@ export default function App() {
 
         {currentPage === 'bookmarks' && (
           <BookmarksPage onNavigate={navigate} />
+        )}
+
+        {currentPage === 'textbook' && (
+          <TextbookSelect
+            onNavigate={navigate}
+            onSelectTopic={(topicId) => {
+              setSelectedTextbookTopic(topicId);
+              navigate('textbook-view');
+            }}
+          />
+        )}
+
+        {currentPage === 'textbook-view' && (
+          <TextbookView
+            onNavigate={navigate}
+            topicId={selectedTextbookTopic}
+          />
         )}
       </main>
     </div>
