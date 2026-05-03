@@ -50,7 +50,7 @@ export default function TextbookView({ onNavigate, topicId }: Props) {
           <img
             src={topic.illustration}
             alt={topic.title}
-            className="w-full h-auto max-h-64 object-cover"
+            className="w-full h-auto"
           />
         </div>
       ) : (
