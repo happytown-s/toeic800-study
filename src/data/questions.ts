@@ -5777,9 +5777,3181 @@ export const questions: Question[] = [
       { word: 'milestones', meaning: 'マイルストーン、重要な節目' },
     ],
   },
+
+  // ===== Part 1: Additional Questions (751-770) =====
+  {
+    id: 751,
+    part: 1,
+    category: 'part1',
+    categoryLabel: '写真描写問題',
+    question: 'What is happening in the photograph?',
+    imageSrc: '/part1/q751-placeholder.png',
+    imageAlt: 'A man watering plants on a balcony.',
+    audioScript: '(A) The man is watering plants on the balcony.\n(B) The woman is sweeping the floor inside the apartment.\n(C) Children are playing in the garden.\n(D) A dog is running across the lawn.',
+    options: [
+      { text: '(A)', isCorrect: true },
+      { text: '(B)', isCorrect: false },
+      { text: '(C)', isCorrect: false },
+      { text: '(D)', isCorrect: false },
+    ],
+    explanation: '男性がベランダで植物に水をやっている写真です。「男性がベランダで植物に水をやっている」が正解。動作の主体と場所を正確に捉えましょう。',
+    keyVocabulary: [
+      { word: 'watering', meaning: '水をやっている（動詞waterの現在分詞）' },
+      { word: 'balcony', meaning: 'ベランダ、バルコニー' },
+      { word: 'plants', meaning: '植物' },
+    ],
+  },
+  {
+    id: 752,
+    part: 1,
+    category: 'part1',
+    categoryLabel: '写真描写問題',
+    question: 'What is happening in the photograph?',
+    imageSrc: '/part1/q752-placeholder.png',
+    imageAlt: 'A woman working at a computer in a modern office.',
+    audioScript: '(A) The woman is printing a document at the copy machine.\n(B) A woman is typing on a computer keyboard.\n(C) The man is fixing a broken monitor.\n(D) Two colleagues are discussing a project in the hallway.',
+    options: [
+      { text: '(A)', isCorrect: false },
+      { text: '(B)', isCorrect: true },
+      { text: '(C)', isCorrect: false },
+      { text: '(D)', isCorrect: false },
+    ],
+    explanation: '女性がコンピュータで作業している写真です。「女性がキーボードを打っている」が正解。(A)のコピー機や(C)の男性は写真に写っていません。写真に実際に写っている内容だけを選びます。',
+    keyVocabulary: [
+      { word: 'typing', meaning: 'タイピングしている、キーボードを打っている' },
+      { word: 'keyboard', meaning: 'キーボード' },
+      { word: 'copy machine', meaning: 'コピー機' },
+    ],
+  },
+  {
+    id: 753,
+    part: 1,
+    category: 'part1',
+    categoryLabel: '写真描写問題',
+    question: 'What is happening in the photograph?',
+    imageSrc: '/part1/q753-placeholder.png',
+    imageAlt: 'People waiting in line at a coffee shop counter.',
+    audioScript: '(A) A waiter is serving food at a restaurant table.\n(B) People are waiting in line at a coffee shop counter.\n(C) The barista is cleaning the espresso machine.\n(D) Two friends are sharing a table outside.',
+    options: [
+      { text: '(A)', isCorrect: false },
+      { text: '(B)', isCorrect: true },
+      { text: '(C)', isCorrect: false },
+      { text: '(D)', isCorrect: false },
+    ],
+    explanation: 'カフェのカウンターで行列に並んでいる人々の写真です。「人々がカフェのカウンターで列に並んで待っている」が正解。列の有無や場所に注意しましょう。',
+    keyVocabulary: [
+      { word: 'waiting in line', meaning: '列に並んで待っている' },
+      { word: 'counter', meaning: 'カウンター' },
+      { word: 'barista', meaning: 'バリスタ' },
+    ],
+  },
+  {
+    id: 754,
+    part: 1,
+    category: 'part1',
+    categoryLabel: '写真描写問題',
+    question: 'What is happening in the photograph?',
+    imageSrc: '/part1/q754-placeholder.png',
+    imageAlt: 'A construction worker wearing a hard hat on a building site.',
+    audioScript: '(A) The construction worker is wearing a hard hat.\n(B) An architect is reviewing blueprints in an office.\n(C) A firefighter is entering a burning building.\n(D) The workers are having lunch in the break room.',
+    options: [
+      { text: '(A)', isCorrect: true },
+      { text: '(B)', isCorrect: false },
+      { text: '(C)', isCorrect: false },
+      { text: '(D)', isCorrect: false },
+    ],
+    explanation: '建設現場でヘルメットをかぶっている作業員の写真です。「作業員がヘルメットを着用している」が正解。(B)のオフィスや(C)の消防士は写っていません。',
+    keyVocabulary: [
+      { word: 'construction worker', meaning: '建設作業員' },
+      { word: 'hard hat', meaning: 'ヘルメット、安全帽' },
+      { word: 'blueprints', meaning: '設計図、青写真' },
+    ],
+  },
+  {
+    id: 755,
+    part: 1,
+    category: 'part1',
+    categoryLabel: '写真描写問題',
+    question: 'What is happening in the photograph?',
+    imageSrc: '/part1/q755-placeholder.png',
+    imageAlt: 'A woman arranging flowers in a vase.',
+    audioScript: '(A) The woman is arranging flowers in a vase.\n(B) A gardener is planting seeds in the garden.\n(C) The man is buying flowers at a market.\n(D) Children are picking flowers in the field.',
+    options: [
+      { text: '(A)', isCorrect: true },
+      { text: '(B)', isCorrect: false },
+      { text: '(C)', isCorrect: false },
+      { text: '(D)', isCorrect: false },
+    ],
+    explanation: '女性が花瓶に花を生けている写真です。「女性が花瓶に花をアレンジしている」が正解。庭園や市場、畑などの場所を答える選択肢は写真と異なります。',
+    keyVocabulary: [
+      { word: 'arranging', meaning: '並べている、アレンジしている' },
+      { word: 'vase', meaning: '花瓶' },
+      { word: 'planting seeds', meaning: '種をまく' },
+    ],
+  },
+  {
+    id: 756,
+    part: 1,
+    category: 'part1',
+    categoryLabel: '写真描写問題',
+    question: 'What is happening in the photograph?',
+    imageSrc: '/part1/q756-placeholder.png',
+    imageAlt: 'A man reading a newspaper on a park bench.',
+    audioScript: '(A) A man is reading a newspaper on a park bench.\n(B) The woman is jogging along the park path.\n(C) Children are playing on the playground equipment.\n(D) A couple is having a picnic on the grass.',
+    options: [
+      { text: '(A)', isCorrect: true },
+      { text: '(B)', isCorrect: false },
+      { text: '(C)', isCorrect: false },
+      { text: '(D)', isCorrect: false },
+    ],
+    explanation: '公園のベンチで新聞を読んでいる男性の写真です。「男性が公園のベンチで新聞を読んでいる」が正解。動作と場所の両方を一致させる必要があります。',
+    keyVocabulary: [
+      { word: 'park bench', meaning: '公園のベンチ' },
+      { word: 'newspaper', meaning: '新聞' },
+      { word: 'jogging', meaning: 'ジョギングする' },
+    ],
+  },
+  {
+    id: 757,
+    part: 1,
+    category: 'part1',
+    categoryLabel: '写真描写問題',
+    question: 'What is happening in the photograph?',
+    imageSrc: '/part1/q757-placeholder.png',
+    imageAlt: 'A chef presenting a dish to customers at a restaurant table.',
+    audioScript: '(A) The waiter is clearing plates from the table.\n(B) A chef is presenting a dish to the customers.\n(C) The customers are writing a review on their phones.\n(D) The restaurant is closed for the holiday.',
+    options: [
+      { text: '(A)', isCorrect: false },
+      { text: '(B)', isCorrect: true },
+      { text: '(C)', isCorrect: false },
+      { text: '(D)', isCorrect: false },
+    ],
+    explanation: 'シェフが客に料理を提供している写真です。「シェフが客に料理をプレゼンしている」が正解。(A)のウェイターは動作が異なり、(D)の「閉店」は写真の状況と矛盾します。',
+    keyVocabulary: [
+      { word: 'presenting a dish', meaning: '料理を提供する、プレゼンする' },
+      { word: 'clearing plates', meaning: '皿を下げる' },
+      { word: 'closed for the holiday', meaning: '休業中' },
+    ],
+  },
+  {
+    id: 758,
+    part: 1,
+    category: 'part1',
+    categoryLabel: '写真描写問題',
+    question: 'What is happening in the photograph?',
+    imageSrc: '/part1/q758-placeholder.png',
+    imageAlt: 'Several bicycles parked in a row near a building entrance.',
+    audioScript: '(A) A man is repairing a bicycle on the sidewalk.\n(B) Several bicycles are parked in a row near the entrance.\n(C) The woman is riding a bicycle down the street.\n(D) Children are learning to ride bicycles in the park.',
+    options: [
+      { text: '(A)', isCorrect: false },
+      { text: '(B)', isCorrect: true },
+      { text: '(C)', isCorrect: false },
+      { text: '(D)', isCorrect: false },
+    ],
+    explanation: '建物の入り口付近に数台の自転車が並んで駐輪されている写真です。「数台の自転車が入り口付近に一列に駐輪されている」が正解。動作ではなく状態を描写する選択肢が正解になることもあります。',
+    keyVocabulary: [
+      { word: 'parked', meaning: '駐車されている、駐輪されている' },
+      { word: 'in a row', meaning: '一列に' },
+      { word: 'repairing', meaning: '修理している' },
+    ],
+  },
+  {
+    id: 759,
+    part: 1,
+    category: 'part1',
+    categoryLabel: '写真描写問題',
+    question: 'What is happening in the photograph?',
+    imageSrc: '/part1/q759-placeholder.png',
+    imageAlt: 'A woman hanging a picture frame on a wall.',
+    audioScript: '(A) The woman is hanging a picture frame on the wall.\n(B) A man is painting the walls of a living room.\n(C) The children are drawing pictures on the floor.\n(D) The gallery is displaying artwork for an exhibition.',
+    options: [
+      { text: '(A)', isCorrect: true },
+      { text: '(B)', isCorrect: false },
+      { text: '(C)', isCorrect: false },
+      { text: '(D)', isCorrect: false },
+    ],
+    explanation: '女性が壁に額縁をかけている写真です。「女性が壁に額縁をかけている」が正解。(D)のギャラリーは場所が異なります。1枚の写真に焦点を当てましょう。',
+    keyVocabulary: [
+      { word: 'hanging', meaning: 'かける、吊るす（動詞hangの現在分詞）' },
+      { word: 'picture frame', meaning: '額縁' },
+      { word: 'exhibition', meaning: '展示、展覧会' },
+    ],
+  },
+  {
+    id: 760,
+    part: 1,
+    category: 'part1',
+    categoryLabel: '写真描写問題',
+    question: 'What is happening in the photograph?',
+    imageSrc: '/part1/q760-placeholder.png',
+    imageAlt: 'A group of people at an outdoor event with tents and banners.',
+    audioScript: '(A) People are working at their desks in an office.\n(B) A group of people is attending an outdoor event with tents.\n(C) The man is setting up a tent in the forest.\n(D) Spectators are watching a sports game in a stadium.',
+    options: [
+      { text: '(A)', isCorrect: false },
+      { text: '(B)', isCorrect: true },
+      { text: '(C)', isCorrect: false },
+      { text: '(D)', isCorrect: false },
+    ],
+    explanation: 'テントやバナーがある屋外イベントに参加している人々の写真です。「テントのある屋外イベントに人々が参加している」が正解。(C)は1人の動作で規模が合いません。',
+    keyVocabulary: [
+      { word: 'attending', meaning: '参加している' },
+      { word: 'tents', meaning: 'テント' },
+      { word: 'banners', meaning: 'バナー、横断幕' },
+    ],
+  },
+  {
+    id: 761,
+    part: 1,
+    category: 'part1',
+    categoryLabel: '写真描写問題',
+    question: 'What is happening in the photograph?',
+    imageSrc: '/part1/q761-placeholder.png',
+    imageAlt: 'A mail carrier delivering letters to a mailbox.',
+    audioScript: '(A) The mail carrier is delivering letters to a mailbox.\n(B) A woman is opening a package on her doorstep.\n(C) The man is sorting mail in the post office.\n(D) Children are playing with envelopes on the floor.',
+    options: [
+      { text: '(A)', isCorrect: true },
+      { text: '(B)', isCorrect: false },
+      { text: '(C)', isCorrect: false },
+      { text: '(D)', isCorrect: false },
+    ],
+    explanation: '郵便配達員が郵便受けに手紙を配達している写真です。「郵便配達員が郵便受けに手紙を届けている」が正解。(C)の郵便局内は場所が異なります。',
+    keyVocabulary: [
+      { word: 'mail carrier', meaning: '郵便配達員' },
+      { word: 'delivering', meaning: '配達している' },
+      { word: 'mailbox', meaning: '郵便受け' },
+    ],
+  },
+  {
+    id: 762,
+    part: 1,
+    category: 'part1',
+    categoryLabel: '写真描写問題',
+    question: 'What is happening in the photograph?',
+    imageSrc: '/part1/q762-placeholder.png',
+    imageAlt: 'A scientist examining samples under a microscope in a laboratory.',
+    audioScript: '(A) The scientist is examining samples under a microscope.\n(B) A doctor is examining a patient in a clinic.\n(C) The teacher is demonstrating an experiment to students.\n(D) A pharmacist is filling prescriptions at a counter.',
+    options: [
+      { text: '(A)', isCorrect: true },
+      { text: '(B)', isCorrect: false },
+      { text: '(C)', isCorrect: false },
+      { text: '(D)', isCorrect: false },
+    ],
+    explanation: '実験室で顕微鏡を使ってサンプルを調べている科学者の写真です。「科学者が顕微鏡でサンプルを検査している」が正解。医師や薬剤師など類似職業の引っかけに注意。',
+    keyVocabulary: [
+      { word: 'examining', meaning: '検査している、調べている' },
+      { word: 'samples', meaning: 'サンプル、検体' },
+      { word: 'microscope', meaning: '顕微鏡' },
+    ],
+  },
+  {
+    id: 763,
+    part: 1,
+    category: 'part1',
+    categoryLabel: '写真描写問題',
+    question: 'What is happening in the photograph?',
+    imageSrc: '/part1/q763-placeholder.png',
+    imageAlt: 'A taxi driver loading luggage into the trunk of a car.',
+    audioScript: '(A) A taxi driver is loading luggage into the trunk.\n(B) The passenger is paying the fare through the window.\n(C) The mechanic is repairing the engine of the taxi.\n(D) A police officer is directing traffic at the intersection.',
+    options: [
+      { text: '(A)', isCorrect: true },
+      { text: '(B)', isCorrect: false },
+      { text: '(C)', isCorrect: false },
+      { text: '(D)', isCorrect: false },
+    ],
+    explanation: 'タクシーの運転手がトランクに荷物を載せている写真です。「タクシー運転手がトランクに荷物を積み込んでいる」が正解。',
+    keyVocabulary: [
+      { word: 'loading', meaning: '積み込んでいる' },
+      { word: 'luggage', meaning: '荷物' },
+      { word: 'trunk', meaning: 'トランク' },
+    ],
+  },
+  {
+    id: 764,
+    part: 1,
+    category: 'part1',
+    categoryLabel: '写真描写問題',
+    question: 'What is happening in the photograph?',
+    imageSrc: '/part1/q764-placeholder.png',
+    imageAlt: 'A woman selecting vegetables at an outdoor market stall.',
+    audioScript: '(A) The woman is selecting vegetables at a market stall.\n(B) A farmer is harvesting crops in a field.\n(C) The chef is chopping vegetables in a kitchen.\n(D) Customers are browsing items in a supermarket aisle.',
+    options: [
+      { text: '(A)', isCorrect: true },
+      { text: '(B)', isCorrect: false },
+      { text: '(C)', isCorrect: false },
+      { text: '(D)', isCorrect: false },
+    ],
+    explanation: '屋外の市場で野菜を選んでいる女性の写真です。「女性が市場の屋台で野菜を選んでいる」が正解。スーパーマーケット(Aisle)や農場(field)は場所が異なります。',
+    keyVocabulary: [
+      { word: 'selecting', meaning: '選んでいる' },
+      { word: 'market stall', meaning: '市場の屋台' },
+      { word: 'harvesting', meaning: '収穫する' },
+    ],
+  },
+  {
+    id: 765,
+    part: 1,
+    category: 'part1',
+    categoryLabel: '写真描写問題',
+    question: 'What is happening in the photograph?',
+    imageSrc: '/part1/q765-placeholder.png',
+    imageAlt: 'A man giving a presentation in front of a whiteboard.',
+    audioScript: '(A) The man is giving a presentation in front of a whiteboard.\n(B) Students are taking notes during a lecture.\n(C) The woman is erasing the whiteboard after a meeting.\n(D) A manager is reviewing documents at his desk.',
+    options: [
+      { text: '(A)', isCorrect: true },
+      { text: '(B)', isCorrect: false },
+      { text: '(C)', isCorrect: false },
+      { text: '(D)', isCorrect: false },
+    ],
+    explanation: '男性がホワイトボードの前でプレゼンテーションをしている写真です。「男性がホワイトボードの前でプレゼンしている」が正解。主語の動作に注目しましょう。',
+    keyVocabulary: [
+      { word: 'giving a presentation', meaning: 'プレゼンテーションをしている' },
+      { word: 'whiteboard', meaning: 'ホワイトボード' },
+      { word: 'taking notes', meaning: 'メモを取る' },
+    ],
+  },
+  {
+    id: 766,
+    part: 1,
+    category: 'part1',
+    categoryLabel: '写真描写問題',
+    question: 'What is happening in the photograph?',
+    imageSrc: '/part1/q766-placeholder.png',
+    imageAlt: 'A ferry boat approaching a harbor with passengers on deck.',
+    audioScript: '(A) The ferry is approaching the harbor with passengers on deck.\n(B) Fishermen are casting their nets into the sea.\n(C) A cargo ship is being loaded at the dock.\n(D) Tourists are boarding a small sightseeing boat.',
+    options: [
+      { text: '(A)', isCorrect: true },
+      { text: '(B)', isCorrect: false },
+      { text: '(C)', isCorrect: false },
+      { text: '(D)', isCorrect: false },
+    ],
+    explanation: '港に近づいているフェリーの写真です。「フェリーがデッキに乗客を乗せて港に接近している」が正解。(C)の貨物船は船の種類が異なり、(D)は動作の段階が違います。',
+    keyVocabulary: [
+      { word: 'ferry', meaning: 'フェリー、連絡船' },
+      { word: 'approaching', meaning: '近づいている' },
+      { word: 'harbor', meaning: '港' },
+    ],
+  },
+  {
+    id: 767,
+    part: 1,
+    category: 'part1',
+    categoryLabel: '写真描写問題',
+    question: 'What is happening in the photograph?',
+    imageSrc: '/part1/q767-placeholder.png',
+    imageAlt: 'A woman organizing files in a filing cabinet.',
+    audioScript: '(A) The woman is organizing files in a filing cabinet.\n(B) A man is shredding documents in the office.\n(C) The receptionist is greeting visitors at the front desk.\n(D) Employees are moving boxes to a new office.',
+    options: [
+      { text: '(A)', isCorrect: true },
+      { text: '(B)', isCorrect: false },
+      { text: '(C)', isCorrect: false },
+      { text: '(D)', isCorrect: false },
+    ],
+    explanation: '女性がキャビネットで書類を整理している写真です。「女性がファイルキャビネットで書類を整理している」が正解。(B)のシュレッダーは行動が異なります。',
+    keyVocabulary: [
+      { word: 'organizing', meaning: '整理している' },
+      { word: 'filing cabinet', meaning: 'ファイルキャビネット' },
+      { word: 'shredding', meaning: 'シュレッダーにかけている' },
+    ],
+  },
+  {
+    id: 768,
+    part: 1,
+    category: 'part1',
+    categoryLabel: '写真描写問題',
+    question: 'What is happening in the photograph?',
+    imageSrc: '/part1/q768-placeholder.png',
+    imageAlt: 'A man checking his watch while waiting at a bus stop.',
+    audioScript: '(A) The man is checking his watch at the bus stop.\n(B) A woman is buying a bus ticket at the machine.\n(C) The bus driver is opening the doors for passengers.\n(D) Passengers are getting off the bus at the station.',
+    options: [
+      { text: '(A)', isCorrect: true },
+      { text: '(B)', isCorrect: false },
+      { text: '(C)', isCorrect: false },
+      { text: '(D)', isCorrect: false },
+    ],
+    explanation: 'バス停で時計を確認している男性の写真です。「男性がバス停で時計を確認している」が正解。(D)の「バスを降りている」はまだ乗っていない状況と矛盾します。',
+    keyVocabulary: [
+      { word: 'checking his watch', meaning: '時計を確認している' },
+      { word: 'bus stop', meaning: 'バス停' },
+      { word: 'getting off', meaning: '降りる' },
+    ],
+  },
+  {
+    id: 769,
+    part: 1,
+    category: 'part1',
+    categoryLabel: '写真描写問題',
+    question: 'What is happening in the photograph?',
+    imageSrc: '/part1/q769-placeholder.png',
+    imageAlt: 'A dog sitting next to its owner on a park bench.',
+    audioScript: '(A) A dog is running after a ball in the park.\n(B) The dog is sitting next to its owner on a bench.\n(C) A cat is sleeping on the windowsill.\n(D) The owner is walking the dog on a leash.',
+    options: [
+      { text: '(A)', isCorrect: false },
+      { text: '(B)', isCorrect: true },
+      { text: '(C)', isCorrect: false },
+      { text: '(D)', isCorrect: false },
+    ],
+    explanation: '犬が飼い主の隣にベンチに座っている写真です。「犬が飼い主の隣のベンチに座っている」が正解。(A)は走っていて、(D)は散歩中で状態が異なります。',
+    keyVocabulary: [
+      { word: 'sitting next to', meaning: '〜の隣に座っている' },
+      { word: 'owner', meaning: '飼い主' },
+      { word: 'on a leash', meaning: 'リードをつけて' },
+    ],
+  },
+  {
+    id: 770,
+    part: 1,
+    category: 'part1',
+    categoryLabel: '写真描写問題',
+    question: 'What is happening in the photograph?',
+    imageSrc: '/part1/q770-placeholder.png',
+    imageAlt: 'A barista preparing coffee drinks behind a counter.',
+    audioScript: '(A) A customer is paying for coffee at the register.\n(B) The barista is preparing drinks behind the counter.\n(C) The café is being renovated by construction workers.\n(D) Two friends are reading books at a corner table.',
+    options: [
+      { text: '(A)', isCorrect: false },
+      { text: '(B)', isCorrect: true },
+      { text: '(C)', isCorrect: false },
+      { text: '(D)', isCorrect: false },
+    ],
+    explanation: 'カウンターの後ろでコーヒーを作っているバリスタの写真です。「バリスタがカウンターの後ろでドリンクを作っている」が正解。主役の動作を正確に捉えましょう。',
+    keyVocabulary: [
+      { word: 'preparing', meaning: '準備している、作っている' },
+      { word: 'behind the counter', meaning: 'カウンターの後ろで' },
+      { word: 'register', meaning: 'レジ' },
+    ],
+  },
+  // ===== Part 2: Additional Questions (771-790) =====
+  {
+    id: 771,
+    part: 2,
+    category: 'part2',
+    categoryLabel: '応答問題',
+    question: "Haven't you submitted the expense report yet?",
+    audioScript: "Haven't you submitted the expense report yet?\n(A) I'll finish it right after this meeting.\n(B) The report was very detailed.\n(C) No, I haven't seen the new office.",
+    options: [
+      { text: "(A) I'll finish it right after this meeting.", isCorrect: true },
+      { text: '(B) The report was very detailed.', isCorrect: false },
+      { text: "(C) No, I haven't seen the new office.", isCorrect: false },
+    ],
+    explanation: '否定疑問文でまだ提出していないことを尋ねています。「この会議の直後に終わらせます」が正解。(B)はレポートの内容、(C)はオフィスについて答えています。',
+    keyVocabulary: [
+      { word: 'submit', meaning: '提出する' },
+      { word: 'expense report', meaning: '経費報告書' },
+    ],
+  },
+  {
+    id: 772,
+    part: 2,
+    category: 'part2',
+    categoryLabel: '応答問題',
+    question: 'When does the conference start?',
+    audioScript: 'When does the conference start?\n(A) It starts at nine o\'clock sharp.\n(B) In the main auditorium.\n(C) About two hundred participants.',
+    options: [
+      { text: "(A) It starts at nine o'clock sharp.", isCorrect: true },
+      { text: '(B) In the main auditorium.', isCorrect: false },
+      { text: '(C) About two hundred participants.', isCorrect: false },
+    { text: '', isCorrect: false },
+    ],
+    explanation: '「When」で時間を尋ねる質問です。「9時ちょうどに始まります」が正解。(B)は場所、(C)は人数で答えています。WH疑問詞に合った回答を選びましょう。',
+    keyVocabulary: [
+      { word: 'conference', meaning: '会議、カンファレンス' },
+      { word: 'sharp', meaning: 'ちょうど、ぴったり' },
+    ],
+  },
+  {
+    id: 773,
+    part: 2,
+    category: 'part2',
+    categoryLabel: '応答問題',
+    question: 'Would you mind sending me the agenda beforehand?',
+    audioScript: 'Would you mind sending me the agenda beforehand?\n(A) Not at all. I\'ll email it to you this afternoon.\n(B) The meeting went very well.\n(C) Yes, it was a productive discussion.',
+    options: [
+      { text: "(A) Not at all. I'll email it to you this afternoon.", isCorrect: true },
+      { text: '(B) The meeting went very well.', isCorrect: false },
+      { text: '(C) Yes, it was a productive discussion.', isCorrect: false },
+    ],
+    explanation: '「Would you mind〜」は「〜してくれませんか」という丁寧な依頼です。「Not at all（全然構いません）」で承諾するのが自然な回答です。(B)と(C)は過去の会議について答えています。',
+    keyVocabulary: [
+      { word: 'agenda', meaning: '議題、アジェンダ' },
+      { word: 'beforehand', meaning: '事前に、あらかじめ' },
+    ],
+  },
+  {
+    id: 774,
+    part: 2,
+    category: 'part2',
+    categoryLabel: '応答問題',
+    question: 'Who is in charge of the marketing campaign?',
+    audioScript: 'Who is in charge of the marketing campaign?\n(A) It was launched last month.\n(B) Ms. Tanaka from the marketing department.\n(C) In the third quarter.',
+    options: [
+      { text: '(A) It was launched last month.', isCorrect: false },
+      { text: '(B) Ms. Tanaka from the marketing department.', isCorrect: true },
+      { text: '(C) In the third quarter.', isCorrect: false },
+    ],
+    explanation: '「Who」で人を尋ねる質問です。「マーケティング部の田中さんです」が正解。(A)は時期、(C)は時期で答えています。',
+    keyVocabulary: [
+      { word: 'in charge of', meaning: '〜の担当で、〜を管理して' },
+      { word: 'campaign', meaning: 'キャンペーン' },
+    ],
+  },
+  {
+    id: 775,
+    part: 2,
+    category: 'part2',
+    categoryLabel: '応答問題',
+    question: 'Why is the project behind schedule?',
+    audioScript: 'Why is the project behind schedule?\n(A) Because we\'re waiting for the supplier to deliver the materials.\n(B) The schedule was posted on the bulletin board.\n(C) It\'s scheduled for next Tuesday.',
+    options: [
+      { text: "(A) Because we're waiting for the supplier to deliver the materials.", isCorrect: true },
+      { text: '(B) The schedule was posted on the bulletin board.', isCorrect: false },
+      { text: "(C) It's scheduled for next Tuesday.", isCorrect: false },
+    ],
+    explanation: '「Why」で理由を尋ねる質問です。「サプライヤーからの材料納入待ちだからです」が正解。「Because」で始まる回答は理由を説明していることが多いです。',
+    keyVocabulary: [
+      { word: 'behind schedule', meaning: 'スケジュールより遅れて' },
+      { word: 'supplier', meaning: 'サプライヤー、供給業者' },
+    ],
+  },
+  {
+    id: 776,
+    part: 2,
+    category: 'part2',
+    categoryLabel: '応答問題',
+    question: 'How many copies should I print for the meeting?',
+    audioScript: 'How many copies should I print for the meeting?\n(A) About fifteen, one for each attendee.\n(B) Yes, the printer is on the second floor.\n(C) The meeting is at three o\'clock.',
+    options: [
+      { text: '(A) About fifteen, one for each attendee.', isCorrect: true },
+      { text: '(B) Yes, the printer is on the second floor.', isCorrect: false },
+      { text: "(C) The meeting is at three o'clock.", isCorrect: false },
+    ],
+    explanation: '「How many」で数を尋ねる質問です。「参加者1人につき1部で約15部です」が正解。(B)は場所、(C)は時間の回答です。',
+    keyVocabulary: [
+      { word: 'copies', meaning: 'コピー、部数' },
+      { word: 'attendee', meaning: '参加者' },
+    ],
+  },
+  {
+    id: 777,
+    part: 2,
+    category: 'part2',
+    categoryLabel: '応答問題',
+    question: 'Where should I park my car?',
+    audioScript: 'Where should I park my car?\n(A) There\'s a parking garage on the ground floor.\n(B) I usually arrive by subway.\n(C) The car is in the repair shop.',
+    options: [
+      { text: "(A) There's a parking garage on the ground floor.", isCorrect: true },
+      { text: '(B) I usually arrive by subway.', isCorrect: false },
+      { text: '(C) The car is in the repair shop.', isCorrect: false },
+    ],
+    explanation: '「Where」で場所を尋ねる質問です。「1階に駐車場があります」が正解。(B)は移動手段、(C)は車の状態について答えています。',
+    keyVocabulary: [
+      { word: 'parking garage', meaning: '駐車場、パーキングガレージ' },
+      { word: 'ground floor', meaning: '1階' },
+    ],
+  },
+  {
+    id: 778,
+    part: 2,
+    category: 'part2',
+    categoryLabel: '応答問題',
+    question: 'Do you know if the new policy has been approved?',
+    audioScript: 'Do you know if the new policy has been approved?\n(A) Yes, I heard it was approved this morning.\n(B) The policy covers all full-time employees.\n(C) It was proposed by the HR department.',
+    options: [
+      { text: '(A) Yes, I heard it was approved this morning.', isCorrect: true },
+      { text: '(B) The policy covers all full-time employees.', isCorrect: false },
+      { text: '(C) It was proposed by the HR department.', isCorrect: false },
+    ],
+    explanation: 'ポリシーが承認されたかどうかを尋ねる質問です。「今朝承認されたと聞きました」が承認の有無に直接答えています。質問の核心（承認されたか？）に答える選択肢を選びましょう。',
+    keyVocabulary: [
+      { word: 'policy', meaning: '方針、ポリシー' },
+      { word: 'approved', meaning: '承認された' },
+    ],
+  },
+  {
+    id: 779,
+    part: 2,
+    category: 'part2',
+    categoryLabel: '応答問題',
+    question: 'What time does the last train leave?',
+    audioScript: 'What time does the last train leave?\n(A) From platform number four.\n(B) The last one departs at midnight.\n(C) About thirty minutes.',
+    options: [
+      { text: '(A) From platform number four.', isCorrect: false },
+      { text: '(B) The last one departs at midnight.', isCorrect: true },
+      { text: '(C) About thirty minutes.', isCorrect: false },
+    ],
+    explanation: '「What time」で時間を尋ねる質問です。「最終電車は真夜中に出発します」が正解。(A)は場所、(C)は所要時間です。「last one」で「last train」を指しています。',
+    keyVocabulary: [
+      { word: 'last train', meaning: '最終電車' },
+      { word: 'departs', meaning: '出発する' },
+      { word: 'midnight', meaning: '真夜中' },
+    ],
+  },
+  {
+    id: 780,
+    part: 2,
+    category: 'part2',
+    categoryLabel: '応答問題',
+    question: "Don't forget to back up your files before you leave.",
+    audioScript: "Don't forget to back up your files before you leave.\n(A) Thanks for the reminder. I'll do it now.\n(B) The files are stored on the server.\n(C) I usually leave at six o'clock.",
+    options: [
+      { text: "(A) Thanks for the reminder. I'll do it now.", isCorrect: true },
+      { text: '(B) The files are stored on the server.', isCorrect: false },
+      { text: "(C) I usually leave at six o'clock.", isCorrect: false },
+    ],
+    explanation: '依頼・注意事項に対する応答問題です。「リマインダーありがとうございます。今やります」が正解。(B)はファイルの保存場所、(C)は退社時間について答えています。',
+    keyVocabulary: [
+      { word: 'back up', meaning: 'バックアップを取る' },
+      { word: 'reminder', meaning: 'リマインダー、注意喚起' },
+    ],
+  },
+  {
+    id: 781,
+    part: 2,
+    category: 'part2',
+    categoryLabel: '応答問題',
+    question: 'Which printer should I use for color documents?',
+    audioScript: 'Which printer should I use for color documents?\n(A) Use the one in the main hallway.\n(B) About fifty pages.\n(C) Yes, the documents are in color.',
+    options: [
+      { text: '(A) Use the one in the main hallway.', isCorrect: true },
+      { text: '(B) About fifty pages.', isCorrect: false },
+      { text: '(C) Yes, the documents are in color.', isCorrect: false },
+    ],
+    explanation: '「Which」で選択肢を尋ねる質問です。「メインホールにあるものを使ってください」が正解。特定のプリンターを指定する回答です。',
+    keyVocabulary: [
+      { word: 'color documents', meaning: 'カラードキュメント' },
+      { word: 'main hallway', meaning: 'メインホール、廊下' },
+    ],
+  },
+  {
+    id: 782,
+    part: 2,
+    category: 'part2',
+    categoryLabel: '応答問題',
+    question: 'How long has she been working here?',
+    audioScript: 'How long has she been working here?\n(A) She started about three years ago.\n(B) She works in the accounting department.\n(C) From nine to five every day.',
+    options: [
+      { text: '(A) She started about three years ago.', isCorrect: true },
+      { text: '(B) She works in the accounting department.', isCorrect: false },
+      { text: '(C) From nine to five every day.', isCorrect: false },
+    ],
+    explanation: '「How long」で期間を尋ねる質問です。「3年ほど前からです」が正解。(B)は部署、(C)は1日の勤務時間です。',
+    keyVocabulary: [
+      { word: 'How long', meaning: 'どのくらいの間' },
+      { word: 'about three years ago', meaning: '約3年前' },
+    ],
+  },
+  {
+    id: 783,
+    part: 2,
+    category: 'part2',
+    categoryLabel: '応答問題',
+    question: 'Is the meeting room available at two o\'clock?',
+    audioScript: "Is the meeting room available at two o'clock?\n(A) Yes, it's free until three.\n(B) The meeting was very informative.\n(C) Room 302 is on the third floor.",
+    options: [
+      { text: "(A) Yes, it's free until three.", isCorrect: true },
+      { text: '(B) The meeting was very informative.', isCorrect: false },
+      { text: '(C) Room 302 is on the third floor.', isCorrect: false },
+    ],
+    explanation: '会議室の空き状況を尋ねるYes/No疑問文です。「はい、3時まで空いています」が正解。利用可能性に直接答える必要があります。',
+    keyVocabulary: [
+      { word: 'available', meaning: '利用可能な、空いている' },
+      { word: 'free', meaning: '空いている、無料の' },
+    ],
+  },
+  {
+    id: 784,
+    part: 2,
+    category: 'part2',
+    categoryLabel: '応答問題',
+    question: 'Would you like me to order lunch for everyone?',
+    audioScript: 'Would you like me to order lunch for everyone?\n(A) That would be great. Something light, please.\n(B) The lunch was served at noon.\n(C) Everyone agreed with the proposal.',
+    options: [
+      { text: '(A) That would be great. Something light, please.', isCorrect: true },
+      { text: '(B) The lunch was served at noon.', isCorrect: false },
+      { text: '(C) Everyone agreed with the proposal.', isCorrect: false },
+    ],
+    explanation: '依頼に対する応答問題です。「素晴らしいです。軽めのものをお願いします」が正解。依頼を承諾しつつ追加の要望を述べるのが自然な流れです。',
+    keyVocabulary: [
+      { word: 'order lunch', meaning: 'ランチを注文する' },
+      { word: 'something light', meaning: '軽めのもの' },
+    ],
+  },
+  {
+    id: 785,
+    part: 2,
+    category: 'part2',
+    categoryLabel: '応答問題',
+    question: 'How much does the membership cost?',
+    audioScript: 'How much does the membership cost?\n(A) It\'s two hundred dollars per year.\n(B) You can sign up online.\n(C) The gym is open twenty-four hours.',
+    options: [
+      { text: "(A) It's two hundred dollars per year.", isCorrect: true },
+      { text: '(B) You can sign up online.', isCorrect: false },
+      { text: '(C) The gym is open twenty-four hours.', isCorrect: false },
+    ],
+    explanation: '「How much」で金額を尋ねる質問です。「年間200ドルです」が正解。(B)は申し込み方法、(C)は営業時間です。',
+    keyVocabulary: [
+      { word: 'membership', meaning: '会員資格、メンバーシップ' },
+      { word: 'per year', meaning: '年間で、1年あたり' },
+    ],
+  },
+  {
+    id: 786,
+    part: 2,
+    category: 'part2',
+    categoryLabel: '応答問題',
+    question: 'Could you recommend a good restaurant nearby?',
+    audioScript: 'Could you recommend a good restaurant nearby?\n(A) There\'s an excellent Italian place two blocks from here.\n(B) The food was delicious, thank you.\n(C) I usually eat lunch at my desk.',
+    options: [
+      { text: "(A) There's an excellent Italian place two blocks from here.", isCorrect: true },
+      { text: '(B) The food was delicious, thank you.', isCorrect: false },
+      { text: '(C) I usually eat lunch at my desk.', isCorrect: false },
+    ],
+    explanation: 'レストランの推薦を求める質問です。「2ブロック先に素晴らしいイタリア料理店があります」が正解。具体的な店の情報を提供する回答が適切です。',
+    keyVocabulary: [
+      { word: 'recommend', meaning: 'おすすめする、推薦する' },
+      { word: 'nearby', meaning: '近くに' },
+    ],
+  },
+  {
+    id: 787,
+    part: 2,
+    category: 'part2',
+    categoryLabel: '応答問題',
+    question: "Shouldn't we confirm the reservation before we go?",
+    audioScript: "Shouldn't we confirm the reservation before we go?\n(A) Good idea. I'll call them right now.\n(B) The reservation is for seven o'clock.\n(C) Yes, we should go together.",
+    options: [
+      { text: "(A) Good idea. I'll call them right now.", isCorrect: true },
+      { text: "(B) The reservation is for seven o'clock.", isCorrect: false },
+      { text: "(C) Yes, we should go together.", isCorrect: false },
+    ],
+    explanation: '否定疑問文「〜すべきではないでしょうか」に対する応答です。「良い考えですね。今すぐ電話します」が正解。提案に同意して行動を示す回答が適切です。',
+    keyVocabulary: [
+      { word: 'confirm', meaning: '確認する' },
+      { word: 'reservation', meaning: '予約' },
+    ],
+  },
+  {
+    id: 788,
+    part: 2,
+    category: 'part2',
+    categoryLabel: '応答問題',
+    question: 'What did the manager say about the deadline?',
+    audioScript: 'What did the manager say about the deadline?\n(A) She said we have until the end of the month.\n(B) The deadline was last Friday.\n(C) He is the new department manager.',
+    options: [
+      { text: '(A) She said we have until the end of the month.', isCorrect: true },
+      { text: '(B) The deadline was last Friday.', isCorrect: false },
+      { text: '(C) He is the new department manager.', isCorrect: false },
+    ],
+    explanation: 'マネージャーが締め切りについて何と言ったかを尋ねる質問です。「月末まであると言っていました」が正解。発言の内容を伝える回答を選びましょう。',
+    keyVocabulary: [
+      { word: 'deadline', meaning: '締め切り' },
+      { word: 'until the end of the month', meaning: '月末まで' },
+    ],
+  },
+  {
+    id: 789,
+    part: 2,
+    category: 'part2',
+    categoryLabel: '応答問題',
+    question: 'Is there anything else you need help with?',
+    audioScript: "Is there anything else you need help with?\n(A) No, that's everything. Thanks for your help.\n(B) The help desk is on the first floor.\n(C) I need to finish this report today.",
+    options: [
+      { text: "(A) No, that's everything. Thanks for your help.", isCorrect: true },
+      { text: '(B) The help desk is on the first floor.', isCorrect: false },
+      { text: '(C) I need to finish this report today.', isCorrect: false },
+    ],
+    explanation: '「他に手伝うことはありますか」という質問です。「いいえ、それで全部です」が正解。追加の用件がないことを伝える回答が自然です。',
+    keyVocabulary: [
+      { word: "that's everything", meaning: 'それで全部です' },
+      { word: 'help desk', meaning: 'ヘルプデスク' },
+    ],
+  },
+  {
+    id: 790,
+    part: 2,
+    category: 'part2',
+    categoryLabel: '応答問題',
+    question: 'Why don\'t we take a short break?',
+    audioScript: "Why don't we take a short break?\n(A) Sure, let's grab some coffee.\n(B) The meeting will be short today.\n(C) I took a break at noon.",
+    options: [
+      { text: "(A) Sure, let's grab some coffee.", isCorrect: true },
+      { text: '(B) The meeting will be short today.', isCorrect: false },
+      { text: '(C) I took a break at noon.', isCorrect: false },
+    ],
+    explanation: '提案に対する応答問題です。「いいですね、コーヒーでも飲みましょう」が正解。提案に同意して具体的な行動を示すのが自然な回答です。',
+    keyVocabulary: [
+      { word: 'take a short break', meaning: '少し休憩する' },
+      { word: 'grab some coffee', meaning: 'コーヒーを飲む' },
+    ],
+  },
+  // ===== Part 3: Additional Questions (791-810) =====
+  {
+    id: 791,
+    part: 3,
+    category: 'part3',
+    categoryLabel: '会話問題',
+    question: 'What is the man\'s problem?',
+    audioScript: 'Woman: How\'s your presentation coming along?\nMan: To be honest, I\'m struggling with the data analysis section. The numbers don\'t seem to match what we discussed last week.\nWoman: Oh, that\'s frustrating. Have you checked the original spreadsheet?\nMan: Yes, but I think there might be an error in the formula. Could you take a look at it when you have a moment?',
+    options: [
+      { text: '(A) He cannot find the original spreadsheet', isCorrect: false },
+      { text: '(B) The data analysis results do not match expectations', isCorrect: true },
+      { text: '(C) He has not started the presentation', isCorrect: false },
+      { text: '(D) The formula was deleted accidentally', isCorrect: false },
+    ],
+    explanation: '男性が「データ分析のセクションで苦戦している。数字が先週議論した内容と合わない」と言っています。「データ分析の結果が期待と合わない」が正解。',
+    keyVocabulary: [
+      { word: 'struggling with', meaning: '〜で苦戦している' },
+      { word: 'data analysis', meaning: 'データ分析' },
+      { word: 'formula', meaning: '数式' },
+    ],
+  },
+  {
+    id: 792,
+    part: 3,
+    category: 'part3',
+    categoryLabel: '会話問題',
+    question: 'Where does this conversation most likely take place?',
+    audioScript: 'Man: Excuse me, I\'d like to check in for my flight to Chicago.\nWoman: May I see your passport and boarding pass, please?\nMan: Here you go. I also have one checked bag.\nWoman: Please place it on the scale. The bag is within the weight limit. Here is your boarding pass and baggage claim ticket.',
+    options: [
+      { text: '(A) At a hotel reception desk', isCorrect: false },
+      { text: '(B) At an airport check-in counter', isCorrect: true },
+      { text: '(C) At a train station ticket window', isCorrect: false },
+      { text: '(D) At a car rental agency', isCorrect: false },
+    ],
+    explanation: 'チェックイン、搭乗券、預け荷物、重量制限という言葉から、空港のチェックインカウンターが正解です。場面を推測する問題ではキーワードに注目しましょう。',
+    keyVocabulary: [
+      { word: 'check in', meaning: 'チェックインする' },
+      { word: 'boarding pass', meaning: '搭乗券' },
+      { word: 'baggage claim ticket', meaning: '荷物引換券' },
+    ],
+  },
+  {
+    id: 793,
+    part: 3,
+    category: 'part3',
+    categoryLabel: '会話問題',
+    question: 'What will the woman do next?',
+    audioScript: 'Woman: I just received an email from the client. They want to schedule a follow-up meeting for Thursday.\nMan: Thursday is going to be tight. I have a vendor meeting in the morning and a team lunch.\nWoman: How about Friday morning instead? We could present the revised proposal then.\nMan: That works better. Can you send them a confirmation?',
+    options: [
+      { text: '(A) Attend a vendor meeting', isCorrect: false },
+      { text: '(B) Send a confirmation to the client', isCorrect: true },
+      { text: '(C) Present the revised proposal on Thursday', isCorrect: false },
+      { text: '(D) Prepare for a team lunch', isCorrect: false },
+    ],
+    explanation: '女性が金曜日にミーティングを変更することに合意し、男性が「クライアントに確認メールを送って」と頼んでいます。女性の次の行動は「クライアントに確認を送る」です。',
+    keyVocabulary: [
+      { word: 'follow-up meeting', meaning: 'フォローアップ会議' },
+      { word: 'tight', meaning: '予定が詰まっている' },
+      { word: 'confirmation', meaning: '確認' },
+    ],
+  },
+  {
+    id: 794,
+    part: 3,
+    category: 'part3',
+    categoryLabel: '会話問題',
+    question: 'What does the man suggest the woman do?',
+    audioScript: 'Woman: I\'m thinking about applying for the project manager position that just opened up.\nMan: That\'s a great opportunity. You should talk to Ms. Rodriguez first — she was in that role for three years and can give you some insider advice.\nWoman: That\'s a good idea. Do you think she\'d have time this week?\nMan: She\'s usually free on Wednesday afternoons. I can introduce you.',
+    options: [
+      { text: '(A) Apply for a different position', isCorrect: false },
+      { text: '(B) Speak with someone who has experience in the role', isCorrect: true },
+      { text: '(C) Postpone her application until next month', isCorrect: false },
+      { text: '(D) Send her resume directly to HR', isCorrect: false },
+    ],
+    explanation: '男性が「Ms. Rodriguezにまず話すべきだ」と提案しています。「その役職の経験者に話す」が正解。アドバイスを求めることはキャリアアップの重要なステップです。',
+    keyVocabulary: [
+      { word: 'project manager position', meaning: 'プロジェクトマネージャーのポジション' },
+      { word: 'insider advice', meaning: '内部情報に基づくアドバイス' },
+      { word: 'introduce', meaning: '紹介する' },
+    ],
+  },
+  {
+    id: 795,
+    part: 3,
+    category: 'part3',
+    categoryLabel: '会話問題',
+    question: 'What is the conversation mainly about?',
+    audioScript: 'Man: We need to find a venue for the company anniversary party. Do you have any suggestions?\nWoman: What about the rooftop garden at the Grand Hotel? I went to an event there last month, and the view was incredible.\nMan: That sounds nice, but I\'m worried about the cost. Our budget is only five thousand dollars.\nWoman: I can ask them about group rates. They might offer a discount for corporate events.',
+    options: [
+      { text: '(A) Planning a company anniversary party venue', isCorrect: true },
+      { text: '(B) Discussing hotel room rates', isCorrect: false },
+      { text: '(C) Reviewing the event budget report', isCorrect: false },
+      { text: '(D) Choosing a restaurant for a team dinner', isCorrect: false },
+    ],
+    explanation: '会社の記念パーティーの会場について話し合っています。「会社記念パーティーの会場の計画」が正解。会話の主題を把握するには最初の発言が重要です。',
+    keyVocabulary: [
+      { word: 'venue', meaning: '会場' },
+      { word: 'anniversary party', meaning: '記念パーティー' },
+      { word: 'group rates', meaning: 'グループ料金' },
+    ],
+  },
+  {
+    id: 796,
+    part: 3,
+    category: 'part3',
+    categoryLabel: '会話問題',
+    question: 'Why is the woman calling?',
+    audioScript: 'Woman: Hello, I\'m calling to inquire about your commercial printing services. We need to print a batch of brochures for an upcoming trade show.\nMan: Certainly. What size and quantity are you looking for?\nWoman: Standard tri-fold, about two thousand copies. We\'d need them delivered by the 15th.\nMan: That\'s doable. Let me prepare a quote and email it to you within the hour.',
+    options: [
+      { text: '(A) To cancel an existing order', isCorrect: false },
+      { text: '(B) To ask about printing services for brochures', isCorrect: true },
+      { text: '(C) To complain about a delayed delivery', isCorrect: false },
+      { text: '(D) To schedule a trade show booth', isCorrect: false },
+    ],
+    explanation: '女性が「商業印刷サービスについて問い合わせたい」と言っています。「ブロシュアの印刷サービスについて尋ねる」が正解。電話の目的は最初の発言に示されることが多いです。',
+    keyVocabulary: [
+      { word: 'inquire about', meaning: '〜について問い合わせる' },
+      { word: 'commercial printing', meaning: '商業印刷' },
+      { word: 'tri-fold', meaning: '三つ折り' },
+    ],
+  },
+  {
+    id: 797,
+    part: 3,
+    category: 'part3',
+    categoryLabel: '会話問題',
+    question: 'What did the woman forget to do?',
+    audioScript: 'Man: Did you remember to register for the cybersecurity workshop?\nWoman: Oh no, I completely forgot. Is the registration still open?\nMan: I think the deadline was yesterday. But you could try contacting the organizer directly.\nWoman: I\'ll send them an email right away. Thanks for reminding me.',
+    options: [
+      { text: '(A) Contact the workshop organizer', isCorrect: false },
+      { text: '(B) Register for the cybersecurity workshop', isCorrect: true },
+      { text: '(C) Remind the man about the deadline', isCorrect: false },
+      { text: '(D) Send an email to the IT department', isCorrect: false },
+    ],
+    explanation: '男性がワークショップの登録を覚えているか尋ね、女性が「すっかり忘れていた」と答えています。「サイバーセキュリティワークショップに登録すること」を忘れていました。',
+    keyVocabulary: [
+      { word: 'register', meaning: '登録する' },
+      { word: 'cybersecurity', meaning: 'サイバーセキュリティ' },
+      { word: 'deadline', meaning: '締め切り' },
+    ],
+  },
+  {
+    id: 798,
+    part: 3,
+    category: 'part3',
+    categoryLabel: '会話問題',
+    question: 'What does the man imply about the product?',
+    audioScript: 'Woman: Have you tried the new inventory management software?\nMan: Yes, I\'ve been testing it for the past week. It\'s much faster than our old system, but the interface takes some getting used to.\nWoman: That\'s what I\'ve heard. Is it worth switching?\nMan: Definitely. Once you learn the shortcuts, it saves a lot of time.',
+    options: [
+      { text: '(A) It is slower than the previous version', isCorrect: false },
+      { text: '(B) The interface is difficult to learn at first', isCorrect: true },
+      { text: '(C) It is not compatible with the current system', isCorrect: false },
+      { text: '(D) The product is too expensive', isCorrect: false },
+    ],
+    explanation: '男性が「インターフェースは慣れるまで少し時間がかかる」と言っています。「最初はインターフェースを覚えるのが難しい」が正解。ただし「ショートカットを覚えれば時間を大幅に節約できる」と肯定的な評価もしています。',
+    keyVocabulary: [
+      { word: 'inventory management', meaning: '在庫管理' },
+      { word: 'interface', meaning: 'インターフェース' },
+      { word: 'take some getting used to', meaning: '慣れるまで時間がかかる' },
+    ],
+  },
+  {
+    id: 799,
+    part: 3,
+    category: 'part3',
+    categoryLabel: '会話問題',
+    question: 'How will the woman get to the seminar?',
+    audioScript: 'Man: Are you going to the marketing seminar downtown tomorrow?\nWoman: Yes, but I\'m not sure about transportation. Parking is always terrible in that area.\nMan: Why don\'t you take the subway? There\'s a station right next to the convention center.\nWoman: That\'s a good point. I\'ll check the train schedule tonight.',
+    options: [
+      { text: '(A) By car', isCorrect: false },
+      { text: '(B) By subway', isCorrect: true },
+      { text: '(C) By bus', isCorrect: false },
+      { text: '(D) By taxi', isCorrect: false },
+    ],
+    explanation: '女性が駐車場の問題を抱えている中、男性が地下鉄を提案し、女性が「それもそうですね」と同意しています。「地下鉄で行く」が正解。',
+    keyVocabulary: [
+      { word: 'seminar', meaning: 'セミナー' },
+      { word: 'convention center', meaning: 'コンベンションセンター' },
+      { word: 'train schedule', meaning: '電車の時刻表' },
+    ],
+  },
+  {
+    id: 800,
+    part: 3,
+    category: 'part3',
+    categoryLabel: '会話問題',
+    question: 'What are the speakers discussing?',
+    audioScript: 'Woman: The client is requesting some changes to the website design. They want a more modern look with larger product images.\nMan: That shouldn\'t be too difficult. When do they need the updated version?\nWoman: They\'re launching a new product line next month, so they\'d like it done by the 20th.\nMan: I\'ll assign two designers to work on it. We can have a mock-up ready for review by Friday.',
+    options: [
+      { text: '(A) A new product launch strategy', isCorrect: false },
+      { text: '(B) Website design modifications for a client', isCorrect: true },
+      { text: '(C) Hiring additional designers', isCorrect: false },
+      { text: '(D) Product image photography', isCorrect: false },
+    ],
+    explanation: 'ウェブサイトのデザイン変更についての会話です。「クライアントのウェブサイトデザインの修正」が正解。クライアントの要望と対応スケジュールが話されています。',
+    keyVocabulary: [
+      { word: 'modern look', meaning: 'モダンな外観' },
+      { word: 'product line', meaning: '製品ライン' },
+      { word: 'mock-up', meaning: 'モックアップ、完成見本' },
+    ],
+  },
+  {
+    id: 801,
+    part: 3,
+    category: 'part3',
+    categoryLabel: '会話問題',
+    question: 'What is the woman\'s current role?',
+    audioScript: 'Man: So you\'re transitioning to the sales department next month, right?\nWoman: Yes, I\'ve been in customer support for three years and I\'m ready for a new challenge. I\'ll be handling the Pacific Northwest accounts.\nMan: That\'s a big territory. Have you met your new team yet?\nWoman: Not yet, but there\'s an orientation session next Monday.',
+    options: [
+      { text: '(A) Sales representative', isCorrect: false },
+      { text: '(B) Customer support agent', isCorrect: true },
+      { text: '(C) Account manager', isCorrect: false },
+      { text: '(D) Human resources coordinator', isCorrect: false },
+    ],
+    explanation: '女性が「3年間カスタマーサポートにいた」と言っているので、現在の役職は「カスタマーサポートエージェント」です。来月から営業部に移る予定ですが、現在の役職を問う問題です。',
+    keyVocabulary: [
+      { word: 'transitioning', meaning: '移行する、異動する' },
+      { word: 'customer support', meaning: 'カスタマーサポート' },
+      { word: 'accounts', meaning: 'アカウント、顧客' },
+    ],
+  },
+  {
+    id: 802,
+    part: 3,
+    category: 'part3',
+    categoryLabel: '会話問題',
+    question: 'What does the man need to do by Friday?',
+    audioScript: 'Woman: Don\'t forget, the quarterly financial report is due this Friday.\nMan: I know. I\'m still waiting on the expense data from the regional offices. I\'ve sent two reminders already.\nWoman: Maybe you should call them directly instead of emailing.\nMan: You\'re right. I\'ll make some calls this afternoon and compile everything tonight.',
+    options: [
+      { text: '(A) Review the quarterly report', isCorrect: false },
+      { text: '(B) Call regional offices for missing data', isCorrect: true },
+      { text: '(C) Send email reminders to the team', isCorrect: false },
+      { text: '(D) Attend a meeting with the CFO', isCorrect: false },
+    ],
+    explanation: '男性が必要なデータが届いておらず、女性から「直接電話したらどうか」とアドバイスを受けています。「地域オフィスに電話してデータを催促する」が男性のやるべきことです。',
+    keyVocabulary: [
+      { word: 'quarterly financial report', meaning: '四半期財務報告書' },
+      { word: 'expense data', meaning: '経費データ' },
+      { word: 'compile', meaning: 'まとめる、編集する' },
+    ],
+  },
+  {
+    id: 803,
+    part: 3,
+    category: 'part3',
+    categoryLabel: '会話問題',
+    question: 'What is the man\'s opinion about the training program?',
+    audioScript: 'Woman: What did you think of the leadership training program?\nMan: Honestly, I was a bit disappointed. The content was too basic for someone with my level of experience.\nWoman: Really? I found the conflict resolution module quite useful.\nMan: Maybe I\'m just not the target audience. It would be better suited for new managers.',
+    options: [
+      { text: '(A) It was very practical and useful', isCorrect: false },
+      { text: '(B) It was too basic for experienced professionals', isCorrect: true },
+      { text: '(C) It was well-designed for senior leaders', isCorrect: false },
+      { text: '(D) It needed more conflict resolution content', isCorrect: false },
+    ],
+    explanation: '男性が「自分の経験レベルには内容が基本的すぎた」と不満を述べています。「経験豊富な専門家には基本的すぎた」が正解。',
+    keyVocabulary: [
+      { word: 'leadership training', meaning: 'リーダーシップ研修' },
+      { word: 'target audience', meaning: '対象読者、ターゲット層' },
+      { word: 'conflict resolution', meaning: '対立解決' },
+    ],
+  },
+  {
+    id: 804,
+    part: 3,
+    category: 'part3',
+    categoryLabel: '会話問題',
+    question: 'What will the speakers do on Saturday?',
+    audioScript: 'Man: The office relocation is scheduled for this Saturday. We\'ll need to start early because there\'s a lot of equipment to move.\nWoman: I can be there by seven. Should we bring our own packing materials?\nMan: No, the moving company is providing all boxes and wrapping. Just make sure to label your personal items clearly.\nWoman: Understood. I\'ll organize my desk tomorrow so I\'m ready.',
+    options: [
+      { text: '(A) Attend a training workshop', isCorrect: false },
+      { text: '(B) Move equipment to a new office', isCorrect: true },
+      { text: '(C) Meet with a moving company', isCorrect: false },
+      { text: '(D) Buy packing materials', isCorrect: false },
+    ],
+    explanation: '土曜日にオフィスの移転が予定されています。「新しいオフィスに機材を移す」が正解。引越会社が梱包材を提供するため、(D)は不要です。',
+    keyVocabulary: [
+      { word: 'relocation', meaning: '移転' },
+      { word: 'packing materials', meaning: '梱包資材' },
+      { word: 'label', meaning: 'ラベルを貼る、目印をつける' },
+    ],
+  },
+  {
+    id: 805,
+    part: 3,
+    category: 'part3',
+    categoryLabel: '会話問題',
+    question: 'Why does the woman want to reschedule the appointment?',
+    audioScript: 'Woman: I\'m sorry, but I need to reschedule my dental appointment on Wednesday. I have an unexpected business trip coming up.\nMan: Of course. How about the following Monday at the same time?\nWoman: That works. I really appreciate you being flexible.\nMan: No problem at all. We\'ll see you on Monday then.',
+    options: [
+      { text: '(A) She has a conflicting business trip', isCorrect: true },
+      { text: '(B) She is not feeling well', isCorrect: false },
+      { text: '(C) The dentist is not available on Wednesday', isCorrect: false },
+      { text: '(D) She forgot about the appointment', isCorrect: false },
+    ],
+    explanation: '女性が「予期せぬ出張」が入ったため予約を変更したいと言っています。「出張と日程が競合しているから」が正解。',
+    keyVocabulary: [
+      { word: 'reschedule', meaning: '再スケジュールする、日程を変更する' },
+      { word: 'unexpected business trip', meaning: '予期せぬ出張' },
+      { word: 'flexible', meaning: '柔軟な、融通が利く' },
+    ],
+  },
+  {
+    id: 806,
+    part: 3,
+    category: 'part3',
+    categoryLabel: '会話問題',
+    question: 'What does the woman ask the man to bring?',
+    audioScript: 'Woman: We\'re having a brainstorming session this afternoon for the new ad campaign. Can you bring the market research data?\nMan: Sure. Do you want the digital version or a printed copy?\nWoman: Both, if possible. We\'ll project the charts on the screen, but hard copies are useful for notes.\nMan: I\'ll prepare both formats before lunch.',
+    options: [
+      { text: '(A) A laptop and projector', isCorrect: false },
+      { text: '(B) Market research data in both formats', isCorrect: true },
+      { text: '(C) Notes from the last brainstorming session', isCorrect: false },
+      { text: '(D) Printed copies of the ad campaign', isCorrect: false },
+    ],
+    explanation: '女性が市場調査データを「両方」の形式で持ってくるよう依頼しています。「両方の形式の市場調査データ」が正解。',
+    keyVocabulary: [
+      { word: 'brainstorming session', meaning: 'ブレインストーミングセッション' },
+      { word: 'market research data', meaning: '市場調査データ' },
+      { word: 'hard copies', meaning: '紙コピー、印刷物' },
+    ],
+  },
+  {
+    id: 807,
+    part: 3,
+    category: 'part3',
+    categoryLabel: '会話問題',
+    question: 'What has the company recently introduced?',
+    audioScript: 'Man: Did you see the announcement about the new flexible work policy?\nWoman: Yes, I think it\'s a great move. Being able to work from home two days a week will really help with work-life balance.\nMan: I agree. It\'s also expected to reduce commuting costs and office space requirements.\nWoman: The only concern is communication. We\'ll need to make sure remote workers stay connected.',
+    options: [
+      { text: '(A) A new health insurance plan', isCorrect: false },
+      { text: '(B) A flexible work arrangement', isCorrect: true },
+      { text: '(C) An office renovation project', isCorrect: false },
+      { text: '(D) A new communication tool', isCorrect: false },
+    ],
+    explanation: '会社が新しい柔軟な勤務制度を導入したことが話されています。「柔軟な勤務体系」が正解。週2日の在宅勤務が可能になりました。',
+    keyVocabulary: [
+      { word: 'flexible work policy', meaning: '柔軟な勤務方針' },
+      { word: 'work-life balance', meaning: 'ワークライフバランス' },
+      { word: 'commuting costs', meaning: '通勤費用' },
+    ],
+  },
+  {
+    id: 808,
+    part: 3,
+    category: 'part3',
+    categoryLabel: '会話問題',
+    question: 'What is the man\'s concern about the new software?',
+    audioScript: 'Woman: IT is planning to upgrade our email system next month. The new platform has better security features.\nMan: That\'s good, but I\'m worried about the transition period. Will we lose access to our old emails?\nWoman: No, all data will be migrated automatically. There will also be a training session next week.\nMan: That\'s a relief. I was afraid of losing important client correspondence.',
+    options: [
+      { text: '(A) The upgrade will be too expensive', isCorrect: false },
+      { text: '(B) He might lose access to old emails during the transition', isCorrect: true },
+      { text: '(C) The security features are inadequate', isCorrect: false },
+      { text: '(D) The training session conflicts with his schedule', isCorrect: false },
+    ],
+    explanation: '男性が「移行期間中に古いメールにアクセスできなくなるのではないか」と心配しています。「移行中に古いメールへのアクセスを失うかもしれない」が正解。',
+    keyVocabulary: [
+      { word: 'upgrade', meaning: 'アップグレードする' },
+      { word: 'transition period', meaning: '移行期間' },
+      { word: 'migrated', meaning: '移行される' },
+    ],
+  },
+  {
+    id: 809,
+    part: 3,
+    category: 'part3',
+    categoryLabel: '会話問題',
+    question: 'What does the man offer to do?',
+    audioScript: 'Woman: I\'m completely overwhelmed with this project. There\'s just too much to do before the deadline.\nMan: I\'ve noticed. Is there anything I can help with? I have some free time this afternoon.\nWoman: Could you handle the vendor communication? I still need to confirm the delivery dates for the promotional materials.\nMan: Consider it done. I\'ll reach out to all three vendors and get back to you with updates.',
+    options: [
+      { text: '(A) Extend the project deadline', isCorrect: false },
+      { text: '(B) Contact vendors about delivery dates', isCorrect: true },
+      { text: '(C) Design the promotional materials', isCorrect: false },
+      { text: '(D) Take over the entire project', isCorrect: false },
+    ],
+    explanation: '男性が「今日の午後は時間がある」と申し出、女性がベンダーとの連絡を依頼しています。「ベンダーに納品日について連絡する」が正解。',
+    keyVocabulary: [
+      { word: 'overwhelmed', meaning: '圧倒されて、手に負えない' },
+      { word: 'vendor communication', meaning: 'ベンダーとの連絡' },
+      { word: 'promotional materials', meaning: 'プロモーション資料' },
+    ],
+  },
+  {
+    id: 810,
+    part: 3,
+    category: 'part3',
+    categoryLabel: '会話問題',
+    question: 'What does the woman mean when she says, "the ball is in their court"?',
+    audioScript: 'Man: Any news on the partnership proposal we sent to GlobalTech?\nWoman: Not yet. We submitted it two weeks ago, and their legal team is currently reviewing it.\nMan: Should we follow up with them?\nWoman: I sent a polite reminder yesterday, but honestly, the ball is in their court now. We\'ve done everything we can on our end.',
+    options: [
+      { text: '(A) The proposal was rejected', isCorrect: false },
+      { text: '(B) It is now GlobalTech\'s responsibility to respond', isCorrect: true },
+      { text: '(C) They need to submit a new proposal', isCorrect: false },
+      { text: '(D) The legal review is complete', isCorrect: false },
+    ],
+    explanation: '「the ball is in their court」は「今は相手の番だ」という意味のイディオムです。こちら側はできることを全て終えたので、GlobalTechが返答するのを待つ状況です。',
+    keyVocabulary: [
+      { word: 'the ball is in their court', meaning: '今は相手の番だ' },
+      { word: 'partnership proposal', meaning: 'パートナーシップ提案' },
+      { word: 'legal team', meaning: '法務チーム' },
+    ],
+  },
+  // ===== Part 4: Additional Questions (811-830) =====
+  {
+    id: 811,
+    part: 4,
+    category: 'part4',
+    categoryLabel: '説明文問題',
+    question: 'What is being announced?',
+    audioScript: 'Good morning, everyone. I\'m pleased to announce that our company has been awarded the Green Business certification for the third consecutive year. This recognition reflects our commitment to sustainable practices, including our transition to renewable energy sources and our waste reduction initiatives. I want to thank every department for contributing to this achievement. Each employee will receive a small gift as a token of appreciation. Please stop by the main lobby to pick it up anytime this week.',
+    options: [
+      { text: '(A) A company has won an environmental award', isCorrect: true },
+      { text: '(B) A new sustainability program is being launched', isCorrect: false },
+      { text: '(C) The company is moving to a new building', isCorrect: false },
+      { text: '(D) Employees are required to attend a training', isCorrect: false },
+    ],
+    explanation: '会社が3年連続でGreen Business認証を受けたことが発表されています。「会社が環境賞を受賞した」が正解。発表の冒頭で主要な内容が述べられています。',
+    keyVocabulary: [
+      { word: 'awarded', meaning: '授与された、受賞した' },
+      { word: 'consecutive', meaning: '連続した' },
+      { word: 'sustainable practices', meaning: '持続可能な取り組み' },
+    ],
+  },
+  {
+    id: 812,
+    part: 4,
+    category: 'part4',
+    categoryLabel: '説明文問題',
+    question: 'Where can employees pick up their gift?',
+    audioScript: 'Good morning, everyone. I\'m pleased to announce that our company has been awarded the Green Business certification for the third consecutive year. This recognition reflects our commitment to sustainable practices, including our transition to renewable energy sources and our waste reduction initiatives. I want to thank every department for contributing to this achievement. Each employee will receive a small gift as a token of appreciation. Please stop by the main lobby to pick it up anytime this week.',
+    options: [
+      { text: '(A) In the HR department', isCorrect: false },
+      { text: '(B) In the main lobby', isCorrect: true },
+      { text: '(C) At the reception desk', isCorrect: false },
+      { text: '(D) In the cafeteria', isCorrect: false },
+    ],
+    explanation: '「メインロビーに立ち寄って受け取ってください」と明記されています。「メインロビー」が正解。場所を問う問題では具体的な名詞に注意しましょう。',
+    keyVocabulary: [
+      { word: 'main lobby', meaning: 'メインロビー' },
+      { word: 'token of appreciation', meaning: '感謝のしるし' },
+    ],
+  },
+  {
+    id: 813,
+    part: 4,
+    category: 'part4',
+    categoryLabel: '説明文問題',
+    question: 'What is the purpose of this message?',
+    audioScript: 'This is a reminder for all employees that the annual health screening will take place next Monday through Wednesday in the wellness center on the second floor. Screening hours are from 8 A.M. to 4 P.M. Please remember to fast for at least eight hours before your appointment. You can sign up for a time slot through the company portal. Participation is voluntary but strongly encouraged. If you have any questions, contact the wellness coordinator at extension 4500.',
+    options: [
+      { text: '(A) To announce a new wellness program', isCorrect: false },
+      { text: '(B) To remind employees about the annual health screening', isCorrect: true },
+      { text: '(C) To inform about changes to the company insurance plan', isCorrect: false },
+      { text: '(D) To schedule a department meeting', isCorrect: false },
+    ],
+    explanation: '年次健康診断のリマインダーメッセージです。「年次健康診断についてリマインドする」が正解。メッセージの冒頭で目的が明確に述べられています。',
+    keyVocabulary: [
+      { word: 'health screening', meaning: '健康診断' },
+      { word: 'fast', meaning: '絶食する、断食する' },
+      { word: 'wellness center', meaning: 'ウェルネスセンター' },
+    ],
+  },
+  {
+    id: 814,
+    part: 4,
+    category: 'part4',
+    categoryLabel: '説明文問題',
+    question: 'How long should employees fast before the screening?',
+    audioScript: 'This is a reminder for all employees that the annual health screening will take place next Monday through Wednesday in the wellness center on the second floor. Screening hours are from 8 A.M. to 4 P.M. Please remember to fast for at least eight hours before your appointment. You can sign up for a time slot through the company portal. Participation is voluntary but strongly encouraged. If you have any questions, contact the wellness coordinator at extension 4500.',
+    options: [
+      { text: '(A) Four hours', isCorrect: false },
+      { text: '(B) Six hours', isCorrect: false },
+      { text: '(C) Eight hours', isCorrect: true },
+      { text: '(D) Twelve hours', isCorrect: false },
+    ],
+    explanation: '「少なくとも8時間絶食してください」と明記されています。「8時間」が正解。数字を含む情報は正確に聞き取る必要があります。',
+    keyVocabulary: [
+      { word: 'fast', meaning: '絶食する' },
+      { word: 'at least', meaning: '少なくとも' },
+    ],
+  },
+  {
+    id: 815,
+    part: 4,
+    category: 'part4',
+    categoryLabel: '説明文問題',
+    question: 'What should passengers do if they need special assistance?',
+    audioScript: 'Attention passengers on flight 472 to Miami. We are currently experiencing a brief delay due to weather conditions. We expect to begin boarding in approximately thirty minutes. Passengers traveling with young children or those requiring special assistance will be boarded first. If you need wheelchair service or any other accommodation, please notify a gate agent immediately. We apologize for the inconvenience and appreciate your patience.',
+    options: [
+      { text: '(A) Contact the airline by phone', isCorrect: false },
+      { text: '(B) Notify a gate agent immediately', isCorrect: true },
+      { text: '(C) Wait until boarding begins', isCorrect: false },
+      { text: '(D) Go to the customer service desk', isCorrect: false },
+    ],
+    explanation: '「車椅子サービスやその他の便宜が必要な場合は、すぐにゲートエージェントにお知らせください」と言っています。「すぐにゲートエージェントに知らせる」が正解。',
+    keyVocabulary: [
+      { word: 'special assistance', meaning: '特別なサポート' },
+      { word: 'wheelchair service', meaning: '車椅子サービス' },
+      { word: 'accommodation', meaning: '便宜、措置' },
+    ],
+  },
+  {
+    id: 816,
+    part: 4,
+    category: 'part4',
+    categoryLabel: '説明文問題',
+    question: 'Why is the flight delayed?',
+    audioScript: 'Attention passengers on flight 472 to Miami. We are currently experiencing a brief delay due to weather conditions. We expect to begin boarding in approximately thirty minutes. Passengers traveling with young children or those requiring special assistance will be boarded first. If you need wheelchair service or any other accommodation, please notify a gate agent immediately. We apologize for the inconvenience and appreciate your patience.',
+    options: [
+      { text: '(A) Mechanical issues with the aircraft', isCorrect: false },
+      { text: '(B) Weather conditions', isCorrect: true },
+      { text: '(C) Late arrival of the crew', isCorrect: false },
+      { text: '(D) Air traffic congestion', isCorrect: false },
+    ],
+    explanation: '「天候状況のため」と明記されています。「天候状況」が正解。遅延の原因は冒頭で述べられることが多いです。',
+    keyVocabulary: [
+      { word: 'weather conditions', meaning: '天候状況' },
+      { word: 'brief delay', meaning: '短い遅延' },
+      { word: 'approximately', meaning: '約、おおよそ' },
+    ],
+  },
+  {
+    id: 817,
+    part: 4,
+    category: 'part4',
+    categoryLabel: '説明文問題',
+    question: 'What is the main topic of this talk?',
+    audioScript: 'Welcome to the quarterly sales review. I\'m happy to report that our revenue increased by twelve percent compared to the same period last year. The strongest growth was in the Asia-Pacific region, where sales rose by twenty-three percent. However, the European market showed a slight decline of three percent. Our marketing team has developed a new strategy to address this, which I\'ll discuss in detail after the break. First, let\'s look at the product-level performance data.',
+    options: [
+      { text: '(A) Employee performance evaluation', isCorrect: false },
+      { text: '(B) Quarterly sales performance results', isCorrect: true },
+      { text: '(C) New product development plans', isCorrect: false },
+      { text: '(D) Marketing budget allocation', isCorrect: false },
+    ],
+    explanation: '四半期の売上レビューのスピーチです。「四半期売上実績結果」が正解。地域別の売上データや成長率が報告されています。',
+    keyVocabulary: [
+      { word: 'quarterly sales review', meaning: '四半期売上レビュー' },
+      { word: 'revenue', meaning: '売上高、収益' },
+      { word: 'decline', meaning: '減少、低下' },
+    ],
+  },
+  {
+    id: 818,
+    part: 4,
+    category: 'part4',
+    categoryLabel: '説明文問題',
+    question: 'Which region had the highest sales growth?',
+    audioScript: 'Welcome to the quarterly sales review. I\'m happy to report that our revenue increased by twelve percent compared to the same period last year. The strongest growth was in the Asia-Pacific region, where sales rose by twenty-three percent. However, the European market showed a slight decline of three percent. Our marketing team has developed a new strategy to address this, which I\'ll discuss in detail after the break. First, let\'s look at the product-level performance data.',
+    options: [
+      { text: '(A) North America', isCorrect: false },
+      { text: '(B) Europe', isCorrect: false },
+      { text: '(C) Asia-Pacific', isCorrect: true },
+      { text: '(D) Latin America', isCorrect: false },
+    ],
+    explanation: '「最も高い成長はアジア太平洋地域で、23%上昇しました」と明記されています。「アジア太平洋」が正解。',
+    keyVocabulary: [
+      { word: 'Asia-Pacific region', meaning: 'アジア太平洋地域' },
+      { word: 'strongest growth', meaning: '最も高い成長' },
+    ],
+  },
+  {
+    id: 819,
+    part: 4,
+    category: 'part4',
+    categoryLabel: '説明文問題',
+    question: 'What will the speaker discuss after the break?',
+    audioScript: 'Welcome to the quarterly sales review. I\'m happy to report that our revenue increased by twelve percent compared to the same period last year. The strongest growth was in the Asia-Pacific region, where sales rose by twenty-three percent. However, the European market showed a slight decline of three percent. Our marketing team has developed a new strategy to address this, which I\'ll discuss in detail after the break. First, let\'s look at the product-level performance data.',
+    options: [
+      { text: '(A) Employee hiring plans', isCorrect: false },
+      { text: '(B) A new marketing strategy for Europe', isCorrect: true },
+      { text: '(C) Product development timeline', isCorrect: false },
+      { text: '(D) Budget cuts for next quarter', isCorrect: false },
+    ],
+    explanation: '休憩後に「ヨーロッパ市場向けの新しいマーケティング戦略」を詳しく説明すると述べています。「ヨーロッパ向けの新しいマーケティング戦略」が正解。',
+    keyVocabulary: [
+      { word: 'after the break', meaning: '休憩後' },
+      { word: 'address this', meaning: 'これに対応する' },
+      { word: 'in detail', meaning: '詳細に' },
+    ],
+  },
+  {
+    id: 820,
+    part: 4,
+    category: 'part4',
+    categoryLabel: '説明文問題',
+    question: 'What is the purpose of this voicemail?',
+    audioScript: 'Hello, this is James Chen from Bright Solutions Consulting. I\'m calling to follow up on our proposal for the IT infrastructure upgrade that we submitted last week. I wanted to check if you\'ve had a chance to review it and whether you have any questions. I\'m available for a call tomorrow between ten A.M. and noon, or Thursday afternoon. Please feel free to reach me at extension 8800 or on my mobile at 555-0199. I look forward to hearing from you. Thank you.',
+    options: [
+      { text: '(A) To schedule a job interview', isCorrect: false },
+      { text: '(B) To follow up on a submitted proposal', isCorrect: true },
+      { text: '(C) To request a reference letter', isCorrect: false },
+      { text: '(D) To confirm a meeting time', isCorrect: false },
+    ],
+    explanation: '提出した提案書についてフォローアップするボイスメールです。「提出した提案書についてフォローアップする」が正解。ボイスメールでは冒頭で名前と目的を述べるのが一般的です。',
+    keyVocabulary: [
+      { word: 'follow up on', meaning: '〜についてフォローアップする' },
+      { word: 'IT infrastructure', meaning: 'ITインフラ' },
+      { word: 'proposal', meaning: '提案書' },
+    ],
+  },
+  {
+    id: 821,
+    part: 4,
+    category: 'part4',
+    categoryLabel: '説明文問題',
+    question: 'When can James be reached for a call?',
+    audioScript: 'Hello, this is James Chen from Bright Solutions Consulting. I\'m calling to follow up on our proposal for the IT infrastructure upgrade that we submitted last week. I wanted to check if you\'ve had a chance to review it and whether you have any questions. I\'m available for a call tomorrow between ten A.M. and noon, or Thursday afternoon. Please feel free to reach me at extension 8800 or on my mobile at 555-0199. I look forward to hearing from you. Thank you.',
+    options: [
+      { text: '(A) Tomorrow morning or Thursday afternoon', isCorrect: true },
+      { text: '(B) Today after three P.M.', isCorrect: false },
+      { text: '(C) Anytime on Friday', isCorrect: false },
+      { text: '(D) Next Monday morning', isCorrect: false },
+    ],
+    explanation: '「明日の午前10時から正午、または木曜日の午後」に連絡可能と言っています。「明日の午前または木曜日の午後」が正解。複数の時間帯が提示された場合は、それらをまとめた選択肢に注目。',
+    keyVocabulary: [
+      { word: 'between ten A.M. and noon', meaning: '午前10時から正午の間' },
+      { word: 'reach me', meaning: '私に連絡する' },
+    ],
+  },
+  {
+    id: 822,
+    part: 4,
+    category: 'part4',
+    categoryLabel: '説明文問題',
+    question: 'What are tenants being informed about?',
+    audioScript: 'Dear residents, this is an important notice from the building management office. Starting next month, the parking garage will undergo scheduled maintenance on the first weekend of every month. During these periods, which will run from Saturday at six P.M. through Sunday at six A.M., the garage will be completely closed. Alternative parking will be available at the municipal lot on Fifth Avenue, free of charge. Please plan accordingly and remove your vehicles before the maintenance periods begin. We apologize for any inconvenience.',
+    options: [
+      { text: '(A) A rent increase effective next month', isCorrect: false },
+      { text: '(B) Monthly parking garage maintenance closures', isCorrect: true },
+      { text: '(C) New security measures in the building', isCorrect: false },
+      { text: '(D) A change in building management company', isCorrect: false },
+    ],
+    explanation: '毎月第1週末に駐車場の定期メンテナンスが行われることが通知されています。「毎月の駐車場メンテナンス閉鎖」が正解。',
+    keyVocabulary: [
+      { word: 'tenants', meaning: 'テナント、住人' },
+      { word: 'scheduled maintenance', meaning: '定期メンテナンス' },
+      { word: 'municipal lot', meaning: '市営駐車場' },
+    ],
+  },
+  {
+    id: 823,
+    part: 4,
+    category: 'part4',
+    categoryLabel: '説明文問題',
+    question: 'How long will each maintenance period last?',
+    audioScript: 'Dear residents, this is an important notice from the building management office. Starting next month, the parking garage will undergo scheduled maintenance on the first weekend of every month. During these periods, which will run from Saturday at six P.M. through Sunday at six A.M., the garage will be completely closed. Alternative parking will be available at the municipal lot on Fifth Avenue, free of charge. Please plan accordingly and remove your vehicles before the maintenance periods begin. We apologize for any inconvenience.',
+    options: [
+      { text: '(A) Six hours', isCorrect: false },
+      { text: '(B) Twelve hours', isCorrect: true },
+      { text: '(C) Twenty-four hours', isCorrect: false },
+      { text: '(D) Forty-eight hours', isCorrect: false },
+    ],
+    explanation: '土曜日午後6時から日曜日午前6時までなので、12時間です。「12時間」が正解。時間を計算する問題では開始時刻と終了時刻の差に注目しましょう。',
+    keyVocabulary: [
+      { word: 'from Saturday at six P.M. through Sunday at six A.M.', meaning: '土曜日午後6時から日曜日午前6時まで' },
+      { word: 'completely closed', meaning: '完全に閉鎖される' },
+    ],
+  },
+  {
+    id: 824,
+    part: 4,
+    category: 'part4',
+    categoryLabel: '説明文問題',
+    question: 'What should listeners do to sign up for the workshop?',
+    audioScript: 'Good evening, library patrons. We are excited to announce a new series of digital literacy workshops starting next month. These free workshops will cover topics such as basic computer skills, internet safety, social media, and online shopping. Classes will be held every Tuesday evening from six to eight in the community room. Registration is now open on our website or at the front desk. Space is limited to twenty participants per session, so we encourage you to sign up early. For more information, visit the library website or call our information desk.',
+    options: [
+      { text: '(A) Send an email to the library', isCorrect: false },
+      { text: '(B) Register on the website or at the front desk', isCorrect: true },
+      { text: '(C) Call the community center', isCorrect: false },
+      { text: '(D) Visit the library on Tuesday evening', isCorrect: false },
+    ],
+    explanation: '「ウェブサイトまたはフロントデスクで登録可能です」と言っています。「ウェブサイトまたはフロントデスクで登録する」が正解。',
+    keyVocabulary: [
+      { word: 'digital literacy', meaning: 'デジタルリテラシー' },
+      { word: 'registration', meaning: '登録' },
+      { word: 'patrons', meaning: '利用者、来館者' },
+    ],
+  },
+  {
+    id: 825,
+    part: 4,
+    category: 'part4',
+    categoryLabel: '説明文問題',
+    question: 'How many participants can attend each session?',
+    audioScript: 'Good evening, library patrons. We are excited to announce a new series of digital literacy workshops starting next month. These free workshops will cover topics such as basic computer skills, internet safety, social media, and online shopping. Classes will be held every Tuesday evening from six to eight in the community room. Registration is now open on our website or at the front desk. Space is limited to twenty participants per session, so we encourage you to sign up early. For more information, visit the library website or call our information desk.',
+    options: [
+      { text: '(A) Ten', isCorrect: false },
+      { text: '(B) Fifteen', isCorrect: false },
+      { text: '(C) Twenty', isCorrect: true },
+      { text: '(D) Thirty', isCorrect: false },
+    ],
+    explanation: '「各セッションは20名まで」と明記されています。「20名」が正解。参加枠の制限は具体的な数字で聞かれやすいポイントです。',
+    keyVocabulary: [
+      { word: 'space is limited to', meaning: '定員は〜に限られている' },
+      { word: 'participants per session', meaning: '各セッションの参加者' },
+    ],
+  },
+  {
+    id: 826,
+    part: 4,
+    category: 'part4',
+    categoryLabel: '説明文問題',
+    question: 'What has happened to the departure time?',
+    audioScript: 'Attention passengers. The 3:15 P.M. departure of the express train to Boston has been delayed by approximately twenty-five minutes due to signal problems on the track. The new estimated departure time is 3:40 P.M. We apologize for the inconvenience. Passengers wishing to exchange their tickets for a later service may do so at the ticket counter free of charge. Complimentary refreshments are available at the platform café for affected passengers.',
+    options: [
+      { text: '(A) It has been moved to an earlier time', isCorrect: false },
+      { text: '(B) It has been delayed by about 25 minutes', isCorrect: true },
+      { text: '(C) It has been cancelled', isCorrect: false },
+      { text: '(D) It has not changed', isCorrect: false },
+    ],
+    explanation: '「約25分遅延」とアナウンスされています。「約25分遅れている」が正解。新しい出発時刻は3:40です。',
+    keyVocabulary: [
+      { word: 'estimated departure time', meaning: '予定出発時刻' },
+      { word: 'signal problems', meaning: '信号問題' },
+      { word: 'complimentary refreshments', meaning: '無料の軽食' },
+    ],
+  },
+  {
+    id: 827,
+    part: 4,
+    category: 'part4',
+    categoryLabel: '説明文問題',
+    question: 'What can affected passengers get for free?',
+    audioScript: 'Attention passengers. The 3:15 P.M. departure of the express train to Boston has been delayed by approximately twenty-five minutes due to signal problems on the track. The new estimated departure time is 3:40 P.M. We apologize for the inconvenience. Passengers wishing to exchange their tickets for a later service may do so at the ticket counter free of charge. Complimentary refreshments are available at the platform café for affected passengers.',
+    options: [
+      { text: '(A) A hotel room for the night', isCorrect: false },
+      { text: '(B) Free ticket exchange and refreshments', isCorrect: true },
+      { text: '(C) A full refund', isCorrect: false },
+      { text: '(D) A taxi voucher', isCorrect: false },
+    ],
+    explanation: 'チケットの無料交換と無料の軽食が提供されています。「無料のチケット交換と軽食」が正解。複数の無料サービスが提供されている場合は全てを含む選択肢を選びましょう。',
+    keyVocabulary: [
+      { word: 'free of charge', meaning: '無料で' },
+      { word: 'exchange their tickets', meaning: 'チケットを交換する' },
+      { word: 'affected passengers', meaning: '影響を受けた乗客' },
+    ],
+  },
+  {
+    id: 828,
+    part: 4,
+    category: 'part4',
+    categoryLabel: '説明文問題',
+    question: 'What is the new company policy regarding remote work?',
+    audioScript: 'Attention all staff. Effective immediately, the company is introducing a hybrid work model. Employees will be required to work from the office three days per week, with the remaining two days available for remote work. The designated office days are Tuesday, Wednesday, and Thursday. Monday and Friday will be optional remote work days. All employees must inform their direct supervisors of their preferred remote work schedule by the end of this month. A detailed FAQ document has been uploaded to the company intranet.',
+    options: [
+      { text: '(A) All employees must work from the office full-time', isCorrect: false },
+      { text: '(B) Employees can work remotely up to two days per week', isCorrect: true },
+      { text: '(C) Remote work is available only during holidays', isCorrect: false },
+      { text: '(D) Employees choose their own office days freely', isCorrect: false },
+    ],
+    explanation: '週3日オフィス出社、週2日リモートワークのハイブリッドモデルが導入されました。「週最大2日リモートワーク可能」が正解。オフィス出社日は火・水・木と指定されています。',
+    keyVocabulary: [
+      { word: 'hybrid work model', meaning: 'ハイブリッド勤務モデル' },
+      { word: 'designated office days', meaning: '指定の出社日' },
+      { word: 'optional', meaning: '任意の、オプションの' },
+    ],
+  },
+  {
+    id: 829,
+    part: 4,
+    category: 'part4',
+    categoryLabel: '説明文問題',
+    question: 'What must employees do by the end of the month?',
+    audioScript: 'Attention all staff. Effective immediately, the company is introducing a hybrid work model. Employees will be required to work from the office three days per week, with the remaining two days available for remote work. The designated office days are Tuesday, Wednesday, and Thursday. Monday and Friday will be optional remote work days. All employees must inform their direct supervisors of their preferred remote work schedule by the end of this month. A detailed FAQ document has been uploaded to the company intranet.',
+    options: [
+      { text: '(A) Submit a remote work application to HR', isCorrect: false },
+      { text: '(B) Read the FAQ document on the intranet', isCorrect: false },
+      { text: '(C) Inform their supervisors of their remote work preference', isCorrect: true },
+      { text: '(D) Attend a mandatory training session', isCorrect: false },
+    ],
+    explanation: '「月末までに直属の上司に希望するリモートワークスケジュールを知らせる必要があります」と言っています。「上司にリモートワークの希望を伝える」が正解。',
+    keyVocabulary: [
+      { word: 'preferred remote work schedule', meaning: '希望するリモートワークスケジュール' },
+      { word: 'direct supervisor', meaning: '直属の上司' },
+      { word: 'intranet', meaning: '社内ネットワーク' },
+    ],
+  },
+  {
+    id: 830,
+    part: 4,
+    category: 'part4',
+    categoryLabel: '説明文問題',
+    question: 'What benefit is mentioned for loyalty members?',
+    audioScript: 'Welcome to the Riverside Shopping Mall. We\'re currently offering special promotions for our loyalty card members this weekend. Gold members receive twenty percent off at all participating stores, while silver members enjoy a fifteen percent discount. Additionally, any loyalty member who spends over one hundred dollars today will receive a ten-dollar gift card redeemable at any food court restaurant. To check your membership status or sign up for a loyalty card, please visit the customer service desk on the ground floor near the main entrance. Happy shopping!',
+    options: [
+      { text: '(A) Free parking for the entire weekend', isCorrect: false },
+      { text: '(B) Discount at stores and a gift card with qualifying purchases', isCorrect: true },
+      { text: '(C) Early access to new store openings', isCorrect: false },
+      { text: '(D) A free meal at any restaurant', isCorrect: false },
+    ],
+    explanation: 'ゴールド会員は20%オフ、シルバー会員は15%オフで、100ドル以上の購入で10ドルのギフトカードがもらえます。「店舗での割引と条件付きギフトカード」が正解。',
+    keyVocabulary: [
+      { word: 'loyalty card members', meaning: 'ロイヤルティカード会員' },
+      { word: 'redeemable', meaning: '交換可能な、利用可能な' },
+      { word: 'gift card', meaning: 'ギフトカード' },
+    ],
+  },
+  // ===== Part 5: Additional Questions (831-850) =====
+  {
+    id: 831,
+    part: 5,
+    category: 'part5',
+    categoryLabel: '短文穴埋め',
+    question: 'The company\'s profits ______ significantly after the new marketing strategy was implemented.',
+    options: [
+      { text: '(A) improve', isCorrect: false },
+      { text: '(B) improved', isCorrect: true },
+      { text: '(C) improving', isCorrect: false },
+      { text: '(D) improvement', isCorrect: false },
+    ],
+    explanation: '「after」節内は過去の出来事なので、主節も過去形にする必要があります。「improved（改善した）」が正解。時制の一致がポイントです。',
+    keyVocabulary: [
+      { word: 'significantly', meaning: '大幅に、著しく' },
+      { word: 'implement', meaning: '実施する、導入する' },
+    ],
+  },
+  {
+    id: 832,
+    part: 5,
+    category: 'part5',
+    categoryLabel: '短文穴埋め',
+    question: 'The manager asked the team to work ______ to meet the project deadline.',
+    options: [
+      { text: '(A) efficient', isCorrect: false },
+      { text: '(B) efficiency', isCorrect: false },
+      { text: '(C) efficiently', isCorrect: true },
+      { text: '(D) more efficient', isCorrect: false },
+    ],
+    explanation: '動詞「work」を修飾する副詞が必要です。「efficiently（効率的に）」が正解。品詞問題では空所の前後の品詞関係に注目しましょう。',
+    keyVocabulary: [
+      { word: 'efficiently', meaning: '効率的に' },
+      { word: 'meet the deadline', meaning: '締め切りを守る' },
+    ],
+  },
+  {
+    id: 833,
+    part: 5,
+    category: 'part5',
+    categoryLabel: '短文穴埋め',
+    question: '______ of the candidates has the required experience for this position.',
+    options: [
+      { text: '(A) Every', isCorrect: false },
+      { text: '(B) Each', isCorrect: false },
+      { text: '(C) Both', isCorrect: false },
+      { text: '(D) Neither', isCorrect: true },
+    ],
+    explanation: '動詞が「has（単数）」なので、単数扱いになる主語が必要です。「Neither of（〜のどちらも〜ない）」は単数動詞を取ります。「Neither」が正解。',
+    keyVocabulary: [
+      { word: 'Neither', meaning: 'どちらも〜ない' },
+      { word: 'candidates', meaning: '候補者' },
+      { word: 'required experience', meaning: '必要な経験' },
+    ],
+  },
+  {
+    id: 834,
+    part: 5,
+    category: 'part5',
+    categoryLabel: '短文穴埋め',
+    question: 'The new regulations will take ______ at the beginning of next fiscal year.',
+    options: [
+      { text: '(A) effect', isCorrect: true },
+      { text: '(B) part', isCorrect: false },
+      { text: '(C) place', isCorrect: false },
+      { text: '(D) action', isCorrect: false },
+    ],
+    explanation: '「take effect」は「発効する、効力を持つ」という意味の決まり文句です。「effect」が正解。「take place（開催される）」も頻出ですが、文脈に合いません。',
+    keyVocabulary: [
+      { word: 'take effect', meaning: '発効する' },
+      { word: 'regulations', meaning: '規則、規制' },
+      { word: 'fiscal year', meaning: '会計年度、事業年度' },
+    ],
+  },
+  {
+    id: 835,
+    part: 5,
+    category: 'part5',
+    categoryLabel: '短文穴埋め',
+    question: 'The report was ______ comprehensive that it covered every aspect of the market analysis.',
+    options: [
+      { text: '(A) so', isCorrect: true },
+      { text: '(B) very', isCorrect: false },
+      { text: '(C) such', isCorrect: false },
+      { text: '(D) too', isCorrect: false },
+    ],
+    explanation: '「so + 形容詞 + that」の構文です。「so（非常に〜なので）」が正解。「such」は名詞の前に置くため、ここでは使えません。',
+    keyVocabulary: [
+      { word: 'comprehensive', meaning: '包括的な' },
+      { word: 'aspect', meaning: '側面、観点' },
+      { word: 'market analysis', meaning: '市場分析' },
+    ],
+  },
+  {
+    id: 836,
+    part: 5,
+    category: 'part5',
+    categoryLabel: '短文穴埋め',
+    question: 'Ms. Park has been responsible ______ managing the overseas accounts since last year.',
+    options: [
+      { text: '(A) for', isCorrect: true },
+      { text: '(B) to', isCorrect: false },
+      { text: '(C) with', isCorrect: false },
+      { text: '(D) of', isCorrect: false },
+    ],
+    explanation: '「responsible for〜」は「〜の責任がある」という意味の定型表現です。「for」が正解。',
+    keyVocabulary: [
+      { word: 'responsible for', meaning: '〜の責任がある' },
+      { word: 'overseas accounts', meaning: '海外のアカウント' },
+    ],
+  },
+  {
+    id: 837,
+    part: 5,
+    category: 'part5',
+    categoryLabel: '短文穴埋め',
+    question: 'The hotel offers a ______ of amenities including a swimming pool, fitness center, and spa.',
+    options: [
+      { text: '(A) variety', isCorrect: true },
+      { text: '(B) various', isCorrect: false },
+      { text: '(C) vary', isCorrect: false },
+      { text: '(D) variable', isCorrect: false },
+    ],
+    explanation: '「a variety of〜」は「さまざまな〜」という定型表現です。名詞句なので「variety（多様性）」が正解。「various」は冠詞なしで直接名詞の前に置くことができます。',
+    keyVocabulary: [
+      { word: 'a variety of', meaning: 'さまざまな' },
+      { word: 'amenities', meaning: '設備、アメニティ' },
+    ],
+  },
+  {
+    id: 838,
+    part: 5,
+    category: 'part5',
+    categoryLabel: '短文穴埋め',
+    question: 'The documents should be submitted ______ than the original deadline.',
+    options: [
+      { text: '(A) early', isCorrect: false },
+      { text: '(B) earlier', isCorrect: true },
+      { text: '(C) earliest', isCorrect: false },
+      { text: '(D) more early', isCorrect: false },
+    ],
+    explanation: '「than」があるので比較級が必要です。「early」の比較級は「earlier」です。「earlier（より早く）」が正解。「more early」は不自然な形です。',
+    keyVocabulary: [
+      { word: 'submit', meaning: '提出する' },
+      { word: 'earlier', meaning: 'より早く' },
+      { word: 'deadline', meaning: '締め切り' },
+    ],
+  },
+  {
+    id: 839,
+    part: 5,
+    category: 'part5',
+    categoryLabel: '短文穴埋め',
+    question: 'The conference room is ______ larger than the one we used last time.',
+    options: [
+      { text: '(A) consider', isCorrect: false },
+      { text: '(B) considerably', isCorrect: true },
+      { text: '(C) considerable', isCorrect: false },
+      { text: '(D) considering', isCorrect: false },
+    ],
+    explanation: '比較級「larger」を修飾する副詞が必要です。「considerably（かなり、著しく）」が正解。「considerable」は形容詞なので使えません。',
+    keyVocabulary: [
+      { word: 'considerably', meaning: 'かなり、著しく' },
+      { word: 'conference room', meaning: '会議室' },
+    ],
+  },
+  {
+    id: 840,
+    part: 5,
+    category: 'part5',
+    categoryLabel: '短文穴埋め',
+    question: 'Employees ______ have completed the training program are eligible for the certification.',
+    options: [
+      { text: '(A) which', isCorrect: false },
+      { text: '(B) who', isCorrect: true },
+      { text: '(C) whom', isCorrect: false },
+      { text: '(D) whose', isCorrect: false },
+    ],
+    explanation: '先行詞は「Employees（人）」で、関係代名詞節の主語になっているため「who」が正解。「whom」は目的格、「whose」は所有格です。',
+    keyVocabulary: [
+      { word: 'eligible for', meaning: '〜の資格がある' },
+      { word: 'certification', meaning: '認定、資格' },
+    ],
+  },
+  {
+    id: 841,
+    part: 5,
+    category: 'part5',
+    categoryLabel: '短文穴埋め',
+    question: 'The CEO emphasized the importance ______ innovation in the company\'s annual report.',
+    options: [
+      { text: '(A) of', isCorrect: true },
+      { text: '(B) in', isCorrect: false },
+      { text: '(C) for', isCorrect: false },
+      { text: '(D) to', isCorrect: false },
+    ],
+    explanation: '「the importance of〜」は「〜の重要性」という定型表現です。「of」が正解。',
+    keyVocabulary: [
+      { word: 'importance of', meaning: '〜の重要性' },
+      { word: 'emphasized', meaning: '強調した' },
+      { word: 'innovation', meaning: 'イノベーション、革新' },
+    ],
+  },
+  {
+    id: 842,
+    part: 5,
+    category: 'part5',
+    categoryLabel: '短文穴埋め',
+    question: 'The product launch was postponed ______ to unexpected supply chain disruptions.',
+    options: [
+      { text: '(A) due', isCorrect: true },
+      { text: '(B) because', isCorrect: false },
+      { text: '(C) since', isCorrect: false },
+      { text: '(D) as', isCorrect: false },
+    ],
+    explanation: '「due to〜」は「〜のために」という理由を表す前置詞句です。「due」が正解。「because」「since」「as」は接続詞なので後に節が必要です。',
+    keyVocabulary: [
+      { word: 'due to', meaning: '〜のために' },
+      { word: 'supply chain disruptions', meaning: 'サプライチェーンの混乱' },
+      { word: 'postponed', meaning: '延期された' },
+    ],
+  },
+  {
+    id: 843,
+    part: 5,
+    category: 'part5',
+    categoryLabel: '短文穴埋め',
+    question: 'The new employee was quickly ______ into the team thanks to the onboarding program.',
+    options: [
+      { text: '(A) integrate', isCorrect: false },
+      { text: '(B) integrated', isCorrect: true },
+      { text: '(C) integrating', isCorrect: false },
+      { text: '(D) integration', isCorrect: false },
+    ],
+    explanation: '受動態「was integrated」が正解。「チームに統合された」＝「チームに受け入れられた」。前置詞「into」の後に名詞があるため、動詞の過去分詞が適切です。',
+    keyVocabulary: [
+      { word: 'integrate into', meaning: '〜に統合する、溶け込む' },
+      { word: 'onboarding program', meaning: 'オンボーディングプログラム' },
+    ],
+  },
+  {
+    id: 844,
+    part: 5,
+    category: 'part5',
+    categoryLabel: '短文穴埋め',
+    question: 'The sales figures for this quarter are ______ those of the previous quarter.',
+    options: [
+      { text: '(A) compare to', isCorrect: false },
+      { text: '(B) comparing with', isCorrect: false },
+      { text: '(C) comparable to', isCorrect: true },
+      { text: '(D) comparatively', isCorrect: false },
+    ],
+    explanation: '主語「sales figures」と補語の間には形容詞が必要です。「comparable to（〜と匹敵する、比較可能な）」が正解。',
+    keyVocabulary: [
+      { word: 'comparable to', meaning: '〜と匹敵する' },
+      { word: 'sales figures', meaning: '売上高' },
+      { word: 'quarter', meaning: '四半期' },
+    ],
+  },
+  {
+    id: 845,
+    part: 5,
+    category: 'part5',
+    categoryLabel: '短文穴埋め',
+    question: '______ the economic downturn, the company managed to increase its market share.',
+    options: [
+      { text: '(A) Despite', isCorrect: true },
+      { text: '(B) Because', isCorrect: false },
+      { text: '(C) Due to', isCorrect: false },
+      { text: '(D) Since', isCorrect: false },
+    ],
+    explanation: '景気後退があるにもかかわらず市場シェアを伸ばしたという逆接の文脈です。「Despite（〜にもかかわらず）」が正解。「Because」「Since」は順接、「Due to」は後に名詞句を取りますが意味が逆です。',
+    keyVocabulary: [
+      { word: 'despite', meaning: '〜にもかかわらず' },
+      { word: 'economic downturn', meaning: '景気後退' },
+      { word: 'market share', meaning: '市場シェア' },
+    ],
+  },
+  {
+    id: 846,
+    part: 5,
+    category: 'part5',
+    categoryLabel: '短文穴埋め',
+    question: 'The management team is currently ______ several options for reducing operating costs.',
+    options: [
+      { text: '(A) evaluate', isCorrect: false },
+      { text: '(B) evaluated', isCorrect: false },
+      { text: '(C) evaluating', isCorrect: true },
+      { text: '(D) evaluation', isCorrect: false },
+    ],
+    explanation: '「is currently」＋現在進行形です。「evaluating（評価している最中だ）」が正解。be動詞＋現在分詞の構文です。',
+    keyVocabulary: [
+      { word: 'evaluate', meaning: '評価する' },
+      { word: 'operating costs', meaning: '運営費' },
+      { word: 'currently', meaning: '現在、現在進行中で' },
+    ],
+  },
+  {
+    id: 847,
+    part: 5,
+    category: 'part5',
+    categoryLabel: '短文穴埋め',
+    question: 'All participants are ______ to bring a valid photo ID to the conference.',
+    options: [
+      { text: '(A) required', isCorrect: true },
+      { text: '(B) requiring', isCorrect: false },
+      { text: '(C) require', isCorrect: false },
+      { text: '(D) requirement', isCorrect: false },
+    ],
+    explanation: '「be required to〜」は「〜するよう求められている」という定型表現です。受動態の「required」が正解。',
+    keyVocabulary: [
+      { word: 'be required to', meaning: '〜するよう求められている' },
+      { word: 'valid photo ID', meaning: '有効な写真付き身分証' },
+      { word: 'participant', meaning: '参加者' },
+    ],
+  },
+  {
+    id: 848,
+    part: 5,
+    category: 'part5',
+    categoryLabel: '短文穴埋め',
+    question: 'The company decided to ______ its operations to Southeast Asia to reduce manufacturing costs.',
+    options: [
+      { text: '(A) expand', isCorrect: true },
+      { text: '(B) expanding', isCorrect: false },
+      { text: '(C) expanded', isCorrect: false },
+      { text: '(D) expansion', isCorrect: false },
+    ],
+    explanation: '「decided to + 動詞の原形」の構文です。「expand（拡大する）」が正解。to不定詞の後には動詞の原形が続きます。',
+    keyVocabulary: [
+      { word: 'expand operations', meaning: '事業を拡大する' },
+      { word: 'manufacturing costs', meaning: '製造コスト' },
+    ],
+  },
+  {
+    id: 849,
+    part: 5,
+    category: 'part5',
+    categoryLabel: '短文穴埋め',
+    question: 'The project was completed ahead of schedule, ______ was a pleasant surprise for everyone.',
+    options: [
+      { text: '(A) that', isCorrect: false },
+      { text: '(B) which', isCorrect: true },
+      { text: '(C) what', isCorrect: false },
+      { text: '(D) it', isCorrect: false },
+    ],
+    explanation: 'カンマの後ろの非制限用法の関係代名詞です。先行詞は前文全体（プロジェクトが予定より早く完了したこと）で、「which」が正解。「that」は非制限用法では使えません。',
+    keyVocabulary: [
+      { word: 'ahead of schedule', meaning: '予定より早く' },
+      { word: 'pleasant surprise', meaning: '嬉しい驚き' },
+    ],
+  },
+  {
+    id: 850,
+    part: 5,
+    category: 'part5',
+    categoryLabel: '短文穴埋め',
+    question: 'The intern showed great ______ during the busy holiday season by volunteering for extra shifts.',
+    options: [
+      { text: '(A) initiative', isCorrect: true },
+      { text: '(B) initial', isCorrect: false },
+      { text: '(C) initiate', isCorrect: false },
+      { text: '(D) initially', isCorrect: false },
+    ],
+    explanation: '冠詞「great」の後に名詞が必要です。「initiative（自発性、主導権）」が正解。名詞形を選ぶ品詞問題です。',
+    keyVocabulary: [
+      { word: 'initiative', meaning: '自発性、主導権' },
+      { word: 'extra shifts', meaning: '追加のシフト' },
+      { word: 'volunteer', meaning: '自発的に申し出る' },
+    ],
+  },
+  // ===== Part 6: Additional Questions (851-870) =====
+  {
+    id: 851,
+    part: 6,
+    category: 'part6',
+    categoryLabel: '長文穴埋め',
+    question: '(A) ______',
+    passage: 'TECHVISION SOLUTIONS\n\nWe are excited to announce the release of CloudSync 3.0, the latest version of our cloud-based collaboration platform. This update includes several new features designed to improve team productivity and streamline workflow management.\n\n(A) ______\n\nAmong the new features are real-time document editing, advanced file sharing capabilities, and an integrated video conferencing tool. These additions were developed based on extensive feedback from our corporate clients.\n\nExisting users can upgrade to version 3.0 at no additional cost. New customers can take advantage of a thirty-day free trial by visiting our website.',
+    options: [
+      { text: '(A) The upgrade is available to all users at no charge.', isCorrect: false },
+      { text: '(B) Our development team has been working on these improvements for over a year.', isCorrect: true },
+      { text: '(C) The previous version will no longer be supported after this month.', isCorrect: false },
+      { text: '(D) Customers must contact support to receive the update.', isCorrect: false },
+    ],
+    explanation: '空所(A)は新機能の導入に先立つ文脈が必要です。「開発チームが1年以上これらの改善に取り組んできた」が、新機能の紹介に自然に繋がります。後文の「based on extensive feedback」とも整合性があります。',
+    keyVocabulary: [
+      { word: 'cloud-based collaboration platform', meaning: 'クラウドベースのコラボレーションプラットフォーム' },
+      { word: 'streamline', meaning: '合理化する' },
+      { word: 'real-time document editing', meaning: 'リアルタイム文書編集' },
+    ],
+  },
+  {
+    id: 852,
+    part: 6,
+    category: 'part6',
+    categoryLabel: '長文穴埋め',
+    question: '(B) ______',
+    passage: 'MEMO\n\nTO: All Staff\nFROM: Facilities Management\nDATE: November 12\nRE: Temporary Office Closure\n\nDue to emergency plumbing repairs, the main office building will be closed this Saturday, November 15. All essential maintenance work is expected to be completed by Sunday evening.\n\n(B) ______\n\nStaff who require access to the building during the closure should contact the security office in advance. Remote work is encouraged for those who had planned to work on-site this weekend.',
+    options: [
+      { text: '(A) The building will reopen on Monday at the regular time.', isCorrect: true },
+      { text: '(B) All staff members must work from home on Saturday.', isCorrect: false },
+      { text: '(C) The plumbing issues have been present for several months.', isCorrect: false },
+      { text: '(D) Security personnel will be on duty throughout the weekend.', isCorrect: false },
+    ],
+    explanation: '空所(B)は修理完了後の再開についての情報を補完する文です。「月曜日に通常通り再開する」が最も自然な追加情報です。(B)は「must」と強制で、リモートワークは「encouraged（推奨）」なので不適切です。',
+    keyVocabulary: [
+      { word: 'emergency plumbing repairs', meaning: '緊急配管修理' },
+      { word: 'in advance', meaning: '事前に' },
+      { word: 'on-site', meaning: '現場で、オフィスで' },
+    ],
+  },
+  {
+    id: 853,
+    part: 6,
+    category: 'part6',
+    categoryLabel: '長文穴埋め',
+    question: '(C) ______',
+    passage: 'Welcome to Brookfield Medical Center. Our facility has been serving the community for over twenty years with a commitment to excellence in patient care.\n\nWe offer a wide range of medical services, including general practice, pediatrics, orthopedics, and cardiology. Our team of over fifty physicians and specialists is dedicated to providing personalized treatment plans.\n\n(C) ______\n\nTo schedule an appointment, please call our main line at 555-0147 or use our online booking system through our website. Walk-in patients are also welcome during our extended hours from 8 A.M. to 8 P.M., Monday through Saturday.',
+    options: [
+      { text: '(A) The hospital will be relocating to a new facility next year.', isCorrect: false },
+      { text: '(B) New patients are currently being accepted in all departments.', isCorrect: true },
+      { text: '(C) All services are covered by a single insurance provider.', isCorrect: false },
+      { text: '(D) The facility is only open on weekdays.', isCorrect: false },
+    ],
+    explanation: '空所(C)はサービスの説明と予約方法の間にあります。「全診療科で新規患者を受け付けている」が、予約を促す後文に自然に繋がります。',
+    keyVocabulary: [
+      { word: 'patient care', meaning: '患者ケア' },
+      { word: 'personalized treatment plans', meaning: '個別化された治療計画' },
+      { word: 'walk-in patients', meaning: '予約なしの患者' },
+    ],
+  },
+  {
+    id: 854,
+    part: 6,
+    category: 'part6',
+    categoryLabel: '長文穴埋め',
+    question: '(A) ______',
+    passage: 'EASTVIEW GALLERY\n\nUPCOMING EXHIBITION\n\n"Colors of the Mediterranean"\nFeaturing works by renowned artist Isabella Moreno\n\n(A) ______\n\nThe exhibition will showcase over forty paintings inspired by the landscapes and cultures of Italy, Greece, and Spain. Ms. Moreno spent three years traveling through the Mediterranean region to capture its beauty on canvas.\n\nThe exhibition opens on March 1 and runs through April 30. An exclusive reception with the artist will be held on the opening night. Tickets are available at the gallery or through our website.',
+    options: [
+      { text: '(A) This is her first solo exhibition in five years.', isCorrect: true },
+      { text: '(B) The gallery is open seven days a week from 10 A.M. to 6 P.M.', isCorrect: false },
+      { text: '(C) All paintings are available for purchase during the exhibition.', isCorrect: false },
+      { text: '(D) The artist was born in Spain and now lives in Italy.', isCorrect: false },
+    ],
+    explanation: '空所(A)は展覧会紹介の導入部です。「5年ぶりの初の個展」が、展覧会の重要性を強調し、後続の詳細説明に繋がります。',
+    keyVocabulary: [
+      { word: 'solo exhibition', meaning: '個展' },
+      { word: 'showcase', meaning: '展示する' },
+      { word: 'reception', meaning: 'レセプション、歓迎会' },
+    ],
+  },
+  {
+    id: 855,
+    part: 6,
+    category: 'part6',
+    categoryLabel: '長文穴埋め',
+    question: '(B) ______',
+    passage: 'NEXUS AUTOMOTIVE\n\nQUARTERLY NEWSLETTER\n\nDear Valued Customers,\n\nThank you for choosing Nexus Automotive for your vehicle maintenance needs. We are committed to providing high-quality service at competitive prices.\n\nStarting this month, we are introducing a new loyalty rewards program. (B) ______ For every five services completed at our facility, customers will receive a complimentary oil change.\n\nAdditionally, we have expanded our service bays to reduce wait times. Our extended hours now include Saturday service from 8 A.M. to 2 P.M.',
+    options: [
+      { text: '(A) The program is only available for new customers.', isCorrect: false },
+      { text: '(B) Members can earn points toward free services.', isCorrect: true },
+      { text: '(C) All services must be completed within six months.', isCorrect: false },
+      { text: '(D) The rewards program replaces our existing discount offers.', isCorrect: false },
+    ],
+    explanation: '空所(B)はロイヤリティプログラムの仕組みを説明する文です。「ポイントを貯めて無料サービスを受けられる」が、後続の「5回で無料オイルチェンジ」と具体的な説明に繋がります。',
+    keyVocabulary: [
+      { word: 'loyalty rewards program', meaning: 'ロイヤリティ報酬プログラム' },
+      { word: 'complimentary', meaning: '無料の' },
+      { word: 'expanded', meaning: '拡大した' },
+    ],
+  },
+  {
+    id: 856,
+    part: 6,
+    category: 'part6',
+    categoryLabel: '長文穴埋め',
+    question: '(A) ______',
+    passage: 'GREENFIELD COMMUNITY CENTER\n\nEVENT ANNOUNCEMENT\n\nThe Greenfield Community Center is pleased to announce its annual Summer Festival, scheduled for July 15-17 at Riverside Park.\n\n(A) ______\n\nThis year\'s festival will feature live music performances, food vendors from over twenty local restaurants, arts and crafts booths, and a fireworks display on Saturday evening. Children\'s activities will include face painting, a petting zoo, and a scavenger hunt.\n\nVolunteers are needed to help with setup, ticket sales, and cleanup. If you are interested in volunteering, please sign up at the community center office or email volunteer@greenfield.org.',
+    options: [
+      { text: '(A) Admission is free for all attendees this year.', isCorrect: true },
+      { text: '(B) The festival was cancelled last year due to bad weather.', isCorrect: false },
+      { text: '(C) All food vendors must register by the end of May.', isCorrect: false },
+      { text: '(D) Parking is available at the shopping mall across the street.', isCorrect: false },
+    ],
+    explanation: '空所(A)はフェスティバルの重要な基本情報です。「入場無料」は参加を促す魅力的な情報で、後続のイベント詳細に自然に繋がります。',
+    keyVocabulary: [
+      { word: 'live music performances', meaning: 'ライブ音楽演奏' },
+      { word: 'food vendors', meaning: '食品売店' },
+      { word: 'scavenger hunt', meaning: '宝探し' },
+    ],
+  },
+  {
+    id: 857,
+    part: 6,
+    category: 'part6',
+    categoryLabel: '長文穴埋め',
+    question: '(C) ______',
+    passage: 'PINNACLE FINANCIAL ADVISORS\n\nCLIENT UPDATE\n\nWe are writing to inform you of important changes to our fee structure, effective January 1.\n\nAfter careful consideration, we have revised our management fees to better reflect the level of service we provide. The new fee schedule is as follows: accounts under $100,000 will be charged 1.2%, and accounts over $100,000 will be charged 0.9%.\n\n(C) ______\n\nWe believe these changes will benefit the majority of our clients, particularly those with larger portfolios. If you have any questions about how these changes may affect your account, please contact your dedicated advisor.',
+    options: [
+      { text: '(A) These rates represent a decrease from our previous fee structure.', isCorrect: true },
+      { text: '(B) The new fees will be reviewed again at the end of the year.', isCorrect: false },
+      { text: '(C) Clients can switch to a different advisor at no cost.', isCorrect: false },
+      { text: '(D) All fees must be paid in advance on a quarterly basis.', isCorrect: false },
+    ],
+    explanation: '空所(C)は手数料変更の影響についての評価です。「今回の料金は前回より引き下げられた」が、後続の「大部分のクライアントにメリットがある」に整合します。',
+    keyVocabulary: [
+      { word: 'fee structure', meaning: '料金体系' },
+      { word: 'portfolios', meaning: 'ポートフォリオ' },
+      { word: 'dedicated advisor', meaning: '専属アドバイザー' },
+    ],
+  },
+  {
+    id: 858,
+    part: 6,
+    category: 'part6',
+    categoryLabel: '長文穴埋め',
+    question: '(B) ______',
+    passage: 'OCEANVIEW RESORT AND SPA\n\nGUEST INFORMATION\n\nWelcome to Oceanview Resort and Spa. We hope you enjoy your stay with us. Check-in time is 3 P.M. and check-out time is 11 A.M.\n\nOur resort features a heated outdoor pool, a full-service spa, a fitness center, and two on-site restaurants. The pool and fitness center are open from 6 A.M. to 10 P.M. daily.\n\n(B) ______\n\nRoom service is available twenty-four hours a day. For dining reservations or spa appointments, please contact our concierge desk at extension 100. We also offer complimentary shuttle service to and from the airport.',
+    options: [
+      { text: '(A) The resort is currently undergoing renovations on the third floor.', isCorrect: false },
+      { text: '(B) Complimentary Wi-Fi is available throughout the resort.', isCorrect: true },
+      { text: '(C) Guests must wear wristbands to access the pool area.', isCorrect: false },
+      { text: '(D) All spa treatments must be booked at least 24 hours in advance.', isCorrect: false },
+    ],
+    explanation: '空所(B)はリゾートのサービスに関する追加情報です。「館内全域で無料Wi-Fiが利用可能」は現代の宿泊施設で期待される基本情報として適切です。',
+    keyVocabulary: [
+      { word: 'full-service spa', meaning: 'フルサービススパ' },
+      { word: 'complimentary', meaning: '無料の' },
+      { word: 'concierge desk', meaning: 'コンシェルジュデスク' },
+    ],
+  },
+  {
+    id: 859,
+    part: 6,
+    category: 'part6',
+    categoryLabel: '長文穴埋め',
+    question: '(A) ______',
+    passage: 'SUMMIT LEARNING ACADEMY\n\nPROFESSIONAL DEVELOPMENT WORKSHOPS\n\nSummit Learning Academy is proud to offer a new series of professional development workshops designed for mid-career professionals looking to enhance their leadership skills.\n\n(A) ______\n\nWorkshops will be held every Saturday morning from 9 A.M. to noon, beginning February 3. Each session is led by an industry expert and includes interactive exercises, case studies, and group discussions.\n\nEarly registration is recommended as class sizes are limited to fifteen participants. A certificate of completion will be awarded to participants who attend all six sessions.',
+    options: [
+      { text: '(A) Topics include strategic thinking, team management, and conflict resolution.', isCorrect: true },
+      { text: '(B) The workshops were originally developed for university students.', isCorrect: false },
+      { text: '(C) Participants are required to have at least ten years of work experience.', isCorrect: false },
+      { text: '(D) All materials will be provided in digital format only.', isCorrect: false },
+    ],
+    explanation: '空所(A)はワークショップの内容を説明する文です。「戦略的思考、チーム管理、対立解決」という具体的なトピックが、後続のスケジュール詳細に自然に繋がります。',
+    keyVocabulary: [
+      { word: 'mid-career professionals', meaning: 'ミドルキャリアの専門家' },
+      { word: 'strategic thinking', meaning: '戦略的思考' },
+      { word: 'case studies', meaning: 'ケーススタディ' },
+    ],
+  },
+  {
+    id: 860,
+    part: 6,
+    category: 'part6',
+    categoryLabel: '長文穴埋め',
+    question: '(B) ______',
+    passage: 'EVERGREEN GROCERY STORE\n\nWEEKLY FLYER SPECIALS\n\nThank you for shopping at Evergreen Grocery. This week, we are offering special deals on fresh produce, dairy products, and bakery items to help you prepare for the holiday season.\n\n(B) ______\n\nIn addition to the weekly specials, our deli department is offering a holiday catering service. Orders for party platters and dessert trays can be placed at the deli counter or by calling 555-0283. All catering orders must be placed at least 48 hours in advance.\n\nDon\'t forget to sign up for our loyalty card to receive additional discounts and personalized offers.',
+    options: [
+      { text: '(A) The store will be closed on Thanksgiving Day.', isCorrect: false },
+      { text: '(B) Save up to 30% on selected organic fruits and vegetables.', isCorrect: true },
+      { text: '(C) All sale items are available while supplies last.', isCorrect: false },
+      { text: '(D) Delivery service is now available for orders over $50.', isCorrect: false },
+    ],
+    explanation: '空所(B)は週間特売の具体的な内容です。「選択されたオーガニックの果物と野菜で最大30%オフ」が、前文の「特別なセール」と後文の「週間特別品に加えて」に繋がります。',
+    keyVocabulary: [
+      { word: 'weekly specials', meaning: '週間特売品' },
+      { word: 'catering service', meaning: 'ケータリングサービス' },
+      { word: 'party platters', meaning: 'パーティー用盛り合わせ' },
+    ],
+  },
+  {
+    id: 861,
+    part: 6,
+    category: 'part6',
+    categoryLabel: '長文穴埋め',
+    question: '(A) ______',
+    passage: 'APEX CONSULTING GROUP\n\nINTERNAL MEMORANDUM\n\nTO: Project Managers\nFROM: Senior Partner\nRE: Client Retention Strategy\n\nOur client retention rate has declined by five percent over the past two quarters. This is a concerning trend that requires immediate attention.\n\n(A) ______\n\nWe are implementing a new client feedback system that will allow us to identify and address concerns before they lead to contract cancellations. Each project manager will be responsible for conducting quarterly check-ins with their assigned clients.\n\nA training session on the new feedback system will be held next Wednesday at 2 P.M. in Conference Room B.',
+    options: [
+      { text: '(A) Analysis shows that poor communication is the primary cause of client dissatisfaction.', isCorrect: true },
+      { text: '(B) The company plans to hire ten new consultants this year.', isCorrect: false },
+      { text: '(C) Client retention rates vary significantly by industry sector.', isCorrect: false },
+      { text: '(D) Most client contracts are renewed automatically each year.', isCorrect: false },
+    ],
+    explanation: '空所(A)はクライアント離れの原因分析です。「コミュニケーション不足が不満の主原因」という分析が、後続のフィードバックシステム導入の理由として説得力があります。',
+    keyVocabulary: [
+      { word: 'client retention rate', meaning: 'クライアント維持率' },
+      { word: 'contract cancellations', meaning: '契約解除' },
+      { word: 'quarterly check-ins', meaning: '四半期ごとの確認' },
+    ],
+  },
+  {
+    id: 862,
+    part: 6,
+    category: 'part6',
+    categoryLabel: '長文穴埋め',
+    question: '(B) ______',
+    passage: 'CITY OF RIVERDALE\n\nPUBLIC NOTICE\n\nThe City of Riverdale is pleased to announce the completion of the new public library on Oak Street. The facility features state-of-the-art technology, a dedicated children\'s section, and a community meeting room.\n\n(B) ______\n\nThe library will hold a grand opening ceremony on Saturday, March 8, at 10 A.M. The event will include guided tours, a children\'s story time session, and light refreshments. All residents are invited to attend.\n\nRegular library hours will be Monday through Saturday, 9 A.M. to 9 P.M., and Sunday, 12 P.M. to 6 P.M.',
+    options: [
+      { text: '(A) The construction was funded entirely by private donations.', isCorrect: false },
+      { text: '(B) Construction of the facility took approximately eighteen months.', isCorrect: true },
+      { text: '(C) The old library building has been converted into a museum.', isCorrect: false },
+      { text: '(D) Library cards can be obtained at the city hall.', isCorrect: false },
+    ],
+    explanation: '空所(B)は図書館の建設に関する補足情報です。「建設に約18ヶ月かかった」が、完成の発表とオープニングの告知の間に適切に位置します。',
+    keyVocabulary: [
+      { word: 'state-of-the-art', meaning: '最先端の' },
+      { word: 'grand opening ceremony', meaning: 'グランドオープンセレモニー' },
+      { word: 'guided tours', meaning: 'ガイド付き見学' },
+    ],
+  },
+  {
+    id: 863,
+    part: 6,
+    category: 'part6',
+    categoryLabel: '長文穴埋め',
+    question: '(C) ______',
+    passage: 'MERIDIAN TEXTILES\n\nANNUAL REPORT SUMMARY\n\nMeridian Textiles achieved record revenue of $45 million in fiscal year 2024, representing a twelve percent increase over the previous year.\n\nGrowth was driven primarily by strong demand in the North American market and successful expansion into the European Union. Our e-commerce platform contributed thirty percent of total sales, up from twenty-two percent the year before.\n\n(C) ______\n\nLooking ahead, the company plans to invest $8 million in upgrading its manufacturing facilities and launching a new sustainable product line. The board of directors has approved a dividend of $0.75 per share for shareholders of record as of March 31.',
+    options: [
+      { text: '(A) The company plans to close three factories in Asia next year.', isCorrect: false },
+      { text: '(B) Operating expenses decreased by five percent compared to last year.', isCorrect: true },
+      { text: '(C) All new products will be sold exclusively online.', isCorrect: false },
+      { text: '(D) The CEO announced her retirement at the annual meeting.', isCorrect: false },
+    ],
+    explanation: '空所(C)は業績の総括的な評価です。「前年比5%の経費削減」が、収益増加と将来の投資計画の間に位置する財務的なポジティブ要素として適切です。',
+    keyVocabulary: [
+      { word: 'record revenue', meaning: '過去最高の収益' },
+      { word: 'e-commerce platform', meaning: 'ECプラットフォーム' },
+      { word: 'dividend', meaning: '配当' },
+    ],
+  },
+  {
+    id: 864,
+    part: 6,
+    category: 'part6',
+    categoryLabel: '長文穴埋め',
+    question: '(A) ______',
+    passage: 'FITZONE GYM\n\nMEMBERSHIP PROMOTION\n\nLooking to get in shape this year? FitZone Gym is offering a special New Year promotion for new members who sign up during the month of January.\n\n(A) ______\n\nOur facility includes modern exercise equipment, a heated indoor swimming pool, saunas, and personal training services. Group fitness classes such as yoga, spinning, and kickboxing are offered daily at no extra charge.\n\nTo take advantage of this limited-time offer, visit our front desk or sign up online at fitzone.com. Don\'t miss this opportunity to invest in your health!',
+    options: [
+      { text: '(A) New members who join in January will receive the first month free and pay no enrollment fee.', isCorrect: true },
+      { text: '(B) All gym memberships automatically renew on a yearly basis.', isCorrect: false },
+      { text: '(C) Personal training sessions are available for an additional $50 per hour.', isCorrect: false },
+      { text: '(D) The gym is planning to open a second location downtown.', isCorrect: false },
+    ],
+    explanation: '空所(A)はプロモーションの具体的な内容です。「1月加入で初月無料＋登録料無料」が、後続の施設紹介に繋がる魅力的なオファーです。',
+    keyVocabulary: [
+      { word: 'enrollment fee', meaning: '登録料、入会金' },
+      { word: 'at no extra charge', meaning: '追加料金なしで' },
+      { word: 'limited-time offer', meaning: '期間限定オファー' },
+    ],
+  },
+  {
+    id: 865,
+    part: 6,
+    category: 'part6',
+    categoryLabel: '長文穴埋め',
+    question: '(B) ______',
+    passage: 'AURORA TECHNOLOGIES\n\nPRESS RELEASE\n\nAurora Technologies today announced a strategic partnership with DataFlow Systems, a leading provider of cloud infrastructure solutions.\n\nThe partnership will combine Aurora\'s artificial intelligence capabilities with DataFlow\'s cloud computing platform to deliver next-generation enterprise solutions. Initial products are expected to launch in the third quarter.\n\n(B) ______\n\n"Aurora Technologies is committed to driving innovation in the enterprise technology sector," said CEO Michael Torres. "This partnership positions us to deliver even greater value to our clients worldwide."',
+    options: [
+      { text: '(A) The partnership will create approximately 200 new jobs in the technology sector.', isCorrect: false },
+      { text: '(B) Financial terms of the agreement were not disclosed.', isCorrect: true },
+      { text: '(C) DataFlow Systems is headquartered in San Francisco, California.', isCorrect: false },
+      { text: '(D) Both companies\' stocks rose following the announcement.', isCorrect: false },
+    ],
+    explanation: '空所(B)は提携に関する補足情報です。「合意の財務的条件は非公開」という記述はプレスリリースでよく見られる表現で、CEOのコメントの前に適切に位置します。',
+    keyVocabulary: [
+      { word: 'strategic partnership', meaning: '戦略的提携' },
+      { word: 'cloud infrastructure', meaning: 'クラウドインフラ' },
+      { word: 'not disclosed', meaning: '非公開の' },
+    ],
+  },
+  {
+    id: 866,
+    part: 6,
+    category: 'part6',
+    categoryLabel: '長文穴埋め',
+    question: '(A) ______',
+    passage: 'CEDARVILLE PUBLIC SCHOOLS\n\nPARENT NOTIFICATION\n\nDear Parents and Guardians,\n\nWe are writing to inform you of changes to the school bus routes effective February 1. Due to road construction on Maple Avenue, Bus Route 7 will be temporarily rerouted.\n\n(A) ______\n\nThe new route will add approximately ten minutes to the morning pickup time. Students who normally board at the corner of Maple Avenue and Oak Street should instead wait at the corner of Cedar Street and Elm Street.\n\nWe expect the road construction to be completed by March 15, at which point the regular route will be restored. Thank you for your understanding and cooperation.',
+    options: [
+      { text: '(A) Parents will receive a detailed map of the new route via email.', isCorrect: true },
+      { text: '(B) All school bus routes will be permanently changed.', isCorrect: false },
+      { text: '(C) The road construction is part of a city-wide improvement project.', isCorrect: false },
+      { text: '(D) Students will be excused from classes if they arrive late.', isCorrect: false },
+    ],
+    explanation: '空所(A)はルート変更に関する具体的な対応です。「新しいルートの詳細な地図をメールで送る」が、後続の具体的な変更内容の前に親への配慮を示します。',
+    keyVocabulary: [
+      { word: 'rerouted', meaning: '迂回された' },
+      { word: 'pickup time', meaning: '迎えの時間' },
+      { word: 'restored', meaning: '復元される' },
+    ],
+  },
+  {
+    id: 867,
+    part: 6,
+    category: 'part6',
+    categoryLabel: '長文穴埋め',
+    question: '(C) ______',
+    passage: 'BLUEWAVE MEDIA\n\nJOB POSTING\n\nBluewave Media is looking for a talented Content Marketing Manager to join our growing digital marketing team.\n\nThe successful candidate will be responsible for developing and executing content strategies across multiple platforms, including our blog, social media channels, and email newsletters. A minimum of five years of experience in content marketing is required.\n\n(C) ______\n\nWe offer a competitive salary, comprehensive health benefits, flexible working hours, and generous paid time off. Our modern office is located in the heart of downtown, easily accessible by public transportation.\n\nTo apply, please submit your resume, cover letter, and a portfolio of your work to careers@bluewavemedia.com by April 15.',
+    options: [
+      { text: '(A) The position requires frequent international travel.', isCorrect: false },
+      { text: '(B) Experience with video production is preferred but not required.', isCorrect: true },
+      { text: '(C) All interviews will be conducted virtually.', isCorrect: false },
+      { text: '(D) The company was founded in 2015 and has 50 employees.', isCorrect: false },
+    ],
+    explanation: '空所(C)は求人要件の追加です。「動画制作の経験はあれば尚可」という追加の望ましい資格が、後続の福利厚生の前に適切に位置します。',
+    keyVocabulary: [
+      { word: 'content strategies', meaning: 'コンテンツ戦略' },
+      { word: 'preferred but not required', meaning: 'あれば尚可、必須ではない' },
+      { word: 'generous paid time off', meaning: '手厚い有給休暇' },
+    ],
+  },
+  {
+    id: 868,
+    part: 6,
+    category: 'part6',
+    categoryLabel: '長文穴埋め',
+    question: '(A) ______',
+    passage: 'STARLIGHT CRUISE LINES\n\nVOYAGE UPDATE\n\nDear Valued Passengers,\n\nWe are pleased to inform you that the itinerary for our Caribbean cruise departing March 20 has been enhanced with an additional port of call.\n\n(A) ______\n\nThe cruise will now include a stop at Cozumel, Mexico, on day four of the voyage. Passengers will have a full day to explore the island\'s beautiful beaches, ancient Mayan ruins, and vibrant shopping district.\n\nDue to this change, the ship will depart one hour earlier than originally scheduled on the final day. Please check your updated boarding information, which will be sent to your email by March 10.',
+    options: [
+      { text: '(A) This change was made in response to passenger feedback requesting more destination variety.', isCorrect: true },
+      { text: '(B) The original itinerary included only two port stops.', isCorrect: false },
+      { text: '(C) Cozumel has been voted the best cruise destination for three consecutive years.', isCorrect: false },
+      { text: '(D) Passengers will receive a partial refund for the itinerary change.', isCorrect: false },
+    ],
+    explanation: '空所(A)は旅程変更の理由です。「乗客からの多様な目的地を求めるフィードバックに応えて」という説明が、ポジティブな変更を正当化します。',
+    keyVocabulary: [
+      { word: 'itinerary', meaning: '旅程、旅行計画' },
+      { word: 'port of call', meaning: '寄港地' },
+      { word: 'in response to', meaning: '〜に応えて' },
+    ],
+  },
+  {
+    id: 869,
+    part: 6,
+    category: 'part6',
+    categoryLabel: '長文穴埋め',
+    question: '(B) ______',
+    passage: 'HARMONY MUSIC ACADEMY\n\nSPRING RECITAL SCHEDULE\n\nThe Harmony Music Academy is excited to announce the schedule for our annual Spring Recital, featuring performances by students of all levels.\n\nThe recital will take place on Saturday, May 10, at the Riverside Performing Arts Center. Doors open at 6:30 P.M., and the performances begin at 7 P.M.\n\n(B) ______\n\nAdmission is free, but donations are greatly appreciated and will be used to fund our scholarship program for underprivileged students. Refreshments will be available for purchase during the intermission.\n\nWe look forward to seeing you there to celebrate our students\' hard work and musical achievements.',
+    options: [
+      { text: '(A) The recital was originally scheduled for April but was postponed.', isCorrect: false },
+      { text: '(B) The program will include piano, violin, guitar, and vocal performances.', isCorrect: true },
+      { text: '(C) All performers must arrive at least one hour before the show.', isCorrect: false },
+      { text: '(D) Parking is available at the municipal garage for a flat fee of $5.', isCorrect: false },
+    ],
+    explanation: '空所(B)は発表会の内容についての具体的な情報です。「ピアノ、バイオリン、ギター、ボーカルの演奏」という具体的なプログラム内容が適切です。',
+    keyVocabulary: [
+      { word: 'recital', meaning: '発表会' },
+      { word: 'intermission', meaning: '休憩時間、幕間' },
+      { word: 'underprivileged', meaning: '恵まれない' },
+    ],
+  },
+  {
+    id: 870,
+    part: 6,
+    category: 'part6',
+    categoryLabel: '長文穴埋め',
+    question: '(A) ______',
+    passage: 'QUICKCART DELIVERY SERVICES\n\nSERVICE UPDATE\n\nWe are committed to providing fast and reliable delivery to our customers. To better serve you, we are making improvements to our delivery network.\n\n(A) ______\n\nStarting April 1, we will offer same-day delivery for orders placed before noon in the metropolitan area. The service fee for same-day delivery will be $4.99, compared to our standard delivery fee of $2.99.\n\nWe are also expanding our weekend delivery hours. Orders placed on Saturday will now be delivered on Sunday, rather than the following Monday.',
+    options: [
+      { text: '(A) These improvements are the result of a $2 million investment in logistics technology.', isCorrect: true },
+      { text: '(B) QuickCart has been in business for over fifteen years.', isCorrect: false },
+      { text: '(C) The company employs over 500 delivery drivers nationwide.', isCorrect: false },
+      { text: '(D) All delivery vehicles have been replaced with electric trucks.', isCorrect: false },
+    ],
+    explanation: '空所(A)は改善の背景説明です。「200万ドルの物流技術投資の結果」という説明が、後続のサービス改善の具体的な内容に説得力を与えます。',
+    keyVocabulary: [
+      { word: 'same-day delivery', meaning: '当日配達' },
+      { word: 'metropolitan area', meaning: '大都市圏' },
+      { word: 'logistics technology', meaning: '物流技術' },
+    ],
+  },
+  // ===== Part 7: Additional Questions (871-890) =====
+  {
+    id: 871,
+    part: 7,
+    category: 'part7',
+    categoryLabel: '読解問題',
+    question: 'What is the purpose of this email?',
+    passage: `From: David Park <d.park@novatech.com>
+To: All Employees
+Subject: Office Relocation Notice
+Date: January 15
+
+Dear Colleagues,
+
+I am writing to inform you that Novatech will be relocating its headquarters to a new office building at 1200 Innovation Drive, effective March 1.
+
+The new facility offers approximately 30 percent more space, modern conference rooms, a larger cafeteria, and on-site fitness facilities. We believe this move will significantly improve our working environment and support our continued growth.
+
+Moving assistance will be provided to all departments. Each team will receive a detailed relocation schedule from the facilities management team by February 1. Please begin organizing your personal items and labeling any equipment that needs to be transferred.
+
+If you have any questions or concerns, please reach out to the relocation committee at relocation@novatech.com.
+
+Best regards,
+David Park
+Chief Operating Officer`,
+    options: [
+      { text: '(A) To announce a company merger', isCorrect: false },
+      { text: '(B) To inform about an upcoming office relocation', isCorrect: true },
+      { text: '(C) To schedule a team building event', isCorrect: false },
+      { text: '(D) To announce new employee benefits', isCorrect: false },
+    ],
+    explanation: 'メールの目的は3月1日の本社移転を通知することです。「オフィス移転について通知する」が正解。冒頭段落に目的が明記されています。',
+    keyVocabulary: [
+      { word: 'relocate', meaning: '移転する' },
+      { word: 'headquarters', meaning: '本社' },
+      { word: 'facilities management', meaning: '施設管理' },
+    ],
+  },
+  {
+    id: 872,
+    part: 7,
+    category: 'part7',
+    categoryLabel: '読解問題',
+    question: 'What feature is mentioned about the new office?',
+    passage: `From: David Park <d.park@novatech.com>
+To: All Employees
+Subject: Office Relocation Notice
+Date: January 15
+
+Dear Colleagues,
+
+I am writing to inform you that Novatech will be relocating its headquarters to a new office building at 1200 Innovation Drive, effective March 1.
+
+The new facility offers approximately 30 percent more space, modern conference rooms, a larger cafeteria, and on-site fitness facilities. We believe this move will significantly improve our working environment and support our continued growth.
+
+Moving assistance will be provided to all departments. Each team will receive a detailed relocation schedule from the facilities management team by February 1. Please begin organizing your personal items and labeling any equipment that needs to be transferred.
+
+If you have any questions or concerns, please reach out to the relocation committee at relocation@novatech.com.
+
+Best regards,
+David Park
+Chief Operating Officer`,
+    options: [
+      { text: '(A) Indoor parking garage', isCorrect: false },
+      { text: '(B) On-site fitness facilities', isCorrect: true },
+      { text: '(C) A rooftop garden', isCorrect: false },
+      { text: '(D) A childcare center', isCorrect: false },
+    ],
+    explanation: '新しいオフィスの特徴として「オンスiteのフィットネス施設」が挙げられています。その他の選択肢は文中に言及されていません。',
+    keyVocabulary: [
+      { word: 'on-site fitness facilities', meaning: 'オフィス内のフィットネス施設' },
+      { word: 'cafeteria', meaning: 'カフェテリア' },
+    ],
+  },
+  {
+    id: 873,
+    part: 7,
+    category: 'part7',
+    categoryLabel: '読解問題',
+    question: 'When will teams receive the relocation schedule?',
+    passage: `From: David Park <d.park@novatech.com>
+To: All Employees
+Subject: Office Relocation Notice
+Date: January 15
+
+Dear Colleagues,
+
+I am writing to inform you that Novatech will be relocating its headquarters to a new office building at 1200 Innovation Drive, effective March 1.
+
+The new facility offers approximately 30 percent more space, modern conference rooms, a larger cafeteria, and on-site fitness facilities. We believe this move will significantly improve our working environment and support our continued growth.
+
+Moving assistance will be provided to all departments. Each team will receive a detailed relocation schedule from the facilities management team by February 1. Please begin organizing your personal items and labeling any equipment that needs to be transferred.
+
+If you have any questions or concerns, please reach out to the relocation committee at relocation@novatech.com.
+
+Best regards,
+David Park
+Chief Operating Officer`,
+    options: [
+      { text: '(A) By January 31', isCorrect: false },
+      { text: '(B) By February 1', isCorrect: true },
+      { text: '(C) By February 15', isCorrect: false },
+      { text: '(D) By March 1', isCorrect: false },
+    ],
+    explanation: '「2月1日までに各チームに詳細な移転スケジュールが送られます」と明記されています。「2月1日までに」が正解。',
+    keyVocabulary: [
+      { word: 'detailed relocation schedule', meaning: '詳細な移転スケジュール' },
+      { word: 'by February 1', meaning: '2月1日までに' },
+    ],
+  },
+  {
+    id: 874,
+    part: 7,
+    category: 'part7',
+    categoryLabel: '読解問題',
+    question: 'How much does the standard annual membership cost?',
+    passage: `FITLIFE GYM AND WELLNESS CENTER
+
+MEMBERSHIP OPTIONS
+
+FitLife Gym offers flexible membership plans to suit your fitness goals and lifestyle.
+
+Standard Annual Membership — $480/year
+- Unlimited access to gym equipment and group classes
+- Use of locker rooms and showers
+- Free monthly fitness assessment
+
+Premium Annual Membership — $720/year
+- Everything in Standard, plus:
+- Unlimited access to the swimming pool and sauna
+- Two personal training sessions per month
+- Priority booking for popular classes
+
+Student Membership (with valid student ID) — $300/year
+- Same benefits as Standard Membership
+
+All memberships include access to our mobile app for class scheduling and workout tracking. Sign up online at fitlife.com or visit our front desk. A one-time registration fee of $25 applies to all new memberships.
+
+Current promotion: Sign up before February 28 and receive 10% off your first year!`,
+    options: [
+      { text: '(A) $300', isCorrect: false },
+      { text: '(B) $480', isCorrect: true },
+      { text: '(C) $720', isCorrect: false },
+      { text: '(D) $800', isCorrect: false },
+    ],
+    explanation: '標準年会費は480ドル/年と明記されています。「480ドル」が正解。学生会員は300ドル、プレミアムは720ドルです。',
+    keyVocabulary: [
+      { word: 'annual membership', meaning: '年会員' },
+      { word: 'unlimited access', meaning: '無制限アクセス' },
+      { word: 'registration fee', meaning: '登録料' },
+    ],
+  },
+  {
+    id: 875,
+    part: 7,
+    category: 'part7',
+    categoryLabel: '読解問題',
+    question: 'What is included with the Premium Membership that is NOT included with the Standard?',
+    passage: `FITLIFE GYM AND WELLNESS CENTER
+
+MEMBERSHIP OPTIONS
+
+FitLife Gym offers flexible membership plans to suit your fitness goals and lifestyle.
+
+Standard Annual Membership — $480/year
+- Unlimited access to gym equipment and group classes
+- Use of locker rooms and showers
+- Free monthly fitness assessment
+
+Premium Annual Membership — $720/year
+- Everything in Standard, plus:
+- Unlimited access to the swimming pool and sauna
+- Two personal training sessions per month
+- Priority booking for popular classes
+
+Student Membership (with valid student ID) — $300/year
+- Same benefits as Standard Membership
+
+All memberships include access to our mobile app for class scheduling and workout tracking. Sign up online at fitlife.com or visit our front desk. A one-time registration fee of $25 applies to all new memberships.
+
+Current promotion: Sign up before February 28 and receive 10% off your first year!`,
+    options: [
+      { text: '(A) Group fitness classes', isCorrect: false },
+      { text: '(B) Swimming pool and sauna access, and personal training sessions', isCorrect: true },
+      { text: '(C) Mobile app access', isCorrect: false },
+      { text: '(D) Monthly fitness assessment', isCorrect: false },
+    ],
+    explanation: 'プレミアム会員には標準の全てに加えて「プール・サウナへのアクセス」「月2回のパーソナルトレーニング」「人気クラスの優先予約」が含まれます。標準会員にないのはこれら3つの特典です。',
+    keyVocabulary: [
+      { word: 'personal training sessions', meaning: 'パーソナルトレーニングセッション' },
+      { word: 'priority booking', meaning: '優先予約' },
+      { word: 'sauna', meaning: 'サウナ' },
+    ],
+  },
+  {
+    id: 876,
+    part: 7,
+    category: 'part7',
+    categoryLabel: '読解問題',
+    question: 'What discount is available for early sign-ups?',
+    passage: `FITLIFE GYM AND WELLNESS CENTER
+
+MEMBERSHIP OPTIONS
+
+FitLife Gym offers flexible membership plans to suit your fitness goals and lifestyle.
+
+Standard Annual Membership — $480/year
+- Unlimited access to gym equipment and group classes
+- Use of locker rooms and showers
+- Free monthly fitness assessment
+
+Premium Annual Membership — $720/year
+- Everything in Standard, plus:
+- Unlimited access to the swimming pool and sauna
+- Two personal training sessions per month
+- Priority booking for popular classes
+
+Student Membership (with valid student ID) — $300/year
+- Same benefits as Standard Membership
+
+All memberships include access to our mobile app for class scheduling and workout tracking. Sign up online at fitlife.com or visit our front desk. A one-time registration fee of $25 applies to all new memberships.
+
+Current promotion: Sign up before February 28 and receive 10% off your first year!`,
+    options: [
+      { text: '(A) 5% off', isCorrect: false },
+      { text: '(B) 10% off', isCorrect: true },
+      { text: '(C) 15% off', isCorrect: false },
+      { text: '(D) 20% off', isCorrect: false },
+    ],
+    explanation: '「2月28日までにサインアップすると初年度10%オフ」と明記されています。「10%オフ」が正解。',
+    keyVocabulary: [
+      { word: 'promotion', meaning: 'プロモーション、キャンペーン' },
+      { word: '10% off', meaning: '10%割引' },
+    ],
+  },
+  {
+    id: 877,
+    part: 7,
+    category: 'part7',
+    categoryLabel: '読解問題',
+    question: 'What is being advertised?',
+    passage: `SUNRISE BED AND BREAKFAST
+
+Experience the charm of historic Charleston from the comfort of our beautifully restored Victorian-era bed and breakfast.
+
+LOCATED in the heart of the historic district, just steps from world-class restaurants, boutique shops, and famous landmarks.
+
+ROOMS & AMENITIES:
+• 8 uniquely decorated guest rooms with private bathrooms
+• Complimentary gourmet breakfast served daily
+• Free Wi-Fi throughout the property
+• Beautiful garden courtyard
+• On-site parking (limited spaces available)
+
+RATES:
+Standard Room: $150/night
+Deluxe Room with balcony: $195/night
+Suite: $275/night
+
+All rates include breakfast and taxes. A two-night minimum stay is required on weekends.
+
+SPECIAL OFFER: Book three nights or more and receive a 15% discount on your total stay.
+
+Reservations: Call 555-0162 or visit sunrisebnb.com
+Address: 42 Magnolia Lane, Charleston, SC`,
+    options: [
+      { text: '(A) A luxury hotel chain', isCorrect: false },
+      { text: '(B) A bed and breakfast in Charleston', isCorrect: true },
+      { text: '(C) A restaurant in the historic district', isCorrect: false },
+      { text: '(D) A real estate property for sale', isCorrect: false },
+    ],
+    explanation: 'チャールストンの歴史的地区にあるベッド＆ブレックファストの広告です。「チャールストンのB&B」が正解。',
+    keyVocabulary: [
+      { word: 'bed and breakfast', meaning: 'ベッド＆ブレックファスト、民宿' },
+      { word: 'restored Victorian-era', meaning: '復元されたヴィクトリア朝時代の' },
+      { word: 'boutique shops', meaning: 'ブティックショップ' },
+    ],
+  },
+  {
+    id: 878,
+    part: 7,
+    category: 'part7',
+    categoryLabel: '読解問題',
+    question: 'How much would a two-night stay in a Deluxe Room cost on a weekday?',
+    passage: `SUNRISE BED AND BREAKFAST
+
+Experience the charm of historic Charleston from the comfort of our beautifully restored Victorian-era bed and breakfast.
+
+LOCATED in the heart of the historic district, just steps from world-class restaurants, boutique shops, and famous landmarks.
+
+ROOMS & AMENITIES:
+• 8 uniquely decorated guest rooms with private bathrooms
+• Complimentary gourmet breakfast served daily
+• Free Wi-Fi throughout the property
+• Beautiful garden courtyard
+• On-site parking (limited spaces available)
+
+RATES:
+Standard Room: $150/night
+Deluxe Room with balcony: $195/night
+Suite: $275/night
+
+All rates include breakfast and taxes. A two-night minimum stay is required on weekends.
+
+SPECIAL OFFER: Book three nights or more and receive a 15% discount on your total stay.
+
+Reservations: Call 555-0162 or visit sunrisebnb.com
+Address: 42 Magnolia Lane, Charleston, SC`,
+    options: [
+      { text: '(A) $150', isCorrect: false },
+      { text: '(B) $195', isCorrect: false },
+      { text: '(C) $390', isCorrect: true },
+      { text: '(D) $440', isCorrect: false },
+    ],
+    explanation: 'デラックスルームは195ドル/泊です。平日の2泊なら195 × 2 = 390ドルです。3泊割引の対象外（15%オフは3泊以上）なので、割引なしの390ドルが正解。',
+    keyVocabulary: [
+      { word: 'weekday', meaning: '平日' },
+      { word: 'two-night stay', meaning: '2泊の滞在' },
+      { word: 'rates', meaning: '料金' },
+    ],
+  },
+  {
+    id: 879,
+    part: 7,
+    category: 'part7',
+    categoryLabel: '読解問題',
+    question: 'What restriction applies to weekend stays?',
+    passage: `SUNRISE BED AND BREAKFAST
+
+Experience the charm of historic Charleston from the comfort of our beautifully restored Victorian-era bed and breakfast.
+
+LOCATED in the heart of the historic district, just steps from world-class restaurants, boutique shops, and famous landmarks.
+
+ROOMS & AMENITIES:
+• 8 uniquely decorated guest rooms with private bathrooms
+• Complimentary gourmet breakfast served daily
+• Free Wi-Fi throughout the property
+• Beautiful garden courtyard
+• On-site parking (limited spaces available)
+
+RATES:
+Standard Room: $150/night
+Deluxe Room with balcony: $195/night
+Suite: $275/night
+
+All rates include breakfast and taxes. A two-night minimum stay is required on weekends.
+
+SPECIAL OFFER: Book three nights or more and receive a 15% discount on your total stay.
+
+Reservations: Call 555-0162 or visit sunrisebnb.com
+Address: 42 Magnolia Lane, Charleston, SC`,
+    options: [
+      { text: '(A) A three-night minimum stay', isCorrect: false },
+      { text: '(B) A two-night minimum stay', isCorrect: true },
+      { text: '(C) No discounts are available', isCorrect: false },
+      { text: '(D) Only suites are available', isCorrect: false },
+    ],
+    explanation: '「週末は最低2泊の宿泊が必要」と明記されています。「2泊以上の最低宿泊要件」が正解。',
+    keyVocabulary: [
+      { word: 'minimum stay', meaning: '最低宿泊数' },
+      { word: 'on weekends', meaning: '週末は' },
+    ],
+  },
+  {
+    id: 880,
+    part: 7,
+    category: 'part7',
+    categoryLabel: '読解問題',
+    question: 'What is the main purpose of this notice?',
+    passage: `RIVERSIDE CITY COUNCIL
+
+PUBLIC NOTICE: ROAD CLOSURE
+
+Please be advised that a portion of Main Street between Oak Avenue and Elm Street will be closed to all traffic from March 5 to March 19 for road resurfacing work.
+
+During this period, traffic will be rerouted via Washington Boulevard. Drivers are advised to expect additional travel time and to use alternate routes when possible.
+
+Local businesses on Main Street will remain open during the construction period. Pedestrian access to all storefronts will be maintained at all times.
+
+The Riverside City Transportation Department will provide weekly progress updates on the city website. We appreciate your patience and cooperation during this improvement project.
+
+For questions or concerns, contact the Transportation Department at (555) 0100 or transport@riverside.gov.`,
+    options: [
+      { text: '(A) To announce the opening of a new road', isCorrect: false },
+      { text: '(B) To notify the public about a temporary road closure', isCorrect: true },
+      { text: '(C) To invite residents to a town hall meeting', isCorrect: false },
+      { text: '(D) To announce a new public transportation route', isCorrect: false },
+    ],
+    explanation: '道路舗装工事のための通行止め通知です。「一時的な道路閉鎖について市民に通知する」が正解。',
+    keyVocabulary: [
+      { word: 'road closure', meaning: '通行止め、道路閉鎖' },
+      { word: 'resurfacing', meaning: '再舗装' },
+      { word: 'rerouted', meaning: '迂回される' },
+    ],
+  },
+  {
+    id: 881,
+    part: 7,
+    category: 'part7',
+    categoryLabel: '読解問題',
+    question: 'How long will the road closure last?',
+    passage: `RIVERSIDE CITY COUNCIL
+
+PUBLIC NOTICE: ROAD CLOSURE
+
+Please be advised that a portion of Main Street between Oak Avenue and Elm Street will be closed to all traffic from March 5 to March 19 for road resurfacing work.
+
+During this period, traffic will be rerouted via Washington Boulevard. Drivers are advised to expect additional travel time and to use alternate routes when possible.
+
+Local businesses on Main Street will remain open during the construction period. Pedestrian access to all storefronts will be maintained at all times.
+
+The Riverside City Transportation Department will provide weekly progress updates on the city website. We appreciate your patience and cooperation during this improvement project.
+
+For questions or concerns, contact the Transportation Department at (555) 0100 or transport@riverside.gov.`,
+    options: [
+      { text: '(A) One week', isCorrect: false },
+      { text: '(B) Two weeks', isCorrect: true },
+      { text: '(C) Three weeks', isCorrect: false },
+      { text: '(D) One month', isCorrect: false },
+    ],
+    explanation: '3月5日から3月19日までなので、約2週間です。「2週間」が正解。日付の差から期間を計算する問題です。',
+    keyVocabulary: [
+      { word: 'from March 5 to March 19', meaning: '3月5日から3月19日まで' },
+      { word: 'during this period', meaning: 'この期間中' },
+    ],
+  },
+  {
+    id: 882,
+    part: 7,
+    category: 'part7',
+    categoryLabel: '読解問題',
+    question: 'What will remain accessible during the construction?',
+    passage: `RIVERSIDE CITY COUNCIL
+
+PUBLIC NOTICE: ROAD CLOSURE
+
+Please be advised that a portion of Main Street between Oak Avenue and Elm Street will be closed to all traffic from March 5 to March 19 for road resurfacing work.
+
+During this period, traffic will be rerouted via Washington Boulevard. Drivers are advised to expect additional travel time and to use alternate routes when possible.
+
+Local businesses on Main Street will remain open during the construction period. Pedestrian access to all storefronts will be maintained at all times.
+
+The Riverside City Transportation Department will provide weekly progress updates on the city website. We appreciate your patience and cooperation during this improvement project.
+
+For questions or concerns, contact the Transportation Department at (555) 0100 or transport@riverside.gov.`,
+    options: [
+      { text: '(A) All vehicle traffic on Main Street', isCorrect: false },
+      { text: '(B) Pedestrian access to storefronts', isCorrect: true },
+      { text: '(C) Parking on Main Street', isCorrect: false },
+      { text: '(D) Bus service through the area', isCorrect: false },
+    ],
+    explanation: '「歩行者の店舗へのアクセスは常に維持されます」と明記されています。「店舗への歩行者アクセス」が正解。',
+    keyVocabulary: [
+      { word: 'pedestrian access', meaning: '歩行者のアクセス' },
+      { word: 'storefronts', meaning: '店舗の入り口' },
+      { word: 'maintained', meaning: '維持される' },
+    ],
+  },
+  {
+    id: 883,
+    part: 7,
+    category: 'part7',
+    categoryLabel: '読解問題',
+    question: 'What position is available at Horizon Media?',
+    passage: `From: HR Department <hr@horizonmedia.com>
+To: Marketing Team
+Subject: Internal Job Opening — Senior Content Strategist
+Date: February 10
+
+Dear Team,
+
+We are pleased to announce an internal opening for the position of Senior Content Strategist within the Digital Marketing Division.
+
+The Senior Content Strategist will be responsible for developing and executing content strategies across multiple platforms, managing a team of three content writers, and analyzing content performance metrics to optimize engagement.
+
+Requirements:
+- Bachelor's degree in Marketing, Communications, or related field
+- Minimum of 5 years of experience in content marketing
+- Strong analytical skills and proficiency in data visualization tools
+- Experience managing a team
+
+Interested internal candidates should submit their updated resume and a brief cover letter to hr@horizonmedia.com by February 28. Please include "Senior Content Strategist Application" in the subject line.
+
+External candidates will be considered if no suitable internal candidate is found.`,
+    options: [
+      { text: '(A) Marketing Manager', isCorrect: false },
+      { text: '(B) Senior Content Strategist', isCorrect: true },
+      { text: '(C) Content Writer', isCorrect: false },
+      { text: '(D) Data Analyst', isCorrect: false },
+    ],
+    explanation: 'メールのタイトルに「Senior Content Strategist」と明記されています。社内公募の職種を正確に把握しましょう。',
+    keyVocabulary: [
+      { word: 'internal job opening', meaning: '社内公募' },
+      { word: 'content strategist', meaning: 'コンテンツストラテジスト' },
+      { word: 'metrics', meaning: '指標、メトリクス' },
+    ],
+  },
+  {
+    id: 884,
+    part: 7,
+    category: 'part7',
+    categoryLabel: '読解問題',
+    question: 'What is one of the responsibilities of the Senior Content Strategist?',
+    passage: `From: HR Department <hr@horizonmedia.com>
+To: Marketing Team
+Subject: Internal Job Opening — Senior Content Strategist
+Date: February 10
+
+Dear Team,
+
+We are pleased to announce an internal opening for the position of Senior Content Strategist within the Digital Marketing Division.
+
+The Senior Content Strategist will be responsible for developing and executing content strategies across multiple platforms, managing a team of three content writers, and analyzing content performance metrics to optimize engagement.
+
+Requirements:
+- Bachelor's degree in Marketing, Communications, or related field
+- Minimum of 5 years of experience in content marketing
+- Strong analytical skills and proficiency in data visualization tools
+- Experience managing a team
+
+Interested internal candidates should submit their updated resume and a brief cover letter to hr@horizonmedia.com by February 28. Please include "Senior Content Strategist Application" in the subject line.
+
+External candidates will be considered if no suitable internal candidate is found.`,
+    options: [
+      { text: '(A) Managing the company budget', isCorrect: false },
+      { text: '(B) Managing a team of content writers', isCorrect: true },
+      { text: '(C) Designing website layouts', isCorrect: false },
+      { text: '(D) Conducting market research surveys', isCorrect: false },
+    ],
+    explanation: '「3名のコンテンツライターのチームを管理する」が職務内容の一つとして明記されています。',
+    keyVocabulary: [
+      { word: 'developing and executing', meaning: '立案・実行する' },
+      { word: 'optimize engagement', meaning: 'エンゲージメントを最適化する' },
+      { word: 'data visualization tools', meaning: 'データ可視化ツール' },
+    ],
+  },
+  {
+    id: 885,
+    part: 7,
+    category: 'part7',
+    categoryLabel: '読解問題',
+    question: 'By when should internal candidates apply?',
+    passage: `From: HR Department <hr@horizonmedia.com>
+To: Marketing Team
+Subject: Internal Job Opening — Senior Content Strategist
+Date: February 10
+
+Dear Team,
+
+We are pleased to announce an internal opening for the position of Senior Content Strategist within the Digital Marketing Division.
+
+The Senior Content Strategist will be responsible for developing and executing content strategies across multiple platforms, managing a team of three content writers, and analyzing content performance metrics to optimize engagement.
+
+Requirements:
+- Bachelor's degree in Marketing, Communications, or related field
+- Minimum of 5 years of experience in content marketing
+- Strong analytical skills and proficiency in data visualization tools
+- Experience managing a team
+
+Interested internal candidates should submit their updated resume and a brief cover letter to hr@horizonmedia.com by February 28. Please include "Senior Content Strategist Application" in the subject line.
+
+External candidates will be considered if no suitable internal candidate is found.`,
+    options: [
+      { text: '(A) February 10', isCorrect: false },
+      { text: '(B) February 15', isCorrect: false },
+      { text: '(C) February 28', isCorrect: true },
+      { text: '(D) March 1', isCorrect: false },
+    ],
+    explanation: '「2月28日までに応募書類を提出してください」と明記されています。「2月28日」が正解。',
+    keyVocabulary: [
+      { word: 'submit', meaning: '提出する' },
+      { word: 'cover letter', meaning: 'カバーレター、添え状' },
+      { word: 'by February 28', meaning: '2月28日までに' },
+    ],
+  },
+  {
+    id: 886,
+    part: 7,
+    category: 'part7',
+    categoryLabel: '読解問題',
+    question: 'What type of event is described in the invitation?',
+    passage: `THE GRAND HOTEL
+
+ cordially invites you to
+
+AN EVENING OF ELEGANCE
+
+Annual Charity Gala benefiting the Riverside Children's Hospital
+
+Saturday, April 12, 2026
+7:00 P.M. — Cocktail Reception
+8:00 P.M. — Dinner and Program
+10:00 P.M. — Dancing and Live Entertainment
+
+Dress Code: Black Tie Optional
+
+TICKETS:
+Individual — $250 per person
+Table of 8 — $1,800
+VIP Table of 8 (front row) — $2,500
+
+All proceeds go directly to the Riverside Children's Hospital Pediatric Wing Expansion Project. Last year's gala raised over $500,000.
+
+RSVP by March 28 to events@grandhotel.com or call 555-0200.
+
+The Grand Hotel, 500 Riverside Drive`,
+    options: [
+      { text: '(A) A corporate awards ceremony', isCorrect: false },
+      { text: '(B) An annual charity gala', isCorrect: true },
+      { text: '(C) A wedding reception', isCorrect: false },
+      { text: '(D) A product launch event', isCorrect: false },
+    ],
+    explanation: '「Annual Charity Gala（年次チャリティーガラ）」でリバーサイド小児病院のために開催される慈善イベントです。',
+    keyVocabulary: [
+      { word: 'charity gala', meaning: 'チャリティーガラ' },
+      { word: 'cocktail reception', meaning: 'カクテルレセプション' },
+      { word: 'proceeds', meaning: '収益、売上金' },
+    ],
+  },
+  {
+    id: 887,
+    part: 7,
+    category: 'part7',
+    categoryLabel: '読解問題',
+    question: 'How much does a VIP table for 8 cost?',
+    passage: `THE GRAND HOTEL
+
+ cordially invites you to
+
+AN EVENING OF ELEGANCE
+
+Annual Charity Gala benefiting the Riverside Children's Hospital
+
+Saturday, April 12, 2026
+7:00 P.M. — Cocktail Reception
+8:00 P.M. — Dinner and Program
+10:00 P.M. — Dancing and Live Entertainment
+
+Dress Code: Black Tie Optional
+
+TICKETS:
+Individual — $250 per person
+Table of 8 — $1,800
+VIP Table of 8 (front row) — $2,500
+
+All proceeds go directly to the Riverside Children's Hospital Pediatric Wing Expansion Project. Last year's gala raised over $500,000.
+
+RSVP by March 28 to events@grandhotel.com or call 555-0200.
+
+The Grand Hotel, 500 Riverside Drive`,
+    options: [
+      { text: '(A) $1,800', isCorrect: false },
+      { text: '(B) $2,000', isCorrect: false },
+      { text: '(C) $2,500', isCorrect: true },
+      { text: '(D) $3,000', isCorrect: false },
+    ],
+    explanation: '「VIPテーブル（8名、最前列）2,500ドル」と明記されています。「2,500ドル」が正解。',
+    keyVocabulary: [
+      { word: 'VIP Table', meaning: 'VIPテーブル' },
+      { word: 'front row', meaning: '最前列' },
+    ],
+  },
+  {
+    id: 888,
+    part: 7,
+    category: 'part7',
+    categoryLabel: '読解問題',
+    question: 'Where will the event proceeds go?',
+    passage: `THE GRAND HOTEL
+
+ cordially invites you to
+
+AN EVENING OF ELEGANCE
+
+Annual Charity Gala benefiting the Riverside Children's Hospital
+
+Saturday, April 12, 2026
+7:00 P.M. — Cocktail Reception
+8:00 P.M. — Dinner and Program
+10:00 P.M. — Dancing and Live Entertainment
+
+Dress Code: Black Tie Optional
+
+TICKETS:
+Individual — $250 per person
+Table of 8 — $1,800
+VIP Table of 8 (front row) — $2,500
+
+All proceeds go directly to the Riverside Children's Hospital Pediatric Wing Expansion Project. Last year's gala raised over $500,000.
+
+RSVP by March 28 to events@grandhotel.com or call 555-0200.
+
+The Grand Hotel, 500 Riverside Drive`,
+    options: [
+      { text: '(A) The Grand Hotel renovation fund', isCorrect: false },
+      { text: '(B) The Riverside Children\'s Hospital Pediatric Wing Expansion', isCorrect: true },
+      { text: '(C) A local arts organization', isCorrect: false },
+      { text: '(D) The city\'s public education system', isCorrect: false },
+    ],
+    explanation: '「全収益はリバーサイド小児病院の小児科棟拡張プロジェクトに直接寄付されます」と明記されています。',
+    keyVocabulary: [
+      { word: 'pediatric wing', meaning: '小児科棟' },
+      { word: 'expansion project', meaning: '拡張プロジェクト' },
+      { word: 'raised', meaning: '調達した、集めた' },
+    ],
+  },
+  {
+    id: 889,
+    part: 7,
+    category: 'part7',
+    categoryLabel: '読解問題',
+    question: 'What should employees do if they identify a security risk?',
+    passage: `CYBERGUARD TECHNOLOGIES
+
+INFORMATION SECURITY POLICY
+
+All employees are responsible for maintaining the confidentiality and integrity of company data. The following guidelines must be observed at all times:
+
+1. PASSWORD SECURITY
+- Use a unique password with a minimum of 12 characters
+- Change passwords every 90 days
+- Never share passwords with colleagues or write them down in visible locations
+
+2. DATA HANDLING
+- Classify all documents according to the company's data classification system
+- Store sensitive files only on approved encrypted drives
+- Do not send confidential information via personal email accounts
+
+3. INCIDENT REPORTING
+- Report any suspected security breaches immediately to the IT Security team at security@cyberguard.com
+- Do not attempt to investigate security incidents on your own
+- Preserve any evidence related to the incident
+
+4. REMOTE WORK
+- Use the company-provided VPN when accessing company resources remotely
+- Ensure your home network is secured with a strong password
+- Lock your computer when stepping away, even briefly
+
+Violations of this policy may result in disciplinary action, up to and including termination of employment.`,
+    options: [
+      { text: '(A) Investigate it themselves', isCorrect: false },
+      { text: '(B) Report it immediately to the IT Security team', isCorrect: true },
+      { text: '(C) Post about it on social media', isCorrect: false },
+      { text: '(D) Wait until the monthly security review', isCorrect: false },
+    ],
+    explanation: '「疑われるセキュリティ侵害は直ちにITセキュリティチームに報告してください」と明記されています。「直ちにITセキュリティチームに報告する」が正解。',
+    keyVocabulary: [
+      { word: 'security breach', meaning: 'セキュリティ侵害' },
+      { word: 'incident reporting', meaning: 'インシデント報告' },
+      { word: 'preserve evidence', meaning: '証拠を保全する' },
+    ],
+  },
+  {
+    id: 890,
+    part: 7,
+    category: 'part7',
+    categoryLabel: '読解問題',
+    question: 'How often must employees change their passwords?',
+    passage: `CYBERGUARD TECHNOLOGIES
+
+INFORMATION SECURITY POLICY
+
+All employees are responsible for maintaining the confidentiality and integrity of company data. The following guidelines must be observed at all times:
+
+1. PASSWORD SECURITY
+- Use a unique password with a minimum of 12 characters
+- Change passwords every 90 days
+- Never share passwords with colleagues or write them down in visible locations
+
+2. DATA HANDLING
+- Classify all documents according to the company's data classification system
+- Store sensitive files only on approved encrypted drives
+- Do not send confidential information via personal email accounts
+
+3. INCIDENT REPORTING
+- Report any suspected security breaches immediately to the IT Security team at security@cyberguard.com
+- Do not attempt to investigate security incidents on your own
+- Preserve any evidence related to the incident
+
+4. REMOTE WORK
+- Use the company-provided VPN when accessing company resources remotely
+- Ensure your home network is secured with a strong password
+- Lock your computer when stepping away, even briefly
+
+Violations of this policy may result in disciplinary action, up to and including termination of employment.`,
+    options: [
+      { text: '(A) Every 30 days', isCorrect: false },
+      { text: '(B) Every 60 days', isCorrect: false },
+      { text: '(C) Every 90 days', isCorrect: true },
+      { text: '(D) Every 180 days', isCorrect: false },
+    ],
+    explanation: '「90日ごとにパスワードを変更してください」と明記されています。「90日ごと」が正解。',
+    keyVocabulary: [
+      { word: 'every 90 days', meaning: '90日ごとに' },
+      { word: 'unique password', meaning: '固有のパスワード' },
+      { word: 'confidentiality', meaning: '機密性' },
+    ],
+  },
+
 ];
 
-// ===== Part 7 Additional Questions (706-750) =====
 const part7Additional: Question[] = [
   {
     id: 706,
@@ -7479,4 +10651,4 @@ Visit langbridge.com or call 555-0321.`,
 
 const allQuestions = [...questions, ...part7Additional];
 
-export default allQuestions;
+export default allQuestions
